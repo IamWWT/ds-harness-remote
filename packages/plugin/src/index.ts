@@ -1,4 +1,5 @@
 import * as DshConnection from '@deepseek-ai/dsh-client-connection'
+import { symbols } from '@deepseek-ai/cordis'
 import type { Context } from '@deepseek-ai/cordis'
 // Type-only: pulls the `ctx.settings` Context merge and the rc.1 forms type.
 import type { SettingsForms } from '@deepseek-ai/dsh-settings'
@@ -271,7 +272,8 @@ async function activate(
     listener => {
       // The manager emits on its own context. Desktop puts that service on the
       // profile root; a nested context with its own bus still needs to hear it.
-      const buses = ctx.events === ctx.root.events ? [ctx.root.events] : [ctx.root.events, ctx.events]
+      const root = rootContext(ctx)
+      const buses = root === undefined || ctx.events === root.events ? [ctx.events] : [root.events, ctx.events]
       const dispose = buses.map(events => events.on('plugin-manager/update-state', listener, { global: true }))
       return () => { for (const stop of dispose) stop() }
     },
@@ -325,7 +327,7 @@ async function activate(
   // when this plugin's own context cannot see it. Absent service = explicit
   // FEATURE_NOT_SUPPORTED from the bridge, never a fabricated one.
   const schedule = (ctx.get('schedule', false)
-    ?? (ctx.root === undefined ? undefined : ctx.root.get('schedule', false))) as ScheduleCreateService | undefined
+    ?? rootContext(ctx)?.get('schedule', false)) as ScheduleCreateService | undefined
 
   const createRuntimes = (config: ResolvedConfig) => {
     const hostIdentities = new IdentityStore({
@@ -508,6 +510,26 @@ async function activate(
 }
 
 /**
+ * Resolve the root Context without the `ctx.root` accessor.
+ *
+ * Cordis 4.x replaces the plain `root` property with a Proxy trap that throws
+ * `cannot get property "root" without inject` instead of returning `undefined`,
+ * so a `ctx.root?.x` guard becomes a hard activation failure — the plugin would
+ * die before writing its first log line. `root` is not an injectable service
+ * either (`ctx.get('root', false)` yields `undefined`), and the registry symbol
+ * that exposes it is not stable across cordis releases (4.0.5 exports
+ * `symbols.root`, 4.1.0 does not), so every access is guarded and a missing
+ * root degrades to `undefined` rather than throwing.
+ */
+function rootContext(ctx: Context): Context | undefined {
+  const registry = symbols as unknown as Record<string, symbol | undefined>
+  const key = registry.root
+  if (key === undefined) return undefined
+  const root = (ctx as unknown as Record<symbol, unknown>)[key]
+  return typeof root === 'object' && root !== null ? (root as Context) : undefined
+}
+
+/**
  * Read the plugin entry's config. The Loader passes the resolved
  * {@link EntryConfig} (a live `Volatile` reference); a direct `ctx.plugin()`
  * caller passes the plain composition object instead.
@@ -515,7 +537,7 @@ async function activate(
 function resolveLogProfileName(ctx: Context): string | undefined {
   const envProfile = process.env.DSH_PROFILE?.trim()
   if (envProfile) return envProfile
-  const baseDir = (ctx.root as { baseDir?: unknown } | undefined)?.baseDir
+  const baseDir = (rootContext(ctx) as { baseDir?: unknown } | undefined)?.baseDir
   if (typeof baseDir === 'string' && baseDir.trim().length > 0) {
     const trimmed = baseDir.trim()
     if (basename(dirname(trimmed)) === 'profiles') {
@@ -540,7 +562,7 @@ function isEntryConfig(value: EntryConfig | ConfigShape): value is EntryConfig {
  * lookup misses it when the service is isolated to the root.
  */
 function readPluginManager(ctx: Context): PluginManagerUpdate | undefined {
-  const candidate = ctx.get('pluginManager', false) ?? ctx.root.get('pluginManager', false)
+  const candidate = ctx.get('pluginManager', false) ?? rootContext(ctx)?.get('pluginManager', false)
   if (
     typeof candidate !== 'object'
     || candidate === null

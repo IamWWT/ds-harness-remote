@@ -10167,7 +10167,7 @@ function sameCodecList(a, b) {
     (codec2, index) => codec2.payloadType === b[index].payloadType && codec2.mimeType.toLowerCase() === b[index].mimeType.toLowerCase() && (codec2.parameters ?? "") === (b[index].parameters ?? "")
   );
 }
-var import_multicast_dns, __defProp2, __export2, EventTarget, BitWriter, BitWriter2, BufferChain, dumpBuffer, BitStream, binaryData_exports, NotEnoughDataError, BinaryReader, BinaryWriter, isObject3, isType, isPlainObject3, createContext, cloneContext, assertSchema, encodeCommon, encodeSchema, decodeCommon, decodeSchema, createUIntBE, assertLengthSpec, checkLength, checkLengthType, types, POLY_CRC32, POLY_CRC32C, table32, tables32By16, table32c, tables32cBy16, Event2, EventDisposer, WeriftError, colors, stateKey, state, debugFactory, debug, interfaceAddress, int2, PromiseQueue, FifoQueue, log, DEFAULT_CONNECT_TIMEOUT_MS, UdpTransport, TcpTransport, TlsTransport, StreamTransport, log2, RTCDataChannel, RTCDataChannelParameters, SignatureAlgorithm, HashAlgorithm, CipherSuite, CipherSuiteList, NamedCurveAlgorithm, NamedCurveAlgorithmList, CurveType, SignatureScheme, certificateTypes, signatures, SessionType, AbstractCipher, Asn1Tag, dumpBuffer2, getObjectSummary, decode22, encode22, types2, FragmentedHandshake, types3, uint16be, uint24be, buffer2, array22, uint8, string22, Extension, ExtensionList, ASN11Cert, ClientCertificateType, DistinguishedName, SignatureHashAlgorithm, ProtocolVersion, decode32, encode32, types4, DtlsRandom, decode4, encode4, types5, ClientHello, decode5, encode5, types6, MACHeader, DtlsPlaintext, createFragments, createPlaintext, AlertDesc, warn, err, Flight, Flight1, log3, Flight3, signTypes, keyTypes, kxTypes, KeyExchange, p256Keypair, p256PreMasterSecret, x25519Oid, x25519RawKeyLength, x25519AlgorithmIdentifier, emptyX25519RawKey, x25519PrivateKeyPrefix, x25519PublicKeyPrefix, err2, AEADCipher, cipherSuites, AEAD_AES_128_GCM, AEAD_AES_256_GCM, RSA_KEY_EXCHANGE, ECDHE_RSA_KEY_EXCHANGE, ECDHE_ECDSA_KEY_EXCHANGE, PSK_KEY_EXCHANGE, ECDHE_PSK_KEY_EXCHANGE, SrtpContext, ExtendedMasterSecret, decode6, encode6, types7, RenegotiationIndication, decode7, encode7, types8, UseSRTP, decode8, encode8, types9, Certificate, decode9, encode9, types10, ChangeCipherSpec, decode10, encode10, types11, CertificateVerify, decode11, encode11, types12, ClientKeyExchange, Finished, decode12, encode12, types13, ServerCertificateRequest, decode13, encode13, types14, ServerHello, decode14, encode14, ServerHelloDone, encode15, decode15, types15, ServerKeyExchange, MTU, ExtensionProfiles, seqNumOffset, timestampOffset, ssrcOffset, csrcOffset, csrcSize, RtpHeader, RtpPacket, DePacketizerBase, PacketizerBase, log4, AV1RtpPayload, AV1Obu, OBU_TYPES, OBU_TYPE_IDS, MAX_W_ELEMENTS, OBU_SEQUENCE_HEADER, OBU_TEMPORAL_DELIMITER, Av1Packetizer, PCMU_PAYLOAD_TYPE, PCMA_PAYLOAD_TYPE, G711_CLOCK_RATE, DEFAULT_FRAME_DURATION_MS, PcmuRtpPayload, PcmaRtpPayload, G711Packetizer, PcmuPacketizer, PcmaPacketizer, G722_PAYLOAD_TYPE, G722_CLOCK_RATE, G722_OCTET_RATE, DEFAULT_FRAME_DURATION_MS2, G722RtpPayload, G722Packetizer, H265_PAYLOAD_TYPE_AP, H265_PAYLOAD_TYPE_FU, H265_PAYLOAD_TYPE_PACI, H265_IRAP_NAL_TYPES, H265_NAL_TYPE, annexBStartCode, H265RtpPayload, H265AnnexBParser, H265Packetizer, H264RtpPayload, NalUnitType, annex_bNALUStartCode, stap_aHeaderSize, stap_aNALULengthSize, H264_MIN_NAL_LENGTH, H264Packetizer, MPEG4_GENERIC_ENCODING_NAME, AAC_HBR_SIZE_LENGTH, AAC_HBR_INDEX_LENGTH, AAC_HBR_INDEX_DELTA_LENGTH, AAC_HBR_AU_HEADER_BITS, FRAG_SIZE_PREFIX, AacHbrRtpPayload, AacHbrPacketizer, OPUS_CLOCK_RATE, OpusRtpPayload, OpusPacketizer, Vp8RtpPayload, VP8_PAYLOAD_DESCRIPTOR_LENGTH, VP8_PICTURE_ID_MASK, Vp8Packetizer, Vp9RtpPayload, Vp9Packetizer, TELEPHONE_EVENT_DEFAULT_PAYLOAD_TYPE, TELEPHONE_EVENT_DEFAULT_CLOCK_RATE, PAYLOAD_SIZE, TelephoneEventRtpPayload, TelephoneEventPacketizer, depacketizerCodecs, timer, RTCP_HEADER_SIZE, RtcpHeader, FullIntraRequest, PictureLossIndication, ReceiverEstimatedMaxBitrate, log5, RtcpPayloadSpecificFeedback, RtcpRrPacket, RtcpReceiverInfo, RtcpTransportLayerFeedbackType, GenericNack, log6, TransportWideCC, RunLengthChunk, StatusVectorChunk, RecvDelta, PacketChunk, PacketStatus, PacketResult, log7, RtcpTransportLayerFeedback, RtcpSourceDescriptionPacket, SourceDescriptionChunk, SourceDescriptionItem, RtcpSrPacket, RtcpSenderInfo, ntpTime2Sec, log8, RtcpPacketConverter, RTP_EXTENSION_URI, UINT32_MODULO, SLOT_EPSILON, RtpMediaTimeline, defaultScheduler, RtpMediaClock, RtpMediaPacer, log9, Red, RedHeader, RedEncoder, Max14Uint, RedHandler, ProtectionProfileAes128CmHmacSha1_80, ProtectionProfileAeadAes128Gcm, Profiles, keyLength, saltLength, SrtpAuthenticationError, minRtpHeaderSize, minRtcpPacketSize, CipherAesBase, CipherAesCtr, srtcpIndexSize, CipherAesGcm, srtcpIndexSize2, rtcpEncryptionFlag, Context, SrtpRolloverCounterOverflowError, SequenceNumberCycle, HalfSequenceNumberCycle, MaxRolloverCounter, packetIndex, guessRolloverCounter, SrtcpContext, maxSRTCPIndex, Session, SrtcpSession, SrtpContext2, SrtpSession, UINT32_MODULO2, RtpBuilder, log10, Flight5, handlers, decode16, encode16, types16, ServerHelloVerifyRequest, signatureAlgorithms, attributeTypes, encode17, types17, generateKeyPairAsync, CipherContext, log11, DtlsContext, TransportContext, decode17, encode18, types18, EllipticCurves, decode18, encode19, types19, Signature, decode19, encode20, types20, Alert, log12, err3, parsePacket, parsePlainText, decode20, types21, log13, err4, DtlsSocket, log14, DtlsClient, log15, flight2, log16, Flight4, log17, Flight6, handlers2, log18, DtlsServer, Candidate, UDP_TYPE_PREFERENCE, TCP_TYPE_PREFERENCE, ACTIVE_PASSIVE_DIRECTION_PREFERENCE, REFLEXIVE_DIRECTION_PREFERENCE, MdnsLookup, TransactionError, TransactionFailed, TransactionTimeout, TransactionCancelled, AddressFamilyMismatch, TurnRedirectError, PQueue, cancelable, COOKIE, FINGERPRINT_LENGTH, FINGERPRINT_XOR, HEADER_LENGTH, INTEGRITY_LENGTH, IPV4_PROTOCOL, IPV6_PROTOCOL, RETRY_MAX, RETRY_RTO, AttributeKeys, classes, methods, TCP_CHECK_RESPONSE_TIMEOUT_MS, cookieBuffer, packUnsigned, unpackUnsigned, packUnsignedShort, unpackUnsignedShort, packUnsigned64, unpackUnsigned64, packString, unpackString, packSoftware, packBytes, unpackBytes, packNone, unpackNone, ATTRIBUTES, AttributeRepository, ATTRIBUTES_BY_TYPE, ATTRIBUTES_BY_NAME, Message, setBodyLength, log19, CandidatePair, ICE_COMPLETED, ICE_FAILED, CONSENT_INTERVAL, CONSENT_FAILURES, CONSENT_TIMEOUT, CONSENT_RESPONSE_TIMEOUT, CONSENT_RESPONSE_TIMEOUT_MIN, CandidatePairState, defaultOptions, log20, Transaction, log21, StunProtocol, log22, BaseTcpProtocol, TcpActiveProtocol, TcpPassiveProtocol, log23, DEFAULT_CHANNEL_REFRESH_TIME, DEFAULT_ALLOCATION_LIFETIME, UDP_TRANSPORT, DEFAULT_MAX_ALLOCATE_REDIRECTS, StunOverTurnProtocol, TurnProtocol, logger, url2Address, log24, DEFAULT_STUN_SERVER, Connection, encodeTxUsername, decodeTxUsername, socketTypeOf, stripZoneId2, SCTP_PADDING_MULTIPLE, SCTP_COMMON_HEADER_SIZE, SCTP_CHUNK_HEADER_SIZE, SCTP_DATA_FIXED_HEADER_SIZE, SCTP_DATA_CHUNK_HEADER_SIZE, Chunk, BaseInitChunk, InitChunk, InitAckChunk, ReConfigChunk, ForwardTsnChunk, DataChunk, CookieEchoChunk, CookieAckChunk, BaseParamsChunk, AbortChunk, ErrorChunk, HeartbeatChunk, HeartbeatAckChunk, ReconfigChunk, SackChunk, ShutdownChunk, ShutdownAckChunk, ShutdownCompleteChunk, CHUNK_CLASSES, CHUNK_BY_TYPE, OutgoingSSNResetRequestParam, StreamAddOutgoingParam, reconfigResult, ReconfigResponseParam, RECONFIG_PARAM_BY_TYPES, log25, COOKIE_LENGTH, COOKIE_LIFETIME, MAX_STREAMS, DEFAULT_SCTP_MTU, SCTP_DATA_LAST_FRAG, SCTP_DATA_FIRST_FRAG, SCTP_DATA_UNORDERED, SCTP_MAX_ASSOCIATION_RETRANS, SCTP_MAX_INIT_RETRANS, SCTP_RTO_ALPHA, SCTP_RTO_BETA, SCTP_RTO_INITIAL, SCTP_RTO_MIN, SCTP_RTO_MAX, SCTP_TSN_MODULO, SCTP_SACK_DELAY_MS, SCTP_HEARTBEAT_INTERVAL, RECONFIG_MAX_STREAMS, SCTP_STATE_COOKIE, SCTP_SUPPORTED_CHUNK_EXT, SCTP_PRSCTP_SUPPORTED, SCTPConnectionStates, SCTP, InboundStream, RTCSctpCapabilities, useFIR, useNACK, usePLI, useREMB, useTWCC, RTCRtpCodecParameters, RTCRtpHeaderExtensionParameters, RTCRtcpParameters, RTCRtcpFeedback, RTCRtpRtxParameters, RTCRtpCodingParameters, RTCRtpSimulcastParameters, useH264, useVP8, useVP9, useAV1, useAV1X, useOPUS, usePCMU, usePCMA, useG722, supportedCodecs, supportedVideoCodecs, supportedAudioCodecs, DATA_CHANNEL_ACK, DATA_CHANNEL_OPEN, DATA_CHANNEL_RELIABLE, DATA_CHANNEL_PARTIAL_RELIABLE_REXMIT, DATA_CHANNEL_PARTIAL_RELIABLE_TIMED, DATA_CHANNEL_RELIABLE_UNORDERED, DATA_CHANNEL_PARTIAL_RELIABLE_REXMIT_UNORDERED, DATA_CHANNEL_PARTIAL_RELIABLE_TIMED_UNORDERED, WEBRTC_DCEP, WEBRTC_STRING, WEBRTC_BINARY, WEBRTC_STRING_EMPTY, WEBRTC_BINARY_EMPTY, DISCARD_HOST, DISCARD_PORT, DTLS_ROLE_SETUP, DTLS_SETUP_ROLE, FMTP_INT_PARAMETERS, SSRC_INFO_ATTRS, SRTP_PROFILE, SenderDirections, ReceiverDirection, RTCStatsReport, ridRouteKey, applicationStops, RTCRtpTransceiver, Inactive, Sendonly, Recvonly, Sendrecv, Directions, sourceCodecsByTrack, sourceCodecsCapturedByTrack, TrackBroadcastSource, MediaStreamTrack, MediaStream, log26, fingerprintHashAlgorithms, andDirection, milliTime, startupTimestampInMicroseconds, microTime, timestampSeconds, ntpTime, ntpTimeToEpochMs, compactNtp, createSelfSignedCertificate, MediaStreamTrackFactory, deepMerge, log27, RTCDtlsTransport, DtlsStates, RTCCertificate, RTCDtlsFingerprint, RTCDtlsParameters, deduplicateFingerprints, preferredFingerprintAlgorithms, selectPreferredFingerprintAlgorithm, IceTransport, createIceTransport, emptyCandidateFields, candidateTypes, tcpTypes, isToken, isUint, fqdnLabel, fqdn, isValid, toNumber, log28, RTCIceTransport, IceTransportStates, IceGathererStates, RTCIceGatherer, parsedFields, RTCIceCandidate, IceCandidate, RTCIceParameters, log29, DEFAULT_MAX_MESSAGE_SIZE, RTCSctpTransport, RTCSctpCapabilities2, BridgeDtls, SessionDescription, MediaDescription, GroupDescription, RTCSessionDescription, SsrcDescription, log30, LOST_SIZE, NackHandler, log31, ReceiverTWCC, StreamStatistics, log32, RTCRtpReceiver, feedbackKey, log33, KeyFrameRequestRoutingModes, ridOfRouteKey, RtpRouter, MLineReuseModes, findCodecByMimeType, defaultPeerConfig, log34, TransceiverManager, CumulativeResult, COUNTER_MAX, SCORE_MAX, SENT_INFO_MAX_AGE_MS, SENT_INFO_MAX_COUNT, SenderBandwidthEstimator, log35, RTP_HISTORY_SIZE, DEFAULT_PENDING_RTP_MAX_LENGTH, RTT_ALPHA, RTCRtpSender, RTCTrackEvent, BundleTopology, DescriptionValidation, IceRestartRequest, NegotiationNeeded, RemoteCandidates, RemoteMediaApplication, ownerOf, liveTransport, groupOf, log36, TransportActivation, ProposalResources, RETIRED_UFRAG_HISTORY, NegotiationTransaction, log37, SctpTransportManager, SDPManager, log38, SecureTransportManager, srtpProfiles, log39, RTCPeerConnection2, SignalingStates, ConnectionStates;
+var import_multicast_dns, __defProp2, __export2, EventTarget, BitWriter, BitWriter2, BufferChain, dumpBuffer, BitStream, binaryData_exports, NotEnoughDataError, BinaryReader, BinaryWriter, isObject4, isType, isPlainObject3, createContext, cloneContext, assertSchema, encodeCommon, encodeSchema, decodeCommon, decodeSchema, createUIntBE, assertLengthSpec, checkLength, checkLengthType, types, POLY_CRC32, POLY_CRC32C, table32, tables32By16, table32c, tables32cBy16, Event2, EventDisposer, WeriftError, colors, stateKey, state, debugFactory, debug, interfaceAddress, int2, PromiseQueue, FifoQueue, log, DEFAULT_CONNECT_TIMEOUT_MS, UdpTransport, TcpTransport, TlsTransport, StreamTransport, log2, RTCDataChannel, RTCDataChannelParameters, SignatureAlgorithm, HashAlgorithm, CipherSuite, CipherSuiteList, NamedCurveAlgorithm, NamedCurveAlgorithmList, CurveType, SignatureScheme, certificateTypes, signatures, SessionType, AbstractCipher, Asn1Tag, dumpBuffer2, getObjectSummary, decode22, encode22, types2, FragmentedHandshake, types3, uint16be, uint24be, buffer2, array22, uint8, string22, Extension, ExtensionList, ASN11Cert, ClientCertificateType, DistinguishedName, SignatureHashAlgorithm, ProtocolVersion, decode32, encode32, types4, DtlsRandom, decode4, encode4, types5, ClientHello, decode5, encode5, types6, MACHeader, DtlsPlaintext, createFragments, createPlaintext, AlertDesc, warn, err, Flight, Flight1, log3, Flight3, signTypes, keyTypes, kxTypes, KeyExchange, p256Keypair, p256PreMasterSecret, x25519Oid, x25519RawKeyLength, x25519AlgorithmIdentifier, emptyX25519RawKey, x25519PrivateKeyPrefix, x25519PublicKeyPrefix, err2, AEADCipher, cipherSuites, AEAD_AES_128_GCM, AEAD_AES_256_GCM, RSA_KEY_EXCHANGE, ECDHE_RSA_KEY_EXCHANGE, ECDHE_ECDSA_KEY_EXCHANGE, PSK_KEY_EXCHANGE, ECDHE_PSK_KEY_EXCHANGE, SrtpContext, ExtendedMasterSecret, decode6, encode6, types7, RenegotiationIndication, decode7, encode7, types8, UseSRTP, decode8, encode8, types9, Certificate, decode9, encode9, types10, ChangeCipherSpec, decode10, encode10, types11, CertificateVerify, decode11, encode11, types12, ClientKeyExchange, Finished, decode12, encode12, types13, ServerCertificateRequest, decode13, encode13, types14, ServerHello, decode14, encode14, ServerHelloDone, encode15, decode15, types15, ServerKeyExchange, MTU, ExtensionProfiles, seqNumOffset, timestampOffset, ssrcOffset, csrcOffset, csrcSize, RtpHeader, RtpPacket, DePacketizerBase, PacketizerBase, log4, AV1RtpPayload, AV1Obu, OBU_TYPES, OBU_TYPE_IDS, MAX_W_ELEMENTS, OBU_SEQUENCE_HEADER, OBU_TEMPORAL_DELIMITER, Av1Packetizer, PCMU_PAYLOAD_TYPE, PCMA_PAYLOAD_TYPE, G711_CLOCK_RATE, DEFAULT_FRAME_DURATION_MS, PcmuRtpPayload, PcmaRtpPayload, G711Packetizer, PcmuPacketizer, PcmaPacketizer, G722_PAYLOAD_TYPE, G722_CLOCK_RATE, G722_OCTET_RATE, DEFAULT_FRAME_DURATION_MS2, G722RtpPayload, G722Packetizer, H265_PAYLOAD_TYPE_AP, H265_PAYLOAD_TYPE_FU, H265_PAYLOAD_TYPE_PACI, H265_IRAP_NAL_TYPES, H265_NAL_TYPE, annexBStartCode, H265RtpPayload, H265AnnexBParser, H265Packetizer, H264RtpPayload, NalUnitType, annex_bNALUStartCode, stap_aHeaderSize, stap_aNALULengthSize, H264_MIN_NAL_LENGTH, H264Packetizer, MPEG4_GENERIC_ENCODING_NAME, AAC_HBR_SIZE_LENGTH, AAC_HBR_INDEX_LENGTH, AAC_HBR_INDEX_DELTA_LENGTH, AAC_HBR_AU_HEADER_BITS, FRAG_SIZE_PREFIX, AacHbrRtpPayload, AacHbrPacketizer, OPUS_CLOCK_RATE, OpusRtpPayload, OpusPacketizer, Vp8RtpPayload, VP8_PAYLOAD_DESCRIPTOR_LENGTH, VP8_PICTURE_ID_MASK, Vp8Packetizer, Vp9RtpPayload, Vp9Packetizer, TELEPHONE_EVENT_DEFAULT_PAYLOAD_TYPE, TELEPHONE_EVENT_DEFAULT_CLOCK_RATE, PAYLOAD_SIZE, TelephoneEventRtpPayload, TelephoneEventPacketizer, depacketizerCodecs, timer, RTCP_HEADER_SIZE, RtcpHeader, FullIntraRequest, PictureLossIndication, ReceiverEstimatedMaxBitrate, log5, RtcpPayloadSpecificFeedback, RtcpRrPacket, RtcpReceiverInfo, RtcpTransportLayerFeedbackType, GenericNack, log6, TransportWideCC, RunLengthChunk, StatusVectorChunk, RecvDelta, PacketChunk, PacketStatus, PacketResult, log7, RtcpTransportLayerFeedback, RtcpSourceDescriptionPacket, SourceDescriptionChunk, SourceDescriptionItem, RtcpSrPacket, RtcpSenderInfo, ntpTime2Sec, log8, RtcpPacketConverter, RTP_EXTENSION_URI, UINT32_MODULO, SLOT_EPSILON, RtpMediaTimeline, defaultScheduler, RtpMediaClock, RtpMediaPacer, log9, Red, RedHeader, RedEncoder, Max14Uint, RedHandler, ProtectionProfileAes128CmHmacSha1_80, ProtectionProfileAeadAes128Gcm, Profiles, keyLength, saltLength, SrtpAuthenticationError, minRtpHeaderSize, minRtcpPacketSize, CipherAesBase, CipherAesCtr, srtcpIndexSize, CipherAesGcm, srtcpIndexSize2, rtcpEncryptionFlag, Context3, SrtpRolloverCounterOverflowError, SequenceNumberCycle, HalfSequenceNumberCycle, MaxRolloverCounter, packetIndex, guessRolloverCounter, SrtcpContext, maxSRTCPIndex, Session, SrtcpSession, SrtpContext2, SrtpSession, UINT32_MODULO2, RtpBuilder, log10, Flight5, handlers, decode16, encode16, types16, ServerHelloVerifyRequest, signatureAlgorithms, attributeTypes, encode17, types17, generateKeyPairAsync, CipherContext, log11, DtlsContext, TransportContext, decode17, encode18, types18, EllipticCurves, decode18, encode19, types19, Signature, decode19, encode20, types20, Alert, log12, err3, parsePacket, parsePlainText, decode20, types21, log13, err4, DtlsSocket, log14, DtlsClient, log15, flight2, log16, Flight4, log17, Flight6, handlers2, log18, DtlsServer, Candidate, UDP_TYPE_PREFERENCE, TCP_TYPE_PREFERENCE, ACTIVE_PASSIVE_DIRECTION_PREFERENCE, REFLEXIVE_DIRECTION_PREFERENCE, MdnsLookup, TransactionError, TransactionFailed, TransactionTimeout, TransactionCancelled, AddressFamilyMismatch, TurnRedirectError, PQueue, cancelable, COOKIE, FINGERPRINT_LENGTH, FINGERPRINT_XOR, HEADER_LENGTH, INTEGRITY_LENGTH, IPV4_PROTOCOL, IPV6_PROTOCOL, RETRY_MAX, RETRY_RTO, AttributeKeys, classes, methods, TCP_CHECK_RESPONSE_TIMEOUT_MS, cookieBuffer, packUnsigned, unpackUnsigned, packUnsignedShort, unpackUnsignedShort, packUnsigned64, unpackUnsigned64, packString, unpackString, packSoftware, packBytes, unpackBytes, packNone, unpackNone, ATTRIBUTES, AttributeRepository, ATTRIBUTES_BY_TYPE, ATTRIBUTES_BY_NAME, Message, setBodyLength, log19, CandidatePair, ICE_COMPLETED, ICE_FAILED, CONSENT_INTERVAL, CONSENT_FAILURES, CONSENT_TIMEOUT, CONSENT_RESPONSE_TIMEOUT, CONSENT_RESPONSE_TIMEOUT_MIN, CandidatePairState, defaultOptions, log20, Transaction, log21, StunProtocol, log22, BaseTcpProtocol, TcpActiveProtocol, TcpPassiveProtocol, log23, DEFAULT_CHANNEL_REFRESH_TIME, DEFAULT_ALLOCATION_LIFETIME, UDP_TRANSPORT, DEFAULT_MAX_ALLOCATE_REDIRECTS, StunOverTurnProtocol, TurnProtocol, logger, url2Address, log24, DEFAULT_STUN_SERVER, Connection, encodeTxUsername, decodeTxUsername, socketTypeOf, stripZoneId2, SCTP_PADDING_MULTIPLE, SCTP_COMMON_HEADER_SIZE, SCTP_CHUNK_HEADER_SIZE, SCTP_DATA_FIXED_HEADER_SIZE, SCTP_DATA_CHUNK_HEADER_SIZE, Chunk, BaseInitChunk, InitChunk, InitAckChunk, ReConfigChunk, ForwardTsnChunk, DataChunk, CookieEchoChunk, CookieAckChunk, BaseParamsChunk, AbortChunk, ErrorChunk, HeartbeatChunk, HeartbeatAckChunk, ReconfigChunk, SackChunk, ShutdownChunk, ShutdownAckChunk, ShutdownCompleteChunk, CHUNK_CLASSES, CHUNK_BY_TYPE, OutgoingSSNResetRequestParam, StreamAddOutgoingParam, reconfigResult, ReconfigResponseParam, RECONFIG_PARAM_BY_TYPES, log25, COOKIE_LENGTH, COOKIE_LIFETIME, MAX_STREAMS, DEFAULT_SCTP_MTU, SCTP_DATA_LAST_FRAG, SCTP_DATA_FIRST_FRAG, SCTP_DATA_UNORDERED, SCTP_MAX_ASSOCIATION_RETRANS, SCTP_MAX_INIT_RETRANS, SCTP_RTO_ALPHA, SCTP_RTO_BETA, SCTP_RTO_INITIAL, SCTP_RTO_MIN, SCTP_RTO_MAX, SCTP_TSN_MODULO, SCTP_SACK_DELAY_MS, SCTP_HEARTBEAT_INTERVAL, RECONFIG_MAX_STREAMS, SCTP_STATE_COOKIE, SCTP_SUPPORTED_CHUNK_EXT, SCTP_PRSCTP_SUPPORTED, SCTPConnectionStates, SCTP, InboundStream, RTCSctpCapabilities, useFIR, useNACK, usePLI, useREMB, useTWCC, RTCRtpCodecParameters, RTCRtpHeaderExtensionParameters, RTCRtcpParameters, RTCRtcpFeedback, RTCRtpRtxParameters, RTCRtpCodingParameters, RTCRtpSimulcastParameters, useH264, useVP8, useVP9, useAV1, useAV1X, useOPUS, usePCMU, usePCMA, useG722, supportedCodecs, supportedVideoCodecs, supportedAudioCodecs, DATA_CHANNEL_ACK, DATA_CHANNEL_OPEN, DATA_CHANNEL_RELIABLE, DATA_CHANNEL_PARTIAL_RELIABLE_REXMIT, DATA_CHANNEL_PARTIAL_RELIABLE_TIMED, DATA_CHANNEL_RELIABLE_UNORDERED, DATA_CHANNEL_PARTIAL_RELIABLE_REXMIT_UNORDERED, DATA_CHANNEL_PARTIAL_RELIABLE_TIMED_UNORDERED, WEBRTC_DCEP, WEBRTC_STRING, WEBRTC_BINARY, WEBRTC_STRING_EMPTY, WEBRTC_BINARY_EMPTY, DISCARD_HOST, DISCARD_PORT, DTLS_ROLE_SETUP, DTLS_SETUP_ROLE, FMTP_INT_PARAMETERS, SSRC_INFO_ATTRS, SRTP_PROFILE, SenderDirections, ReceiverDirection, RTCStatsReport, ridRouteKey, applicationStops, RTCRtpTransceiver, Inactive, Sendonly, Recvonly, Sendrecv, Directions, sourceCodecsByTrack, sourceCodecsCapturedByTrack, TrackBroadcastSource, MediaStreamTrack, MediaStream, log26, fingerprintHashAlgorithms, andDirection, milliTime, startupTimestampInMicroseconds, microTime, timestampSeconds, ntpTime, ntpTimeToEpochMs, compactNtp, createSelfSignedCertificate, MediaStreamTrackFactory, deepMerge, log27, RTCDtlsTransport, DtlsStates, RTCCertificate, RTCDtlsFingerprint, RTCDtlsParameters, deduplicateFingerprints, preferredFingerprintAlgorithms, selectPreferredFingerprintAlgorithm, IceTransport, createIceTransport, emptyCandidateFields, candidateTypes, tcpTypes, isToken, isUint, fqdnLabel, fqdn, isValid, toNumber, log28, RTCIceTransport, IceTransportStates, IceGathererStates, RTCIceGatherer, parsedFields, RTCIceCandidate, IceCandidate, RTCIceParameters, log29, DEFAULT_MAX_MESSAGE_SIZE, RTCSctpTransport, RTCSctpCapabilities2, BridgeDtls, SessionDescription, MediaDescription, GroupDescription, RTCSessionDescription, SsrcDescription, log30, LOST_SIZE, NackHandler, log31, ReceiverTWCC, StreamStatistics, log32, RTCRtpReceiver, feedbackKey, log33, KeyFrameRequestRoutingModes, ridOfRouteKey, RtpRouter, MLineReuseModes, findCodecByMimeType, defaultPeerConfig, log34, TransceiverManager, CumulativeResult, COUNTER_MAX, SCORE_MAX, SENT_INFO_MAX_AGE_MS, SENT_INFO_MAX_COUNT, SenderBandwidthEstimator, log35, RTP_HISTORY_SIZE, DEFAULT_PENDING_RTP_MAX_LENGTH, RTT_ALPHA, RTCRtpSender, RTCTrackEvent, BundleTopology, DescriptionValidation, IceRestartRequest, NegotiationNeeded, RemoteCandidates, RemoteMediaApplication, ownerOf, liveTransport, groupOf, log36, TransportActivation, ProposalResources, RETIRED_UFRAG_HISTORY, NegotiationTransaction, log37, SctpTransportManager, SDPManager, log38, SecureTransportManager, srtpProfiles, log39, RTCPeerConnection2, SignalingStates, ConnectionStates;
 var init_lib = __esm({
   "node_modules/werift/lib/index.mjs"() {
     import_multicast_dns = __toESM(require_multicast_dns(), 1);
@@ -10426,10 +10426,10 @@ var init_lib = __esm({
         return Buffer.concat(this.chunks, this.written);
       }
     };
-    isObject3 = (value) => typeof value === "object" && value !== null;
-    isType = (value) => isObject3(value) && typeof value.encode === "function" && typeof value.decode === "function";
+    isObject4 = (value) => typeof value === "object" && value !== null;
+    isType = (value) => isObject4(value) && typeof value.encode === "function" && typeof value.decode === "function";
     isPlainObject3 = (value) => {
-      if (!isObject3(value)) return false;
+      if (!isObject4(value)) return false;
       const proto = Object.getPrototypeOf(value);
       return proto === Object.prototype || proto === null;
     };
@@ -16476,7 +16476,7 @@ var init_lib = __esm({
     };
     srtcpIndexSize2 = 4;
     rtcpEncryptionFlag = 128;
-    Context = class {
+    Context3 = class {
       constructor(masterKey, masterSalt, profile2) {
         this.masterKey = masterKey;
         this.masterSalt = masterSalt;
@@ -16704,7 +16704,7 @@ var init_lib = __esm({
       }
       return lastSequenceNumber - HalfSequenceNumberCycle > sequenceNumber ? rolloverCounter + 1 : rolloverCounter;
     };
-    SrtcpContext = class extends Context {
+    SrtcpContext = class extends Context3 {
       constructor(masterKey, masterSalt, profile2) {
         super(masterKey, masterSalt, profile2);
       }
@@ -16767,7 +16767,7 @@ var init_lib = __esm({
         return enc;
       }
     };
-    SrtpContext2 = class extends Context {
+    SrtpContext2 = class extends Context3 {
       constructor(masterKey, masterSalt, profile2) {
         super(masterKey, masterSalt, profile2);
       }
@@ -43796,7 +43796,7 @@ var require_parser_sync = __commonJS({
         );
       }
       let err5;
-      function handleError(_err_) {
+      function handleError2(_err_) {
         err5 = _err_;
       }
       let metaData;
@@ -43823,7 +43823,7 @@ var require_parser_sync = __commonJS({
       let reader = new SyncReader(buffer3);
       let parser = new Parser(options, {
         read: reader.read.bind(reader),
-        error: handleError,
+        error: handleError2,
         metadata: handleMetaData,
         gamma: handleGamma,
         palette: handlePalette,
@@ -44701,6 +44701,1991 @@ var require_lib = __commonJS({
 // packages/plugin/src/index.ts
 import * as DshConnection from "@deepseek-ai/dsh-client-connection";
 
+// node_modules/@deepseek-ai/cosmokit/lib/index.js
+function isNullable(value) {
+  return value === null || value === void 0;
+}
+function isPlainObject(data2) {
+  return data2 && typeof data2 === "object" && !Array.isArray(data2);
+}
+function filterKeys(object6, filter) {
+  return Object.fromEntries(Object.entries(object6).filter(([key, value]) => filter(key, value)));
+}
+function mapValues(object6, transform2) {
+  return Object.fromEntries(Object.entries(object6).map(([key, value]) => [key, transform2(value, key)]));
+}
+function pick(source, keys, forced) {
+  if (!keys) return { ...source };
+  const result = {};
+  for (const key of keys) if (forced || source[key] !== void 0) result[key] = source[key];
+  return result;
+}
+function defineProperty(object6, key, value) {
+  return Object.defineProperty(object6, key, {
+    writable: true,
+    value,
+    enumerable: false
+  });
+}
+var write = Symbol.for("cosmokit.volatile.write");
+function snapshot(value, ancestors = /* @__PURE__ */ new Set()) {
+  if (typeof value === "function") throw new TypeError("volatile config cannot contain functions");
+  if (value === null || typeof value !== "object") return value;
+  if (ancestors.has(value)) throw new TypeError("volatile config cannot contain cycles");
+  ancestors.add(value);
+  try {
+    if (Array.isArray(value)) return Object.freeze(value.map((item) => snapshot(item, ancestors)));
+    if (Object.getPrototypeOf(value) !== Object.prototype && Object.getPrototypeOf(value) !== null) throw new TypeError("volatile config objects must be plain objects or arrays");
+    return Object.freeze(Object.fromEntries(Object.entries(value).map(([key, item]) => [key, snapshot(item, ancestors)])));
+  } finally {
+    ancestors.delete(value);
+  }
+}
+function createVolatile(value) {
+  let current = snapshot(value);
+  return Object.freeze({
+    get: () => current,
+    [write]: (value2) => {
+      current = value2;
+    }
+  });
+}
+function isVolatile(value) {
+  return typeof value === "object" && value !== null && write in value;
+}
+function is(type, value) {
+  if (arguments.length === 1) return (value2) => is(type, value2);
+  return type in globalThis && value instanceof globalThis[type] || Object.prototype.toString.call(value).slice(8, -1) === type;
+}
+function isArrayBufferLike(value) {
+  return is("ArrayBuffer", value) || is("SharedArrayBuffer", value);
+}
+function isArrayBufferSource(value) {
+  return isArrayBufferLike(value) || ArrayBuffer.isView(value);
+}
+var Binary;
+(function(Binary2) {
+  Binary2.is = isArrayBufferLike;
+  Binary2.isSource = isArrayBufferSource;
+  function fromSource(source) {
+    if (ArrayBuffer.isView(source)) return source.buffer.slice(source.byteOffset, source.byteOffset + source.byteLength);
+    else return source;
+  }
+  Binary2.fromSource = fromSource;
+  function toBase64(source) {
+    source = fromSource(source);
+    if (typeof Buffer !== "undefined") return Buffer.from(source).toString("base64");
+    let binary = "";
+    const bytes = new Uint8Array(source);
+    for (let i = 0; i < bytes.byteLength; i++) binary += String.fromCharCode(bytes[i]);
+    return btoa(binary);
+  }
+  Binary2.toBase64 = toBase64;
+  function fromBase64(source) {
+    if (typeof Buffer !== "undefined") return fromSource(Buffer.from(source, "base64"));
+    return Uint8Array.from(atob(source), (c) => c.charCodeAt(0));
+  }
+  Binary2.fromBase64 = fromBase64;
+  function toHex(source) {
+    source = fromSource(source);
+    if (typeof Buffer !== "undefined") return Buffer.from(source).toString("hex");
+    return Array.from(new Uint8Array(source), (byte) => byte.toString(16).padStart(2, "0")).join("");
+  }
+  Binary2.toHex = toHex;
+  function fromHex(source) {
+    if (typeof Buffer !== "undefined") return fromSource(Buffer.from(source, "hex"));
+    const hex3 = source.length % 2 === 0 ? source : source.slice(0, source.length - 1);
+    const buffer3 = [];
+    for (let i = 0; i < hex3.length; i += 2) buffer3.push(parseInt(`${hex3[i]}${hex3[i + 1]}`, 16));
+    return Uint8Array.from(buffer3).buffer;
+  }
+  Binary2.fromHex = fromHex;
+})(Binary || (Binary = {}));
+var base64ToArrayBuffer = Binary.fromBase64;
+var arrayBufferToBase64 = Binary.toBase64;
+var hexToArrayBuffer = Binary.fromHex;
+var arrayBufferToHex = Binary.toHex;
+function clone(source, refs = /* @__PURE__ */ new Map()) {
+  if (!source || typeof source !== "object") return source;
+  if (is("Date", source)) return new Date(source.valueOf());
+  if (is("RegExp", source)) return new RegExp(source.source, source.flags);
+  if (isArrayBufferLike(source)) return source.slice(0);
+  if (ArrayBuffer.isView(source)) return source.buffer.slice(source.byteOffset, source.byteOffset + source.byteLength);
+  const cached2 = refs.get(source);
+  if (cached2) return cached2;
+  if (Array.isArray(source)) {
+    const result2 = [];
+    refs.set(source, result2);
+    source.forEach((value, index) => {
+      result2[index] = Reflect.apply(clone, null, [value, refs]);
+    });
+    return result2;
+  }
+  const result = Object.create(Object.getPrototypeOf(source));
+  refs.set(source, result);
+  for (const key of Reflect.ownKeys(source)) {
+    const descriptor = { ...Reflect.getOwnPropertyDescriptor(source, key) };
+    if ("value" in descriptor) descriptor.value = Reflect.apply(clone, null, [descriptor.value, refs]);
+    Reflect.defineProperty(result, key, descriptor);
+  }
+  return result;
+}
+function deepEqual(a, b, strict) {
+  const ancestors = /* @__PURE__ */ new Set();
+  function compare(a2, b2) {
+    if (a2 === b2) return true;
+    if (isVolatile(a2) || isVolatile(b2)) return isVolatile(a2) && isVolatile(b2);
+    if (!strict && isNullable(a2) && isNullable(b2)) return true;
+    if (typeof a2 !== typeof b2 || typeof a2 !== "object" || !a2 || !b2) return false;
+    if (ancestors.has(a2)) return false;
+    function check2(test, then) {
+      return test(a2) ? test(b2) ? then(a2, b2) : false : test(b2) ? false : void 0;
+    }
+    ancestors.add(a2);
+    try {
+      return check2(Array.isArray, (a3, b3) => {
+        if (a3.length !== b3.length) return false;
+        for (let index = 0; index < a3.length; index++) if (!compare(a3[index], b3[index])) return false;
+        return true;
+      }) ?? check2(is("Date"), (a3, b3) => a3.valueOf() === b3.valueOf()) ?? check2(is("URL"), (a3, b3) => a3.href === b3.href) ?? check2(is("RegExp"), (a3, b3) => a3.source === b3.source && a3.flags === b3.flags) ?? check2(isArrayBufferLike, (a3, b3) => {
+        if (a3.byteLength !== b3.byteLength) return false;
+        const viewA = new Uint8Array(a3);
+        const viewB = new Uint8Array(b3);
+        for (let i = 0; i < viewA.length; i++) if (viewA[i] !== viewB[i]) return false;
+        return true;
+      }) ?? ((!strict || [a2, b2].every((value) => Object.getPrototypeOf(value) === Object.prototype || Object.getPrototypeOf(value) === null)) && Object.keys({
+        ...a2,
+        ...b2
+      }).every((key) => compare(a2[key], b2[key])));
+    } finally {
+      ancestors.delete(a2);
+    }
+  }
+  return compare(a, b);
+}
+function tokenize(source, delimiters, delimiter3) {
+  const output2 = [];
+  let state2 = 0;
+  for (let i = 0; i < source.length; i++) {
+    const code = source.charCodeAt(i);
+    if (code >= 65 && code <= 90) {
+      if (state2 === 1) {
+        const next = source.charCodeAt(i + 1);
+        if (next >= 97 && next <= 122) output2.push(delimiter3);
+        output2.push(code + 32);
+      } else {
+        if (state2 !== 0) output2.push(delimiter3);
+        output2.push(code + 32);
+      }
+      state2 = 1;
+    } else if (code >= 97 && code <= 122) {
+      output2.push(code);
+      state2 = 2;
+    } else if (delimiters.includes(code)) {
+      if (state2 !== 0) output2.push(delimiter3);
+      state2 = 0;
+    } else output2.push(code);
+  }
+  return String.fromCharCode(...output2);
+}
+function paramCase(source) {
+  return tokenize(source, [45, 95], 45);
+}
+var hyphenate = paramCase;
+var Time;
+(function(Time2) {
+  Time2.millisecond = 1;
+  Time2.second = 1e3;
+  Time2.minute = Time2.second * 60;
+  Time2.hour = Time2.minute * 60;
+  Time2.day = Time2.hour * 24;
+  Time2.week = Time2.day * 7;
+  let timezoneOffset = (/* @__PURE__ */ new Date()).getTimezoneOffset();
+  function setTimezoneOffset(offset) {
+    timezoneOffset = offset;
+  }
+  Time2.setTimezoneOffset = setTimezoneOffset;
+  function getTimezoneOffset() {
+    return timezoneOffset;
+  }
+  Time2.getTimezoneOffset = getTimezoneOffset;
+  function getDateNumber(date6 = /* @__PURE__ */ new Date(), offset) {
+    if (typeof date6 === "number") date6 = new Date(date6);
+    if (offset === void 0) offset = timezoneOffset;
+    return Math.floor((date6.valueOf() / Time2.minute - offset) / 1440);
+  }
+  Time2.getDateNumber = getDateNumber;
+  function fromDateNumber(value, offset) {
+    const date6 = new Date(value * Time2.day);
+    if (offset === void 0) offset = timezoneOffset;
+    return new Date(+date6 + offset * Time2.minute);
+  }
+  Time2.fromDateNumber = fromDateNumber;
+  const numeric = /\d+(?:\.\d+)?/.source;
+  const timeRegExp = new RegExp(`^${[
+    "w(?:eek(?:s)?)?",
+    "d(?:ay(?:s)?)?",
+    "h(?:our(?:s)?)?",
+    "m(?:in(?:ute)?(?:s)?)?",
+    "s(?:ec(?:ond)?(?:s)?)?"
+  ].map((unit) => `(${numeric}${unit})?`).join("")}$`);
+  function parseTime(source) {
+    const capture = timeRegExp.exec(source);
+    if (!capture) return 0;
+    return (parseFloat(capture[1]) * Time2.week || 0) + (parseFloat(capture[2]) * Time2.day || 0) + (parseFloat(capture[3]) * Time2.hour || 0) + (parseFloat(capture[4]) * Time2.minute || 0) + (parseFloat(capture[5]) * Time2.second || 0);
+  }
+  Time2.parseTime = parseTime;
+  function parseDate(date6) {
+    const parsed = parseTime(date6);
+    if (parsed) date6 = Date.now() + parsed;
+    else if (/^\d{1,2}(:\d{1,2}){1,2}$/.test(date6)) date6 = `${(/* @__PURE__ */ new Date()).toLocaleDateString()}-${date6}`;
+    else if (/^\d{1,2}-\d{1,2}-\d{1,2}(:\d{1,2}){1,2}$/.test(date6)) date6 = `${(/* @__PURE__ */ new Date()).getFullYear()}-${date6}`;
+    return date6 ? new Date(date6) : /* @__PURE__ */ new Date();
+  }
+  Time2.parseDate = parseDate;
+  function format(ms) {
+    const abs = Math.abs(ms);
+    if (abs >= Time2.day - Time2.hour / 2) return Math.round(ms / Time2.day) + "d";
+    else if (abs >= Time2.hour - Time2.minute / 2) return Math.round(ms / Time2.hour) + "h";
+    else if (abs >= Time2.minute - Time2.second / 2) return Math.round(ms / Time2.minute) + "m";
+    else if (abs >= Time2.second) return Math.round(ms / Time2.second) + "s";
+    return ms + "ms";
+  }
+  Time2.format = format;
+  function toDigits(source, length = 2) {
+    return source.toString().padStart(length, "0");
+  }
+  Time2.toDigits = toDigits;
+  function template(template2, time3 = /* @__PURE__ */ new Date()) {
+    return template2.replace("yyyy", time3.getFullYear().toString()).replace("yy", time3.getFullYear().toString().slice(2)).replace("MM", toDigits(time3.getMonth() + 1)).replace("dd", toDigits(time3.getDate())).replace("hh", toDigits(time3.getHours())).replace("mm", toDigits(time3.getMinutes())).replace("ss", toDigits(time3.getSeconds())).replace("SSS", toDigits(time3.getMilliseconds(), 3));
+  }
+  Time2.template = template;
+})(Time || (Time = {}));
+
+// node_modules/@deepseek-ai/cordis/lib/index.js
+var DisposableList = class {
+  sn = 0;
+  map = /* @__PURE__ */ new Map();
+  weak = /* @__PURE__ */ new WeakMap();
+  get length() {
+    return this.map.size;
+  }
+  push(value) {
+    const sn = ++this.sn;
+    this.map.set(sn, value);
+    this.weak.set(value, sn);
+    return () => this.map.delete(sn);
+  }
+  delete(value) {
+    const sn = this.weak.get(value);
+    if (!sn) return false;
+    return this.map.delete(sn);
+  }
+  clear() {
+    const values = [...this.map.values()];
+    this.map.clear();
+    return values.reverse();
+  }
+  [Symbol.iterator]() {
+    return this.map.values();
+  }
+  [Symbol.for("nodejs.util.inspect.custom")]() {
+    return [...this];
+  }
+};
+var symbols = {
+  shadow: Symbol.for("cordis.shadow"),
+  receiver: Symbol.for("cordis.receiver"),
+  original: Symbol.for("cordis.original"),
+  metadata: Symbol.for("cordis.metadata"),
+  initHooks: Symbol.for("cordis.initHooks"),
+  checkProto: Symbol.for("cordis.checkProto"),
+  effect: Symbol.for("cordis.effect"),
+  filter: Symbol.for("cordis.filter"),
+  isolate: Symbol.for("cordis.isolate"),
+  intercept: Symbol.for("cordis.intercept"),
+  init: Symbol.for("cordis.init"),
+  check: Symbol.for("cordis.check"),
+  config: Symbol.for("cordis.config"),
+  invoke: Symbol.for("cordis.invoke"),
+  extend: Symbol.for("cordis.extend"),
+  tracker: Symbol.for("cordis.tracker"),
+  resolveConfig: Symbol.for("cordis.resolveConfig")
+};
+var GeneratorFunction = function* () {
+}.constructor;
+var AsyncGeneratorFunction = async function* () {
+}.constructor;
+function isConstructor(func) {
+  if (!func.prototype) return false;
+  if (func instanceof GeneratorFunction) return false;
+  if (AsyncGeneratorFunction !== Function && func instanceof AsyncGeneratorFunction) return false;
+  return true;
+}
+function joinPrototype(proto1, proto2) {
+  if (proto1 === Object.prototype) return proto2;
+  const result = Object.create(joinPrototype(Object.getPrototypeOf(proto1), proto2));
+  for (const key of Reflect.ownKeys(proto1)) Object.defineProperty(result, key, Object.getOwnPropertyDescriptor(proto1, key));
+  return result;
+}
+function isObject(value) {
+  return value && (typeof value === "object" || typeof value === "function");
+}
+function getPropertyDescriptor(target3, prop) {
+  let proto = target3;
+  while (proto) {
+    const desc = Reflect.getOwnPropertyDescriptor(proto, prop);
+    if (desc) return desc;
+    proto = Object.getPrototypeOf(proto);
+  }
+}
+function getTraceable(ctx, value) {
+  if (!isObject(value)) return value;
+  if (Object.hasOwn(value, symbols.shadow)) return Object.getPrototypeOf(value);
+  const tracker = value[symbols.tracker];
+  if (!tracker) return value;
+  return createTraceable(ctx, value, tracker);
+}
+function withProps(target3, props) {
+  if (!props) return target3;
+  return new Proxy(target3, {
+    get: (target4, prop, receiver) => {
+      if (prop in props && prop !== "constructor") return Reflect.get(props, prop, receiver);
+      return Reflect.get(target4, prop, receiver);
+    },
+    set: (target4, prop, value, receiver) => {
+      if (prop in props && prop !== "constructor") return Reflect.set(props, prop, value, receiver);
+      return Reflect.set(target4, prop, value, receiver);
+    }
+  });
+}
+function withProp(target3, prop, value) {
+  return withProps(target3, Object.defineProperty(/* @__PURE__ */ Object.create(null), prop, {
+    value,
+    writable: false
+  }));
+}
+function createShadow(ctx, target3, property2, receiver) {
+  if (!property2) return receiver;
+  const origin = Reflect.getOwnPropertyDescriptor(target3, property2)?.value;
+  if (!origin) return receiver;
+  return withProp(receiver, property2, ctx.extend({ [symbols.shadow]: origin }));
+}
+function createShadowMethod(ctx, value, outer, shadow) {
+  return new Proxy(value, { apply: (target3, thisArg, args) => {
+    if (thisArg === outer) thisArg = shadow;
+    return getTraceable(ctx, Reflect.apply(target3, thisArg, args));
+  } });
+}
+function createTraceable(ctx, value, tracker) {
+  if (ctx[symbols.shadow] && !tracker.noShadow) ctx = Object.getPrototypeOf(ctx);
+  const proxy = new Proxy(value, {
+    get: (target3, prop, receiver) => {
+      if (prop === symbols.original) return target3;
+      if (prop === tracker.property) return ctx;
+      if (typeof prop === "symbol") return Reflect.get(target3, prop, receiver);
+      if (tracker.associate && ctx.reflect.props[`${tracker.associate}.${prop}`]) return Reflect.get(ctx, `${tracker.associate}.${prop}`, withProp(ctx, symbols.receiver, receiver));
+      let shadow, innerValue;
+      const desc = getPropertyDescriptor(target3, prop);
+      if (desc && "value" in desc) innerValue = desc.value;
+      else {
+        shadow = createShadow(ctx, target3, tracker.property, receiver);
+        innerValue = Reflect.get(target3, prop, shadow);
+      }
+      const innerTracker = innerValue?.[symbols.tracker];
+      if (innerTracker) return createTraceable(ctx, innerValue, innerTracker);
+      else if (!tracker.noShadow && typeof innerValue === "function") {
+        shadow ??= createShadow(ctx, target3, tracker.property, receiver);
+        return createShadowMethod(ctx, innerValue, receiver, shadow);
+      } else return innerValue;
+    },
+    set: (target3, prop, value2, receiver) => {
+      if (prop === symbols.original) return false;
+      if (prop === tracker.property) return false;
+      if (typeof prop === "symbol") return Reflect.set(target3, prop, value2, receiver);
+      if (tracker.associate && ctx.reflect.props[`${tracker.associate}.${prop}`]) return Reflect.set(ctx, `${tracker.associate}.${prop}`, value2, withProp(ctx, symbols.receiver, receiver));
+      const shadow = createShadow(ctx, target3, tracker.property, receiver);
+      return Reflect.set(target3, prop, value2, shadow);
+    },
+    apply: (target3, thisArg, args) => {
+      return applyTraceable(proxy, target3, thisArg, args);
+    }
+  });
+  return proxy;
+}
+function applyTraceable(proxy, value, thisArg, args) {
+  if (!value[symbols.invoke]) return Reflect.apply(value, thisArg, args);
+  return value[symbols.invoke].apply(proxy, args);
+}
+function createCallable(name2, proto, tracker) {
+  const self = function(...args) {
+    return applyTraceable(createTraceable(self["ctx"], self, tracker), self, this, args);
+  };
+  defineProperty(self, "name", name2);
+  return Object.setPrototypeOf(self, proto);
+}
+function handleError(info, reason, getOuterStack) {
+  const innerLines = info.error.stack.split("\n");
+  if (typeof reason?.stack !== "string") {
+    const outerError = new Error(reason);
+    const lines2 = outerError.stack.split("\n");
+    lines2.splice(1, Infinity, ...getOuterStack());
+    outerError.stack = lines2.join("\n");
+    throw outerError;
+  }
+  const lines = reason.stack.split("\n");
+  let index = lines.indexOf(innerLines[2]);
+  if (index === -1) throw reason;
+  index -= info.offset;
+  while (index > 0) {
+    if (!lines[index - 1].endsWith(" (<anonymous>)")) break;
+    index -= 1;
+  }
+  lines.splice(index, Infinity, ...getOuterStack());
+  reason.stack = lines.join("\n");
+  throw reason;
+}
+function composeError(callback, getOuterStack = buildOuterStack()) {
+  const info = {
+    offset: 1,
+    error: /* @__PURE__ */ new Error()
+  };
+  try {
+    const result = callback(info);
+    if (isObject(result) && "then" in result) return result.then(void 0, (reason) => handleError(info, reason, getOuterStack));
+    else return result;
+  } catch (reason) {
+    handleError(info, reason, getOuterStack);
+  }
+}
+function buildOuterStack(offset = 0) {
+  const outerError = /* @__PURE__ */ new Error();
+  return () => outerError.stack.split("\n").slice(3 + offset);
+}
+function isBailed(value) {
+  return value !== null && value !== false && value !== void 0;
+}
+var EventsService = class {
+  ctx;
+  _hooks = {};
+  constructor(ctx) {
+    this.ctx = ctx;
+    defineProperty(this, symbols.tracker, {
+      property: "ctx",
+      noShadow: true
+    });
+    this.on("internal/listener", function(name2, listener, options) {
+      if (name2 === "internal/update" && !options.global) return (this.fiber._hooks["internal/update"] ??= new DisposableList())[options.prepend ? "unshift" : "push"](listener);
+    });
+    this.on("internal/update", function(config2, noSave, next) {
+      const cbs = [...this._hooks["internal/update"] || []];
+      const _next = () => {
+        return (cbs.shift() ?? next).call(this, config2, noSave, _next);
+      };
+      return _next();
+    }, {
+      global: true,
+      prepend: true
+    });
+  }
+  /**
+  * Resolve listeners for one dispatch and apply context filtering.
+  *
+  * @param type — the dispatch mode, reported on `internal/dispatch`.
+  * @param args — the raw dispatch arguments; consumed up to the event name.
+  * @returns the matching listener callbacks, bound to the dispatch `this`.
+  */
+  dispatch(type, args) {
+    const thisArg = typeof args[0] === "object" || typeof args[0] === "function" ? args.shift() : null;
+    const name2 = args.shift();
+    if (!name2.startsWith("internal/")) this.emit("internal/dispatch", type, name2, args, thisArg);
+    const filter = thisArg?.[Context.filter];
+    return (this._hooks[name2] || []).filter((hook) => hook.global || !filter || filter.call(thisArg, hook.ctx)).map((hook) => hook.callback.bind(thisArg));
+  }
+  /**
+  * Run listeners concurrently and wait for all of them.
+  *
+  * @param args — optional `this`, the event name, then listener arguments.
+  * @returns a promise resolving once every listener has settled.
+  */
+  async parallel(...args) {
+    const errors = (await Promise.allSettled(this.dispatch("emit", args).map(async (cb) => cb(...args)))).filter((result) => result.status === "rejected");
+    if (errors.length) throw new AggregateError(errors.map((error62) => error62.reason));
+  }
+  /**
+  * Run listeners synchronously without waiting for returned promises.
+  *
+  * @param args — optional `this`, the event name, then listener arguments.
+  */
+  emit(...args) {
+    this.dispatch("emit", args).map((cb) => cb(...args));
+  }
+  /**
+  * Run listeners in order, awaiting each, until one returns a bail value.
+  *
+  * @param args — optional `this`, the event name, then listener arguments.
+  * @returns the first bail value (see {@link isBailed}), if any.
+  */
+  async serial(...args) {
+    for (const cb of this.dispatch("serial", args)) {
+      const result = await cb(...args);
+      if (isBailed(result)) return result;
+    }
+  }
+  /**
+  * Run listeners synchronously until one returns a bail value.
+  *
+  * @param args — optional `this`, the event name, then listener arguments.
+  * @returns the first bail value (see {@link isBailed}), if any.
+  */
+  bail(...args) {
+    for (const cb of this.dispatch("bail", args)) {
+      const result = cb(...args);
+      if (isBailed(result)) return result;
+    }
+  }
+  /**
+  * Compose listeners around the final `next` callback.
+  *
+  * The last dispatch argument is treated as the innermost `next`. Listeners
+  * run outermost-first; a listener that does not call `next()` vetoes the
+  * rest of the chain, including the built-in behavior.
+  *
+  * @param args — optional `this`, the event name, listener arguments, then `next`.
+  * @returns the outermost listener's return value.
+  */
+  waterfall(...args) {
+    const cbs = this.dispatch("waterfall", args);
+    const inner = args.pop();
+    const next = () => {
+      return (cbs.shift() ?? inner)(...args);
+    };
+    args.push(next);
+    return next();
+  }
+  /**
+  * Store a listener record as an effect on the current fiber.
+  *
+  * @param label — effect label shown in fiber diagnostics.
+  * @param hooks — the listener list for one event.
+  * @param callback — the listener to store.
+  * @param options — placement and filtering options.
+  * @returns a disposer that unregisters the listener.
+  */
+  register(label, hooks, callback, options) {
+    const method = options.prepend ? "unshift" : "push";
+    return this.ctx.fiber.effect(() => {
+      hooks[method]({
+        ctx: this.ctx,
+        callback,
+        ...options
+      });
+      return () => this.unregister(hooks, callback);
+    }, label);
+  }
+  /**
+  * Remove a stored listener record.
+  *
+  * @param hooks — the listener list for one event.
+  * @param callback — the listener to remove.
+  * @returns `true` if the listener was found and removed.
+  */
+  unregister(hooks, callback) {
+    const index = hooks.findIndex((hook) => hook.callback === callback);
+    if (index >= 0) {
+      hooks.splice(index, 1);
+      return true;
+    }
+  }
+  /**
+  * Register an event listener owned by the current fiber.
+  *
+  * The listener is removed automatically when the fiber unloads. Throws
+  * `CordisError('INACTIVE_EFFECT')` if the fiber is already disposed.
+  *
+  * @param name — the event name to listen for.
+  * @param listener — called with the dispatch arguments.
+  * @param options — listener options; a boolean is shorthand for `prepend`.
+  * @returns a disposer removing the listener; `true` if it was still registered.
+  */
+  on(name2, listener, options) {
+    if (typeof options !== "object") options = { prepend: options };
+    this.ctx.fiber.assertActive();
+    listener = this.ctx.reflect.bind(listener);
+    const result = this.bail(this.ctx, "internal/listener", name2, listener, options);
+    if (result) return result;
+    const hooks = this._hooks[name2] ||= [];
+    const label = `ctx.on(${typeof name2 === "string" ? JSON.stringify(name2) : name2.toString()})`;
+    return this.register(label, hooks, listener, options);
+  }
+  /**
+  * Register an event listener that disposes itself after the first call.
+  *
+  * @param name — the event name to listen for.
+  * @param listener — called at most once with the dispatch arguments.
+  * @param options — listener options; a boolean is shorthand for `prepend`.
+  * @returns a disposer removing the listener; `true` if it was still registered.
+  */
+  once(name2, listener, options) {
+    const dispose = this.on(name2, function(...args) {
+      dispose();
+      return listener.apply(this, args);
+    }, options);
+    return dispose;
+  }
+};
+var defaultFormatters = {
+  s: (value) => String(value),
+  d: (value) => Math.trunc(Number(value)),
+  i: (value) => Math.trunc(Number(value)),
+  f: (value) => Number(value),
+  o: (value) => JSON.stringify(value),
+  O: (value) => JSON.stringify(value),
+  c: () => "",
+  C: (value, exporter, message) => {
+    return Logger.color(exporter, Logger.code(message.name, exporter.colors), value);
+  }
+};
+function isAggregateError(error62) {
+  return error62 instanceof Error && Array.isArray(error62["errors"]);
+}
+var Logger = class {
+  service;
+  static color(exporter, code, value, decoration = "") {
+    if (!exporter.colors) return "" + value;
+    return `\x1B[3${code < 8 ? code : "8;5;" + code}${exporter.colors >= 2 ? decoration : ""}m${value}\x1B[0m`;
+  }
+  static code(name2, level) {
+    let hash3 = 0;
+    for (let i = 0; i < name2.length; i++) {
+      hash3 = (hash3 << 3) - hash3 + name2.charCodeAt(i) + 13;
+      hash3 |= 0;
+    }
+    const colors2 = !level ? [] : level >= 2 ? c256 : c16;
+    return colors2[Math.abs(hash3) % colors2.length];
+  }
+  static format(exporter, message) {
+    const args = message.args.slice();
+    if (args[0] instanceof Error) {
+      args[0] = args[0].stack || args[0].message;
+      args.unshift("%s");
+    } else if (typeof args[0] !== "string") args.unshift("%o");
+    let format = args.shift();
+    format = format.replace(/%([a-zA-Z%])/g, (match, char) => {
+      if (match === "%%") return "%";
+      const formatter = exporter.formatters?.[char] ?? defaultFormatters[char];
+      if (typeof formatter === "function") return formatter(args.shift(), exporter, message);
+      return match;
+    });
+    const oFormatter = exporter.formatters?.o ?? defaultFormatters.o;
+    for (let arg of args) {
+      if (typeof arg === "object" && arg) arg = oFormatter(arg, exporter, message);
+      format += " " + arg;
+    }
+    const { maxLength = 10240 } = exporter;
+    return format.split(/\r?\n/g).map((line) => {
+      return line.slice(0, maxLength) + (line.length > maxLength ? "..." : "");
+    }).join("\n");
+  }
+  constructor(options, service) {
+    this.service = service;
+    Object.assign(this, options);
+    this.error = this._method("error", 0);
+    this.info = this._method("info", 1);
+    this.warn = this._method("warn", 2);
+    this.debug = this._method("debug", 3);
+  }
+  _method(type, level) {
+    return (...args) => {
+      if (args.length === 1 && args[0] instanceof Error) {
+        if (args[0].cause) this[type](args[0].cause);
+        else if (isAggregateError(args[0])) {
+          args[0].errors.forEach((error62) => this[type](error62));
+          return;
+        }
+      }
+      const sn = ++this.service._snMessage;
+      const ts = Date.now();
+      for (const exporter of this.service.exporters.values()) {
+        if ((exporter.levels?.[this.name] ?? exporter.levels?.default ?? this.level ?? 1) < level) continue;
+        const message = {
+          sn,
+          ts,
+          type,
+          level,
+          name: this.name,
+          ...this.meta,
+          args
+        };
+        exporter.export(message);
+      }
+    };
+  }
+};
+var c16 = [
+  6,
+  2,
+  3,
+  4,
+  5,
+  1
+];
+var c256 = [
+  20,
+  21,
+  26,
+  27,
+  32,
+  33,
+  38,
+  39,
+  40,
+  41,
+  42,
+  43,
+  44,
+  45,
+  56,
+  57,
+  62,
+  63,
+  68,
+  69,
+  74,
+  75,
+  76,
+  77,
+  78,
+  79,
+  80,
+  81,
+  92,
+  93,
+  98,
+  99,
+  112,
+  113,
+  129,
+  134,
+  135,
+  148,
+  149,
+  160,
+  161,
+  162,
+  163,
+  164,
+  165,
+  166,
+  167,
+  168,
+  169,
+  170,
+  171,
+  172,
+  173,
+  178,
+  179,
+  184,
+  185,
+  196,
+  197,
+  198,
+  199,
+  200,
+  201,
+  202,
+  203,
+  204,
+  205,
+  206,
+  207,
+  208,
+  209,
+  214,
+  215,
+  220,
+  221
+];
+var LoggerService = class LoggerService2 {
+  bufferSize = 1e3;
+  buffer = [];
+  ctx;
+  _snMessage = 0;
+  _snExporter = 0;
+  exporters = /* @__PURE__ */ new Map();
+  constructor(ctx) {
+    const tracker = {
+      property: "ctx",
+      noShadow: true
+    };
+    const self = createCallable("logger", joinPrototype(Object.getPrototypeOf(this), Function.prototype), tracker);
+    Object.assign(self, this);
+    self.ctx = ctx;
+    defineProperty(self, symbols.tracker, tracker);
+    self.exporter({
+      colors: 3,
+      export: (message) => {
+        self.buffer.push(message);
+        if (self.buffer.length > self.bufferSize) self.buffer = self.buffer.slice(-self.bufferSize);
+      }
+    });
+    return self;
+  }
+  /**
+  * Register an exporter and dispose it with the current fiber.
+  *
+  * @param exporter — the sink that receives structured log messages.
+  * @returns a disposer that removes the exporter.
+  */
+  exporter(exporter) {
+    return this.ctx.effect(() => {
+      const id6 = ++this._snExporter;
+      this.exporters.set(id6, exporter);
+      return () => this.exporters.delete(id6);
+    }, "ctx.logger.exporter()");
+  }
+  _resolveConfig() {
+    let intercept = this.ctx[symbols.intercept];
+    const configs = [];
+    while ("logger" in intercept) {
+      if (Object.hasOwn(intercept, "logger")) configs.unshift(intercept["logger"]);
+      intercept = Object.getPrototypeOf(intercept);
+    }
+    return Object.assign({}, ...configs);
+  }
+  [symbols.invoke](name2) {
+    const config2 = this._resolveConfig();
+    const fiber = (this.ctx[symbols.shadow] ?? this.ctx).fiber;
+    name2 ??= config2.name;
+    name2 ??= hyphenate(fiber.name);
+    return new Logger({
+      name: name2,
+      level: config2.level,
+      meta: { fiber: new WeakRef(fiber) }
+    }, this);
+  }
+  static {
+    for (const type of [
+      "error",
+      "info",
+      "warn",
+      "debug"
+    ]) LoggerService2.prototype[type] = function(...args) {
+      return this()[type](...args);
+    };
+  }
+};
+function enhanceError(error62) {
+  const lines = error62.stack.split("\n");
+  lines.splice(0, 2, `Error: ${error62.message}`);
+  error62.stack = lines.join("\n");
+  return error62;
+}
+var RESERVED_WORDS = ["prototype", "then"];
+function isSpecialProperty(prop) {
+  return typeof prop === "symbol" || RESERVED_WORDS.includes(prop) || parseInt(prop).toString() === prop || prop.startsWith("_");
+}
+var ReflectService = class {
+  ctx;
+  /** Proxy traps implementing service resolution for every context object. */
+  static handler = {
+    get: (target3, prop, ctx) => {
+      if (isSpecialProperty(prop)) return Reflect.get(target3, prop, ctx);
+      if (Reflect.has(target3, prop)) return getTraceable(ctx, Reflect.get(target3, prop, ctx));
+      const error62 = /* @__PURE__ */ new Error(`cannot get property "${prop}" without inject`);
+      try {
+        const def = target3.reflect.props[prop];
+        if (def?.type === "accessor") return def.get.call(ctx, ctx[symbols.receiver], error62);
+        if (!ctx.fiber.runtime) return ctx.reflect.get(prop, false);
+        return ctx.events.waterfall("internal/get", ctx, prop, error62, () => {
+          const key = target3[symbols.isolate][prop];
+          let fiber = (ctx[symbols.shadow] ?? ctx).fiber;
+          while (true) {
+            const impl = fiber.store?.[prop];
+            if (impl) return getTraceable(ctx, impl.value);
+            if (prop in fiber.inject) {
+              error62.message = `cannot get required service "${prop}" in inactive context`;
+              throw error62;
+            }
+            if (!fiber.runtime) throw error62;
+            if (fiber.parent[symbols.isolate][prop] !== key) throw error62;
+            fiber = fiber.parent.fiber;
+          }
+        });
+      } catch (e) {
+        throw e === error62 ? enhanceError(e) : e;
+      }
+    },
+    set: (target3, prop, value, ctx) => {
+      if (isSpecialProperty(prop)) return Reflect.set(target3, prop, value, ctx);
+      const error62 = /* @__PURE__ */ new Error(`cannot set property "${prop}" without provide`);
+      const def = target3.reflect.props[prop];
+      if (!def) {
+        if (!ctx.fiber.runtime) return Reflect.set(target3, prop, value, ctx);
+        throw enhanceError(error62);
+      }
+      try {
+        if (def.type === "accessor") {
+          if (!def.set) return false;
+          return def.set.call(ctx, value, ctx[symbols.receiver], error62);
+        }
+        return ctx.events.waterfall("internal/set", ctx, prop, value, error62, () => {
+          return ctx.reflect.set(prop, value, error62);
+        });
+      } catch (e) {
+        throw e === error62 ? enhanceError(e) : e;
+      }
+    },
+    has: (target3, prop) => {
+      if (isSpecialProperty(prop)) return Reflect.has(target3, prop);
+      if (Reflect.has(target3, prop)) return true;
+      return !!target3.reflect.props[prop];
+    }
+  };
+  /** Service implementations, keyed by isolation label. */
+  store = /* @__PURE__ */ Object.create(null);
+  /** Declared context properties (services and accessors), by name. */
+  props = /* @__PURE__ */ Object.create(null);
+  constructor(ctx) {
+    this.ctx = ctx;
+    defineProperty(this, symbols.tracker, {
+      property: "ctx",
+      noShadow: true
+    });
+    this.mixin("reflect", [
+      "get",
+      "set",
+      "provide",
+      "accessor",
+      "mixin"
+    ]);
+    this.mixin("fiber", ["runtime", "effect"]);
+    this.mixin("registry", ["inject", "plugin"]);
+    this.mixin("events", [
+      "on",
+      "once",
+      "parallel",
+      "emit",
+      "serial",
+      "bail",
+      "waterfall"
+    ]);
+  }
+  /**
+  * Read a service from the store without the inject requirement.
+  *
+  * @param name — the service name.
+  * @param strict — when `true`, only return implementations whose providing
+  * fiber is currently active.
+  * @returns the service value, or `undefined` when not (yet) provided.
+  */
+  get(name2, strict = true) {
+    return getTraceable(this.ctx, this._getImpl(name2, strict)?.value);
+  }
+  _getImpl(name2, strict = true) {
+    const key = this.ctx[symbols.isolate][name2];
+    const impl = key && this.store[key];
+    if (!impl) return;
+    if (strict && impl.fiber.state !== 2) return;
+    return impl;
+  }
+  /**
+  * Overwrite a provided service's value.
+  *
+  * @param name — the service name.
+  * @param value — the new service value.
+  * @param error — carrier for the caller stack in diagnostics.
+  * @returns `true` on success.
+  * @throws when `name` was never provided, or was provided by another fiber.
+  */
+  set(name2, value, error62) {
+    const key = this.ctx[symbols.isolate][name2];
+    const impl = this.store[key];
+    if (!impl) throw new Error(`cannot set property "${name2}" without provide`);
+    if (impl.fiber !== this.ctx.fiber) throw new Error(`cannot set property "${name2}" in multiple fibers`);
+    impl.value = value;
+    return true;
+  }
+  /**
+  * Register a service implementation owned by the current fiber.
+  *
+  * See the `ctx.provide()` overload above for the full contract.
+  *
+  * @param name — the service name.
+  * @param value — the service value.
+  * @param check — optional availability predicate for dependents.
+  * @returns a disposer that unregisters the service.
+  */
+  provide(name2, value, check2) {
+    return this.ctx.fiber.effect(() => {
+      if (!this.props[name2]) this.props[name2] ??= { type: "service" };
+      else if (this.props[name2].type !== "service") throw new Error(`property "${name2}" is already declared as ${this.props[name2].type}`);
+      this.props[name2] = { type: "service" };
+      this.ctx.root[symbols.isolate][name2] ??= Symbol(name2);
+      const key = this.ctx[symbols.isolate][name2];
+      const impl = {
+        name: name2,
+        value,
+        fiber: this.ctx.fiber,
+        check: check2
+      };
+      if (this.store[key]) throw new Error(`service "${name2}" has been registered at <${this.store[key].fiber.name}>`);
+      this.store[key] = impl;
+      this.ctx.fiber.store[name2] = impl;
+      if (this.ctx.fiber.state === 2) this.notify([name2]);
+      return async () => {
+        delete this.store[key];
+        const fibers = this.notify([name2]);
+        await Promise.allSettled(fibers.map((fiber) => fiber.await()));
+        delete this.ctx.fiber.store[name2];
+      };
+    }, `ctx.provide(${JSON.stringify(name2)})`);
+  }
+  /**
+  * Re-evaluate every fiber that requires one of the given services.
+  *
+  * @param names — the service names that changed.
+  * @param filter — restricts notification to matching isolation scopes.
+  * @returns the fibers whose dependency state was refreshed.
+  */
+  notify(names, filter = (ctx, name2) => ctx[symbols.isolate][name2] === this.ctx[symbols.isolate][name2]) {
+    const fibers = [];
+    for (const runtime of this.ctx.registry.values()) for (const fiber of runtime.fibers) {
+      let hasUpdate = false;
+      for (const name2 of names) {
+        if (!(name2 in fiber.inject)) continue;
+        if (!filter(fiber.ctx, name2)) continue;
+        hasUpdate = true;
+        fiber._checkImpl(name2);
+      }
+      if (!hasUpdate) continue;
+      fiber._refresh();
+      fibers.push(fiber);
+    }
+    for (const name2 of names) {
+      const self = Object.create(this.ctx);
+      self[symbols.filter] = (target3) => filter(target3, name2);
+      this.ctx.events.emit(self, "internal/service", name2, this._getImpl(name2, false)?.value);
+    }
+    return fibers;
+  }
+  /**
+  * Define a computed context property backed by get/set hooks.
+  *
+  * @param name — the context property name.
+  * @param options — the `get` hook and optional `set` hook.
+  * @returns a disposer that removes the accessor.
+  */
+  accessor(name2, options) {
+    return this.ctx.fiber.effect(() => {
+      if (name2 in this.props) throw new Error(`property "${name2}" is already declared as ${this.props[name2].type}`);
+      this.props[name2] = {
+        type: "accessor",
+        ...options
+      };
+      return () => delete this.props[name2];
+    }, `ctx.accessor(${JSON.stringify(name2)})`);
+  }
+  /**
+  * Expose selected members of a service directly on `ctx`.
+  *
+  * See the `ctx.mixin()` overload above for the full contract.
+  *
+  * @param source — a context property name or a source object.
+  * @param mixins — keys to forward, or a source-key → ctx-key map.
+  * @returns a disposer that removes all created accessors.
+  */
+  mixin(source, mixins) {
+    const self = this;
+    return this.ctx.fiber.effect(function* () {
+      const entries = Array.isArray(mixins) ? mixins.map((key) => [key, key]) : Object.entries(mixins);
+      const getTarget = (ctx, error62) => {
+        return ctx[source];
+      };
+      for (const [key, value] of entries) yield self.accessor(value, {
+        get(receiver, error62) {
+          const service = getTarget(this, error62);
+          if (isNullable(service)) return service;
+          const mixin = receiver ? withProps(receiver, service) : service;
+          const value2 = Reflect.get(service, key, mixin);
+          if (typeof value2 !== "function") return value2;
+          return value2.bind(mixin ?? service);
+        },
+        set(value2, receiver, error62) {
+          const service = getTarget(this, error62);
+          const mixin = receiver ? withProps(receiver, service) : service;
+          return Reflect.set(service, key, value2, mixin);
+        }
+      });
+    }, `ctx.mixin(${JSON.stringify(source)})`);
+  }
+  /**
+  * Attach this context's tracing wrapper to a value.
+  *
+  * @param value — the value to wrap.
+  * @returns the traceable wrapper (or the value itself when not applicable).
+  */
+  trace(value) {
+    return getTraceable(this.ctx, value);
+  }
+  /**
+  * Wrap a callback so calls trace `this` and arguments to this context.
+  *
+  * @param callback — the function to wrap.
+  * @returns a proxy delegating to `callback` with traced values.
+  */
+  bind(callback) {
+    return new Proxy(callback, {
+      apply: (target3, thisArg, args) => {
+        return Reflect.apply(target3, this.trace(thisArg), args.map((arg) => this.trace(arg)));
+      },
+      construct: (target3, args, newTarget) => {
+        return Reflect.construct(target3, args.map((arg) => this.trace(arg)), newTarget);
+      }
+    });
+  }
+};
+var kValidationError = Symbol.for("ValidationError");
+var ValidationError = class extends TypeError {
+  name = "ValidationError";
+  /**
+  * Build the aggregated message from schema issues.
+  *
+  * @param issues — the standard-schema issues, one message line each.
+  */
+  constructor(issues) {
+    super(`invalid config:
+` + issues.map((issue2) => {
+      if (issue2.path) return `  - ${issue2.message} (at ${issue2.path.join(".")})`;
+      else return `  - ${issue2.message}`;
+    }).join("\n"));
+  }
+};
+Object.defineProperty(ValidationError.prototype, kValidationError, { value: true });
+function resolveConfig(runtime, config2) {
+  if (!runtime.Config) return config2;
+  const result = runtime.Config["~standard"].validate(config2);
+  if ("then" in result) throw new TypeError("Async config validation is not supported");
+  if (result.issues) throw new ValidationError(result.issues);
+  else return result.value;
+}
+var effectInertia = /* @__PURE__ */ new WeakMap();
+function runDisposable(dispose) {
+  const result = dispose();
+  return effectInertia.get(dispose)?.() ?? result;
+}
+function emitPluginDisposed(context, fiber) {
+  const args = ["internal/plugin", fiber];
+  let callbacks;
+  try {
+    callbacks = context.events.dispatch("emit", args);
+  } catch (error62) {
+    context.logger.error(error62);
+    return;
+  }
+  for (const callback of callbacks) try {
+    const returned = callback(...args);
+    Promise.resolve(returned).catch((error62) => context.logger.error(error62));
+  } catch (error62) {
+    context.logger.error(error62);
+  }
+}
+var CordisError = class CordisError2 extends Error {
+  code;
+  /**
+  * @param code — the stable error code; also the default message.
+  * @param message — optional human-readable override.
+  */
+  constructor(code, message) {
+    super(message ?? CordisError2.Code[code]);
+    this.code = code;
+  }
+};
+(function(CordisError3) {
+  CordisError3.Code = { INACTIVE_EFFECT: "cannot create effect on inactive context" };
+})(CordisError || (CordisError = {}));
+var INACTIVE = "__INACTIVE__";
+var Fiber = class {
+  parent;
+  inject;
+  runtime;
+  /** Unique id within the registry; 0 for the root fiber, `null` once disposed. */
+  uid;
+  /** The context this fiber's plugin runs in (extends the parent context). */
+  ctx;
+  /** The validated plugin config (updated by `update()`). */
+  config;
+  /** The raw plugin config, re-resolved before each activation. */
+  _config;
+  /** Current lifecycle state; transitions emit `internal/status`. */
+  state = 0;
+  /** Dispose this fiber: unload the plugin, then settle once cleanup finished. */
+  dispose;
+  /** Snapshot of required service implementations while loaded; `undefined` otherwise. */
+  store;
+  /** The in-flight load/unload transition, if one is currently running. */
+  inertia;
+  _hooks = /* @__PURE__ */ Object.create(null);
+  _disposables = new DisposableList();
+  context;
+  _error;
+  _runner;
+  _store = /* @__PURE__ */ Object.create(null);
+  /**
+  * Create a fiber. Plugin authors normally obtain fibers from `ctx.plugin()`
+  * rather than constructing them directly.
+  *
+  * @param parent — the context the plugin was loaded from.
+  * @param config — raw config, validated against the runtime's schema.
+  * @param inject — resolved dependency map (service name → intercept config).
+  * @param runtime — the shared plugin runtime, or `null` for the root fiber.
+  * @param getOuterStack — captures the caller stack for effect diagnostics.
+  */
+  constructor(parent, config2, inject, runtime, getOuterStack) {
+    this.parent = parent;
+    this.inject = inject;
+    this.runtime = runtime;
+    this._config = config2;
+    const collect = (dispose) => {
+      this._disposables.push(dispose);
+    };
+    if (runtime) {
+      this.uid = parent.registry.counter;
+      this.ctx = this.context = parent.extend({ fiber: this });
+      const injectEntries = Object.entries(this.inject);
+      if (injectEntries.length) {
+        this.ctx[Context.intercept] = Object.create(parent[Context.intercept]);
+        for (const [name2, config3] of injectEntries) {
+          if (isNullable(config3)) continue;
+          this.ctx[Context.intercept][name2] = config3;
+        }
+      }
+      this._runner = {
+        epoch: INACTIVE,
+        getOuterStack,
+        execute: function() {
+          if (isConstructor(runtime.callback)) {
+            const instance = new runtime.callback(this.ctx, this.config);
+            for (const hook of instance?.[symbols.initHooks] ?? []) hook();
+            return instance?.[symbols.init]?.();
+          } else return runtime.callback(this.ctx, this.config);
+        },
+        collect
+      };
+      this.dispose = parent.fiber.effect(() => {
+        const remove = runtime.fibers.push(this);
+        return async () => {
+          this.uid = null;
+          emitPluginDisposed(this.context, this);
+          if (this.ctx.registry.has(runtime.callback)) {
+            remove();
+            if (!runtime.fibers.length) this.ctx.registry.delete(runtime.callback);
+          }
+          this._setEpoch(INACTIVE);
+          if (!this.inertia) this._updateState(() => {
+            this.inertia = this._unload();
+            return 5;
+          });
+          while (this.inertia) await this.inertia;
+        };
+      }, "ctx.plugin()");
+      try {
+        this.context.emit("internal/plugin", this);
+      } catch (error62) {
+        Promise.resolve(this.dispose()).catch((reason) => this.ctx.logger.error(reason));
+        throw error62;
+      }
+      if (this.uid !== null && parent.fiber.state !== 5) {
+        for (const name2 of Object.keys(this.inject)) this._checkImpl(name2);
+        this._refresh();
+      }
+    } else {
+      this.uid = 0;
+      this.ctx = this.context = parent;
+      this.state = 2;
+      this.store = /* @__PURE__ */ Object.create(null);
+      this._runner = {
+        epoch: "",
+        getOuterStack,
+        execute: () => {
+        },
+        collect
+      };
+      this.dispose = () => this.restart();
+    }
+  }
+  /** The plugin's display name, inherited from the nearest named ancestor, else `'root'`. */
+  get name() {
+    let fiber = this;
+    do {
+      if (fiber.runtime?.name) return fiber.runtime.name;
+      fiber = fiber.parent.fiber;
+    } while (fiber !== fiber.parent.fiber);
+    return "root";
+  }
+  /**
+  * Throw if the fiber has already been disposed.
+  *
+  * @returns nothing when the fiber is still active.
+  * @throws {CordisError} `INACTIVE_EFFECT` when the fiber's uid has been cleared.
+  */
+  assertActive() {
+    if (this.uid !== null) return;
+    throw new CordisError("INACTIVE_EFFECT");
+  }
+  _execute(runner) {
+    const oldEpoch = runner.epoch;
+    return composeError((info) => {
+      const safeCollect = (dispose) => {
+        if (typeof dispose === "function") runner.collect(dispose);
+        else if (!isNullable(dispose)) throw new TypeError("Invalid effect");
+      };
+      const effect = runner.execute.call(this);
+      if (typeof effect === "function") return runner.collect(effect);
+      else if (isNullable(effect)) {
+      } else if (!isObject(effect)) throw new TypeError("Invalid effect");
+      else if ("then" in effect) return effect.then(safeCollect);
+      else if (Symbol.iterator in effect) {
+        info.error = /* @__PURE__ */ new Error();
+        const iter = effect[Symbol.iterator]();
+        while (true) {
+          const result = iter.next();
+          safeCollect(result.value);
+          if (result.done) return;
+        }
+      } else if (Symbol.asyncIterator in effect) {
+        const iter = effect[Symbol.asyncIterator]();
+        return (async () => {
+          await Promise.resolve();
+          info.error = /* @__PURE__ */ new Error();
+          while (true) {
+            if (runner.epoch !== oldEpoch) return;
+            const result = await iter.next();
+            safeCollect(result.value);
+            if (result.done) return;
+          }
+        })();
+      } else throw new TypeError("Invalid effect");
+    }, runner.getOuterStack);
+  }
+  effect(execute, label = "anonymous") {
+    this.assertActive();
+    if (this.state === 5) throw new CordisError("INACTIVE_EFFECT");
+    const disposables = [];
+    let disposing = false;
+    let disposalTask;
+    const dispose = () => {
+      if (disposing) return disposalTask;
+      disposing = true;
+      let task2;
+      for (const disposable of disposables.splice(0).reverse()) if (task2) task2 = task2.then(() => runDisposable(disposable));
+      else {
+        const result = runDisposable(disposable);
+        if (isObject(result) && "then" in result) task2 = result;
+      }
+      return disposalTask = task2;
+    };
+    const meta3 = {
+      label,
+      children: []
+    };
+    const runner = {
+      execute,
+      epoch: true,
+      collect: (dispose2) => {
+        disposables.push(dispose2);
+        this._disposables.delete(dispose2);
+        if (dispose2[symbols.effect]) meta3.children.push(dispose2[symbols.effect]);
+      },
+      getOuterStack: buildOuterStack()
+    };
+    let task;
+    let executing = true;
+    let resolveSetup;
+    let rejectSetup;
+    let setupBarrier;
+    let setupFailed = false;
+    let inFlight;
+    let removeWrapper = () => false;
+    const waitForSetup = () => {
+      setupBarrier ??= new Promise((resolve10, reject) => {
+        resolveSetup = resolve10;
+        rejectSetup = reject;
+      });
+      return setupBarrier;
+    };
+    const disposeAfter = (setup) => {
+      return Promise.resolve(setup).then(() => dispose(), async (reason) => {
+        await dispose();
+        throw reason;
+      });
+    };
+    const finalizeDisposal = (callback) => {
+      let result;
+      try {
+        result = callback();
+      } catch (error62) {
+        removeWrapper();
+        throw error62;
+      }
+      if (isObject(result) && "then" in result) {
+        const pending = Promise.resolve(result).finally(() => {
+          removeWrapper();
+          if (inFlight === pending) inFlight = void 0;
+        });
+        return inFlight = pending;
+      }
+      removeWrapper();
+      return result;
+    };
+    const wrapper = defineProperty(() => {
+      if (!runner.epoch) return setupFailed ? inFlight : void 0;
+      runner.epoch = false;
+      return finalizeDisposal(() => {
+        if (executing) return disposeAfter(waitForSetup());
+        return task ? disposeAfter(task) : dispose();
+      });
+    }, symbols.effect, meta3);
+    effectInertia.set(wrapper, () => inFlight);
+    removeWrapper = this._disposables.push(wrapper);
+    try {
+      task = this._execute(runner);
+    } catch (reason) {
+      executing = false;
+      setupFailed = true;
+      runner.epoch = false;
+      let cleanup;
+      try {
+        cleanup = finalizeDisposal(dispose);
+      } finally {
+        rejectSetup?.(reason);
+      }
+      if (isObject(cleanup) && "then" in cleanup) cleanup.catch((error62) => this.ctx.logger.error(error62));
+      throw reason;
+    }
+    executing = false;
+    if (setupBarrier) Promise.resolve(task).then(resolveSetup, rejectSetup);
+    task?.catch(() => {
+      if (!runner.epoch) return dispose();
+      return finalizeDisposal(dispose);
+    }).catch((error62) => this.ctx.logger.error(error62));
+    const disposeAsync = () => {
+      if (!runner.epoch) return;
+      runner.epoch = false;
+      return finalizeDisposal(dispose);
+    };
+    wrapper.then = async (onFulfilled, onRejected) => {
+      return Promise.resolve(task).then(() => disposeAsync).then(onFulfilled, onRejected);
+    };
+    return wrapper;
+  }
+  /**
+  * Return metadata for currently registered effects.
+  *
+  * @returns one {@link EffectMeta} tree per labeled live effect.
+  */
+  getEffects() {
+    return [...this._disposables].map((dispose) => dispose[symbols.effect]).filter(Boolean);
+  }
+  _getState() {
+    if (this.uid === null) return 4;
+    if (this._error) return 3;
+    if (this._runner.epoch !== INACTIVE) return 2;
+    return 0;
+  }
+  _updateState(callback) {
+    const oldState = this.state;
+    this.state = callback() ?? this._getState();
+    if (oldState === this.state) return;
+    this.context.emit("internal/status", this, oldState);
+    if (oldState !== 2 && this.state !== 2) return;
+    for (const key of Reflect.ownKeys(this.ctx.reflect.store)) {
+      const impl = this.ctx.reflect.store[key];
+      if (impl.fiber !== this) continue;
+      this.ctx.reflect.notify([impl.name]);
+    }
+  }
+  _checkImpl(name2) {
+    const impl = this.ctx.reflect._getImpl(name2, true);
+    if (!impl) return delete this._store[name2];
+    try {
+      if (impl.check && !impl.check.call(getTraceable(this.ctx, impl.value))) return delete this._store[name2];
+    } catch (error62) {
+      impl.fiber.ctx.logger.error(error62);
+      return delete this._store[name2];
+    }
+    this._store[name2] = impl;
+  }
+  _refresh() {
+    let epoch = false;
+    epoch = "";
+    for (const name2 of Object.keys(this.inject)) {
+      const impl = this._store[name2];
+      if (!impl) {
+        epoch = INACTIVE;
+        break;
+      }
+      epoch += ":" + impl.fiber.uid;
+    }
+    this._setEpoch(epoch);
+  }
+  _setEpoch(epoch) {
+    const oldEpoch = this._runner.epoch;
+    if (epoch === oldEpoch) return;
+    this._runner.epoch = epoch;
+    if (this.inertia) return;
+    this._updateState(() => {
+      if (epoch !== INACTIVE && oldEpoch === INACTIVE) {
+        this.inertia = this._reload();
+        return 1;
+      } else {
+        this.inertia = this._unload();
+        return 5;
+      }
+    });
+  }
+  _resolveConfig(config2) {
+    config2 = this.context.waterfall(this, "internal/config", config2, () => config2);
+    return this.runtime ? resolveConfig(this.runtime, config2) : config2;
+  }
+  async _reload() {
+    this.store = { ...this._store };
+    const oldEpoch = this._runner.epoch;
+    try {
+      await Promise.resolve();
+      if (this._runner.epoch === oldEpoch) {
+        this.config = this._resolveConfig(this._config);
+        await this._execute(this._runner);
+        this._error = void 0;
+      }
+    } catch (reason) {
+      this.ctx.logger.error(reason);
+      this._error = reason;
+      this._runner.epoch = INACTIVE;
+    }
+    this._updateState(() => {
+      if (this._runner.epoch === oldEpoch) this.inertia = void 0;
+      else {
+        this.inertia = this._unload();
+        return 5;
+      }
+    });
+  }
+  async _unload() {
+    await Promise.all(this._disposables.clear().map(async (dispose) => {
+      try {
+        await composeError(async (info) => {
+          await Promise.resolve();
+          info.error = /* @__PURE__ */ new Error();
+          await runDisposable(dispose);
+        }, this._runner.getOuterStack);
+      } catch (reason) {
+        this.ctx.logger.error(reason);
+      }
+    }));
+    this.store = void 0;
+    this._updateState(() => {
+      if (this._runner.epoch === INACTIVE) this.inertia = void 0;
+      else {
+        this.inertia = this._reload();
+        return 1;
+      }
+    });
+  }
+  /**
+  * Wait for current lifecycle work and rethrow startup errors.
+  *
+  * @returns this fiber, once it has settled into a stable state.
+  * @throws the config-validation or plugin-startup error, if any.
+  */
+  async await() {
+    while (this.inertia) await this.inertia;
+    if (this._error) throw this._error;
+    return this;
+  }
+  /**
+  * Dispose and immediately reload this plugin with its current config.
+  *
+  * @returns a promise resolving once the reload settled.
+  * @throws {CordisError} `INACTIVE_EFFECT` when the fiber is already disposed.
+  */
+  async restart() {
+    this.assertActive();
+    this._setEpoch(INACTIVE);
+    this._refresh();
+    await this.await();
+  }
+  /**
+  * Validate and apply new config, then restart the plugin.
+  *
+  * Runs the `internal/update` waterfall first, so update hooks (and HMR)
+  * can veto or replace the restart.
+  *
+  * @param config — the new raw config; validated before anything restarts.
+  * @param noSave — hint for persistence hooks not to write the change back.
+  * @returns nothing; the restart runs behind the `internal/update` waterfall.
+  * @throws {ValidationError} when the new config fails validation.
+  */
+  update(config2, noSave = false) {
+    this.assertActive();
+    this._config = config2;
+    if (this.state !== 2) {
+      this._error = void 0;
+      this._setEpoch(INACTIVE);
+      this._refresh();
+      return;
+    }
+    config2 = this._resolveConfig(config2);
+    this.context.waterfall(this, "internal/update", config2, noSave, () => {
+      this.config = config2;
+      this._error = void 0;
+      return this.restart();
+    });
+  }
+};
+function isApplicable(object6) {
+  return object6 && typeof object6 === "object" && typeof object6.apply === "function";
+}
+function Inject(name2, config2) {
+  return function(value, decorator) {
+    if (decorator.kind === "class") {
+      if (!Object.hasOwn(value, "inject")) {
+        defineProperty(value, "inject", Object.create(Object.getPrototypeOf(value).inject ?? null));
+        defineProperty(value.inject, symbols.checkProto, true);
+      }
+      value.inject[name2] = config2;
+    } else if (decorator.kind === "method") {
+      const inject = (value[symbols.metadata] ??= {}).inject ??= /* @__PURE__ */ Object.create(null);
+      inject[name2] = config2;
+      decorator.addInitializer(function() {
+        const property2 = this[symbols.tracker]?.property;
+        (this[symbols.initHooks] ??= []).push(() => {
+          this.ctx.inject(inject, (ctx) => {
+            return value.call(property2 ? withProps(this, { [property2]: ctx }) : this);
+          });
+        });
+      });
+    } else throw new Error("@Inject() can only be used on class or class methods");
+  };
+}
+(function(Inject2) {
+  function resolve10(inject, result = /* @__PURE__ */ Object.create(null)) {
+    if (!inject) return result;
+    if (Array.isArray(inject)) for (const name2 of inject) result[name2] = null;
+    else if (Reflect.has(inject, symbols.checkProto)) {
+      Object.assign(result, resolve10(Object.getPrototypeOf(inject)));
+      for (const name2 of Object.keys(inject)) result[name2] = inject[name2] ?? null;
+    } else for (const name2 of Object.keys(inject)) result[name2] = inject[name2] ?? null;
+    return result;
+  }
+  Inject2.resolve = resolve10;
+})(Inject || (Inject = {}));
+var RegistryService = class {
+  ctx;
+  _counter = 0;
+  _internal = /* @__PURE__ */ new Map();
+  constructor(ctx) {
+    this.ctx = ctx;
+    defineProperty(this, symbols.tracker, {
+      property: "ctx",
+      noShadow: true
+    });
+  }
+  /** Allocate the next fiber uid (increments on every read). */
+  get counter() {
+    return ++this._counter;
+  }
+  /** Number of registered plugin runtimes. */
+  get size() {
+    return this._internal.size;
+  }
+  /**
+  * Resolve a supported plugin shape to its executable callback.
+  *
+  * @param plugin — a function, class, or `{ apply }` object plugin.
+  * @returns the callback identifying the plugin, or `undefined` if invalid.
+  */
+  resolve(plugin) {
+    try {
+      if (typeof plugin === "function") return plugin;
+      if (isApplicable(plugin)) return plugin.apply;
+    } catch {
+    }
+  }
+  /**
+  * Look up the runtime record for a plugin.
+  *
+  * @param plugin — any supported plugin shape.
+  * @returns the runtime, or `undefined` when the plugin is not registered.
+  */
+  get(plugin) {
+    const key = this.resolve(plugin);
+    return key && this._internal.get(key);
+  }
+  /**
+  * Check whether a plugin has a registered runtime.
+  *
+  * @param plugin — any supported plugin shape.
+  * @returns `true` when at least one fiber of the plugin exists.
+  */
+  has(plugin) {
+    const key = this.resolve(plugin);
+    return !!key && this._internal.has(key);
+  }
+  /**
+  * Dispose every running fiber for a plugin and remove its runtime record.
+  *
+  * @param plugin — any supported plugin shape.
+  * @returns the removed runtime, or `undefined` when none was registered.
+  */
+  delete(plugin) {
+    const key = this.resolve(plugin);
+    const runtime = key && this._internal.get(key);
+    if (!runtime) return;
+    this._internal.delete(key);
+    for (const fiber of runtime.fibers) fiber.dispose();
+    return runtime;
+  }
+  /** Iterate the registered plugin callbacks. */
+  keys() {
+    return this._internal.keys();
+  }
+  /** Iterate the registered plugin runtimes. */
+  values() {
+    return this._internal.values();
+  }
+  /** Iterate `[callback, runtime]` pairs. */
+  entries() {
+    return this._internal.entries();
+  }
+  /**
+  * Visit every registered runtime.
+  *
+  * @param callback — receives each runtime and its identifying callback.
+  */
+  forEach(callback) {
+    return this._internal.forEach(callback);
+  }
+  /**
+  * Start a callback once the requested dependencies are available.
+  *
+  * @param inject — required services, as an array or a name → config map.
+  * @param callback — plugin body called with `(ctx, config)`.
+  * @returns the fiber; awaiting it settles once loading finished.
+  */
+  inject(inject, callback) {
+    return this.plugin({
+      inject,
+      apply: callback,
+      name: callback.name
+    });
+  }
+  /**
+  * Start a plugin in the current context and return its fiber.
+  *
+  * Creates (or reuses) the plugin's runtime record, then starts a new fiber
+  * under the current context. Throws if `plugin` is not a supported shape or
+  * if the current fiber is already disposed.
+  *
+  * @param plugin — a function, class, or `{ apply }` object plugin.
+  * @param config — the plugin config, validated against its `Config` schema.
+  * @param getOuterStack — captures the caller stack for effect diagnostics.
+  * @returns the fiber; awaiting it settles once loading finished.
+  */
+  plugin(plugin, config2, getOuterStack = buildOuterStack()) {
+    const callback = this.resolve(plugin);
+    if (!callback) throw new Error('invalid plugin, expect function or object with an "apply" method, received ' + typeof plugin);
+    this.ctx.fiber.assertActive();
+    let runtime = this._internal.get(callback);
+    if (!runtime) {
+      let name2 = plugin.name;
+      if (name2 === "apply") name2 = void 0;
+      runtime = {
+        name: name2,
+        callback,
+        fibers: new DisposableList(),
+        Config: plugin.Config
+      };
+      this._internal.set(callback, runtime);
+    }
+    const fiber = new Fiber(this.ctx, config2, Inject.resolve(plugin.inject), runtime, getOuterStack);
+    const wrapped = Object.create(fiber);
+    wrapped.then = (onFulfilled, onRejected) => {
+      return fiber.await().then(onFulfilled, onRejected);
+    };
+    return wrapped;
+  }
+};
+var Context = class Context2 {
+  /** Symbol key under which a disposer exposes its {@link EffectMeta} diagnostics tree. */
+  static effect = symbols.effect;
+  /** Symbol key for a context's listener filter, consulted on every event dispatch. */
+  static filter = symbols.filter;
+  /** Symbol key of the isolation map (see the `Context[symbols.isolate]` property). */
+  static isolate = symbols.isolate;
+  /** Symbol key of the intercept map (see the `Context[symbols.intercept]` property). */
+  static intercept = symbols.intercept;
+  /**
+  * Returns true for Cordis context proxies and context prototypes.
+  *
+  * Works across realms and across multiple copies of cordis, because the
+  * brand is keyed by a global symbol rather than by `instanceof`.
+  *
+  * @param value — the value to test.
+  * @returns `true` if `value` is a Cordis context, narrowing its type.
+  */
+  static is(value) {
+    return !!value?.[Context2.is];
+  }
+  static {
+    Context2.is[Symbol.toPrimitive] = () => Symbol.for("cordis.is");
+    Context2.prototype[Context2.is] = true;
+  }
+  /** Create the root context and install the built-in services. */
+  constructor() {
+    this[symbols.isolate] = /* @__PURE__ */ Object.create(null);
+    this[symbols.intercept] = /* @__PURE__ */ Object.create(null);
+    const self = new Proxy(this, ReflectService.handler);
+    this.root = self;
+    this.baseUrl = void 0;
+    this.fiber = new Fiber(self, {}, /* @__PURE__ */ Object.create(null), null, () => []);
+    this.reflect = new ReflectService(self);
+    this.registry = new RegistryService(self);
+    this.events = new EventsService(self);
+    this.logger = new LoggerService(self);
+    this.fiber._disposables.clear();
+    return self;
+  }
+  [Symbol.for("nodejs.util.inspect.custom")]() {
+    return `Context <${this.fiber.name}>`;
+  }
+  /**
+  * Create a child context with extra metadata on top of the current scope.
+  *
+  * The child prototypally inherits every property of this context; own
+  * properties of `meta` shadow the inherited ones. The parent is not mutated.
+  *
+  * @param meta — own properties (including symbol keys) to define on the child.
+  * @returns a child context inheriting from this one.
+  */
+  extend(meta3 = {}) {
+    const shadow = Reflect.getOwnPropertyDescriptor(this, symbols.shadow)?.value;
+    const self = Object.create(getTraceable(this, this));
+    for (const prop of Reflect.ownKeys(meta3)) Object.defineProperty(self, prop, Reflect.getOwnPropertyDescriptor(meta3, prop));
+    if (!shadow) return self;
+    return Object.assign(Object.create(self), { [symbols.shadow]: shadow });
+  }
+  /**
+  * Create a child context with an independent service scope for `name`.
+  *
+  * Below the returned context, reads and writes of the service `name`
+  * resolve against the new label instead of the parent's, so a different
+  * implementation can be provided without affecting the parent scope.
+  * Passing the same `label` to two `isolate()` calls joins their scopes.
+  *
+  * @param name — the service name to isolate.
+  * @param label — scope label to join; defaults to a fresh unique symbol.
+  * @returns a child context whose `name` service resolves in the new scope.
+  */
+  isolate(name2, label) {
+    const shadow = Object.create(this[symbols.isolate]);
+    shadow[name2] = label ?? Symbol(name2);
+    return this.extend({ [symbols.isolate]: shadow });
+  }
+  intercept(name2, config2) {
+    const intercept = Object.create(this[symbols.intercept]);
+    intercept[name2] = config2;
+    return this.extend({ [symbols.intercept]: intercept });
+  }
+};
+var Service = class Service2 {
+  ctx;
+  /** Symbol key of an instance method run after construction (class plugins). */
+  static init = symbols.init;
+  /** Symbol key of the availability predicate passed to `ctx.provide()`. */
+  static check = symbols.check;
+  /** Symbol key of the phantom intercept-config type parameter. */
+  static config = symbols.config;
+  /** Symbol key of the call body making a service callable (e.g. `ctx.logger()`). */
+  static invoke = symbols.invoke;
+  /** Symbol key of the helper deriving an extended service instance. */
+  static extend = symbols.extend;
+  /** Symbol key of the tracker metadata used for context tracing. */
+  static tracker = symbols.tracker;
+  /** Symbol key of the intercept-config resolution helper below. */
+  static resolveConfig = symbols.resolveConfig;
+  /** The service name this instance is registered under. */
+  name;
+  /**
+  * Register this instance as `name` in the current context.
+  *
+  * Calls `ctx.reflect.provide(name, this, this[Service.check])`, so the
+  * service is unregistered automatically when the owning fiber unloads.
+  * Services with a `[Service.invoke]` body return a callable instance.
+  *
+  * @param ctx — the context to register in (stored as `this.ctx`).
+  * @param name — the service name; defaults to the static `provide` field.
+  */
+  constructor(ctx, name2) {
+    this.ctx = ctx;
+    name2 ??= this.constructor["provide"];
+    let self = this;
+    const tracker = {
+      associate: name2,
+      property: "ctx"
+    };
+    if (self[symbols.invoke]) self = createCallable(name2, joinPrototype(Object.getPrototypeOf(this), Function.prototype), tracker);
+    self.ctx = ctx;
+    self.name = name2;
+    defineProperty(self, symbols.tracker, tracker);
+    self.ctx.reflect.provide(name2, self, this[symbols.check]);
+    return self;
+  }
+  [symbols.filter](ctx) {
+    return ctx[symbols.isolate][this.name] === this.ctx[symbols.isolate][this.name];
+  }
+  [symbols.extend](props) {
+    let self;
+    if (this[Service2.invoke]) self = createCallable(this.name, this, this[symbols.tracker]);
+    else self = Object.create(this);
+    return Object.assign(self, props);
+  }
+  /**
+  * Merge intercept config from ancestors with optional base and head values.
+  *
+  * Entries added closer to the root apply first; `base` is prepended and
+  * `head` appended. Uses `Config.merge` when the service declares one,
+  * otherwise a shallow `Object.assign`.
+  *
+  * @param base — lowest-precedence config merged before all intercepts.
+  * @param head — highest-precedence config merged after all intercepts.
+  * @returns the merged config.
+  */
+  [symbols.resolveConfig](base, head) {
+    let intercept = this.ctx[Context.intercept];
+    const configs = [];
+    while (this.name in intercept) {
+      if (Object.hasOwn(intercept, this.name)) configs.unshift(intercept[this.name]);
+      intercept = Object.getPrototypeOf(intercept);
+    }
+    if (base) configs.unshift(base);
+    if (head) configs.push(head);
+    if (this["Config"]?.merge) return this["Config"].merge(...configs);
+    else return Object.assign({}, ...configs);
+  }
+  static [Symbol.hasInstance](instance) {
+    if (!instance) return false;
+    let constructor = instance.constructor;
+    while (constructor) {
+      constructor = constructor.prototype?.constructor;
+      if (constructor === this) return true;
+      constructor &&= Object.getPrototypeOf(constructor);
+    }
+    return false;
+  }
+};
+
 // packages/plugin/src/local-mention-upload.ts
 import { lstat, readFile } from "node:fs/promises";
 import { posix, win32 } from "node:path";
@@ -44874,7 +46859,7 @@ __export(external_exports, {
   check: () => check,
   cidrv4: () => cidrv42,
   cidrv6: () => cidrv62,
-  clone: () => clone,
+  clone: () => clone2,
   codec: () => codec,
   coerce: () => coerce_exports,
   compile: () => compile,
@@ -45287,7 +47272,7 @@ __export(core_exports2, {
   base64Charset: () => base64Charset,
   base64urlCharset: () => base64urlCharset,
   canParseURL: () => canParseURL,
-  clone: () => clone,
+  clone: () => clone2,
   compile: () => compile,
   compileFn: () => compileFn,
   config: () => config,
@@ -45372,7 +47357,7 @@ __export(util_exports, {
   captureStackTrace: () => captureStackTrace,
   cleanEnum: () => cleanEnum,
   cleanRegex: () => cleanRegex,
-  clone: () => clone,
+  clone: () => clone2,
   cloneDef: () => cloneDef,
   codePointLength: () => codePointLength,
   constantCatch: () => constantCatch,
@@ -45394,8 +47379,8 @@ __export(util_exports, {
   hexToUint8Array: () => hexToUint8Array,
   hide: () => hide,
   installLazyProp: () => installLazyProp,
-  isObject: () => isObject,
-  isPlainObject: () => isPlainObject,
+  isObject: () => isObject2,
+  isPlainObject: () => isPlainObject2,
   issue: () => issue,
   joinValues: () => joinValues,
   jsonStringifyReplacer: () => jsonStringifyReplacer,
@@ -45411,7 +47396,7 @@ __export(util_exports, {
   own: () => own,
   parsedType: () => parsedType,
   partial: () => partial,
-  pick: () => pick,
+  pick: () => pick2,
   prefixIssues: () => prefixIssues,
   primitiveTypes: () => primitiveTypes,
   promiseAllObject: () => promiseAllObject,
@@ -45619,7 +47604,7 @@ function slugify(input4) {
 }
 var captureStackTrace = "captureStackTrace" in Error ? Error.captureStackTrace : (..._args) => {
 };
-function isObject(data2) {
+function isObject2(data2) {
   return typeof data2 === "object" && data2 !== null && !Array.isArray(data2);
 }
 var allowsEval = /* @__PURE__ */ cached(() => {
@@ -45637,8 +47622,8 @@ var allowsEval = /* @__PURE__ */ cached(() => {
     return false;
   }
 });
-function isPlainObject(o) {
-  if (isObject(o) === false)
+function isPlainObject2(o) {
+  if (isObject2(o) === false)
     return false;
   const ctor = o.constructor;
   if (ctor === void 0)
@@ -45646,7 +47631,7 @@ function isPlainObject(o) {
   if (typeof ctor !== "function")
     return true;
   const prot = ctor.prototype;
-  if (isObject(prot) === false)
+  if (isObject2(prot) === false)
     return false;
   if (Object.prototype.hasOwnProperty.call(prot, "isPrototypeOf") === false) {
     return false;
@@ -45654,7 +47639,7 @@ function isPlainObject(o) {
   return true;
 }
 function shallowClone(o) {
-  if (isPlainObject(o))
+  if (isPlainObject2(o))
     return { ...o };
   if (Array.isArray(o))
     return [...o];
@@ -45729,7 +47714,7 @@ var primitiveTypes = /* @__PURE__ */ new Set([
 function escapeRegex(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
-function clone(inst, def, params) {
+function clone2(inst, def, params) {
   const cl = new inst._zod.constr(def ?? inst._zod.def);
   if (!def || params?.parent)
     cl._zod.parent = inst;
@@ -45807,7 +47792,7 @@ var BIGINT_FORMAT_RANGES = {
   int64: [/* @__PURE__ */ BigInt("-9223372036854775808"), /* @__PURE__ */ BigInt("9223372036854775807")],
   uint64: [/* @__PURE__ */ BigInt(0), /* @__PURE__ */ BigInt("18446744073709551615")]
 };
-function pick(schema, mask) {
+function pick2(schema, mask) {
   const currDef = schema._zod.def;
   const checks = currDef.checks;
   const hasChecks = checks && checks.length > 0;
@@ -45816,7 +47801,7 @@ function pick(schema, mask) {
   }
   const newShape = {};
   mirrorShape(newShape, schema, maskedKeys(schema, mask));
-  return clone(schema, mergeDefs(currDef, { shape: newShape, checks: [] }));
+  return clone2(schema, mergeDefs(currDef, { shape: newShape, checks: [] }));
 }
 function maskedKeys(schema, mask) {
   const raw = sourceShape(schema);
@@ -45840,10 +47825,10 @@ function omit(schema, mask) {
   const omitted = new Set(maskedKeys(schema, mask));
   const newShape = {};
   mirrorShape(newShape, schema, Reflect.ownKeys(sourceShape(schema)).filter((key) => !omitted.has(key)));
-  return clone(schema, mergeDefs(currDef, { shape: newShape, checks: [] }));
+  return clone2(schema, mergeDefs(currDef, { shape: newShape, checks: [] }));
 }
 function extend(schema, shape) {
-  if (!isPlainObject(shape)) {
+  if (!isPlainObject2(shape)) {
     throw new Error("Invalid input to extend: expected a plain object");
   }
   const checks = schema._zod.def.checks;
@@ -45856,7 +47841,7 @@ function extend(schema, shape) {
       }
     }
   }
-  return clone(schema, mergeDefs(schema._zod.def, { shape: extended(schema, shape) }));
+  return clone2(schema, mergeDefs(schema._zod.def, { shape: extended(schema, shape) }));
 }
 function extended(schema, shape) {
   const newShape = {};
@@ -45865,10 +47850,10 @@ function extended(schema, shape) {
   return newShape;
 }
 function safeExtend(schema, shape) {
-  if (!isPlainObject(shape)) {
+  if (!isPlainObject2(shape)) {
     throw new Error("Invalid input to safeExtend: expected a plain object");
   }
-  return clone(schema, mergeDefs(schema._zod.def, { shape: extended(schema, shape) }));
+  return clone2(schema, mergeDefs(schema._zod.def, { shape: extended(schema, shape) }));
 }
 function merge(a, b) {
   if (!b?._zod?.def) {
@@ -45887,7 +47872,7 @@ function merge(a, b) {
     },
     checks: b._zod.def.checks ?? []
   });
-  return clone(a, def);
+  return clone2(a, def);
 }
 function partial(Class2, schema, mask, name2 = "partial") {
   const currDef = schema._zod.def;
@@ -45899,7 +47884,7 @@ function partial(Class2, schema, mask, name2 = "partial") {
   const selected = mask ? new Set(maskedKeys(schema, mask)) : void 0;
   const newShape = {};
   mirrorShape(newShape, schema, Reflect.ownKeys(sourceShape(schema)), Class2 && ((value, key) => selected && !selected.has(key) ? value : new Class2({ type: "optional", innerType: value })));
-  return clone(schema, mergeDefs(schema._zod.def, { shape: newShape, checks: [] }));
+  return clone2(schema, mergeDefs(schema._zod.def, { shape: newShape, checks: [] }));
 }
 function required(Class2, schema, mask) {
   const selected = mask ? new Set(maskedKeys(schema, mask)) : void 0;
@@ -45908,7 +47893,7 @@ function required(Class2, schema, mask) {
     // overwrite with non-optional
     selected && !selected.has(key) ? value : new Class2({ type: "nonoptional", innerType: value })
   ));
-  return clone(schema, mergeDefs(schema._zod.def, { shape: newShape }));
+  return clone2(schema, mergeDefs(schema._zod.def, { shape: newShape }));
 }
 function aborted(x, startIndex = 0) {
   if (x.aborted === true)
@@ -48332,7 +50317,7 @@ var $ZodObject = /* @__PURE__ */ $constructor("$ZodObject", (inst, def) => {
     }
     return propValues;
   });
-  const isObject4 = isObject;
+  const isObject5 = isObject2;
   const catchall = def.catchall;
   let value;
   const memo2 = globalConfig.memoizer;
@@ -48340,7 +50325,7 @@ var $ZodObject = /* @__PURE__ */ $constructor("$ZodObject", (inst, def) => {
   inst._zod.parse = (payload, ctx) => {
     value ?? (value = _normalized.value);
     const input4 = payload.value;
-    if (!isObject4(input4)) {
+    if (!isObject5(input4)) {
       payload.issues.push({
         expected: "object",
         code: "invalid_type",
@@ -48476,7 +50461,7 @@ var $ZodObjectJIT = /* @__PURE__ */ $constructor("$ZodObjectJIT", (inst, def) =>
     return doc.compile();
   };
   let fastpass;
-  const isObject4 = isObject;
+  const isObject5 = isObject2;
   const jit = !globalConfig.jitless;
   const allowsEval2 = allowsEval;
   const fastEnabled = jit && allowsEval2.value;
@@ -48485,7 +50470,7 @@ var $ZodObjectJIT = /* @__PURE__ */ $constructor("$ZodObjectJIT", (inst, def) =>
   inst._zod.parse = (payload, ctx) => {
     value ?? (value = _normalized.value);
     const input4 = payload.value;
-    if (!isObject4(input4)) {
+    if (!isObject5(input4)) {
       payload.issues.push({
         expected: "object",
         code: "invalid_type",
@@ -48693,7 +50678,7 @@ var $ZodDiscriminatedUnion = /* @__PURE__ */ $constructor("$ZodDiscriminatedUnio
   const disc = cached(() => discriminatorMap(def));
   inst._zod.parse = (payload, ctx) => {
     const input4 = payload.value;
-    if (!isObject(input4)) {
+    if (!isObject2(input4)) {
       payload.issues.push({
         code: "invalid_type",
         expected: "object",
@@ -48745,7 +50730,7 @@ function mergeValues(a, b) {
   if (a instanceof Date && b instanceof Date && +a === +b) {
     return { valid: true, data: a };
   }
-  if (isPlainObject(a) && isPlainObject(b)) {
+  if (isPlainObject2(a) && isPlainObject2(b)) {
     const bKeys = Object.keys(b);
     const sharedKeys = Object.keys(a).filter((key) => bKeys.indexOf(key) !== -1);
     const newObj = { ...a, ...b };
@@ -48966,7 +50951,7 @@ var $ZodRecord = /* @__PURE__ */ $constructor("$ZodRecord", (inst, def) => {
   memo2?.attach(inst);
   inst._zod.parse = (payload, ctx) => {
     const input4 = payload.value;
-    if (!isPlainObject(input4)) {
+    if (!isPlainObject2(input4)) {
       payload.issues.push({
         expected: "record",
         code: "invalid_type",
@@ -57751,7 +59736,7 @@ function withParser(schema, parser) {
   if (isRecursiveSchema(schema)) {
     throw new ZodCompileUnsupportedError("a schema whose subtree contains a reference cycle");
   }
-  const clone3 = clone(schema);
+  const clone3 = clone2(schema);
   const liveRun = schema._zod.run;
   const originalRun = liveRun.__originalRun ?? liveRun;
   const wrapped = (payload, ctx) => {
@@ -59055,7 +61040,7 @@ function generateIntersectionCheck(doc, ctx, schema, accessor) {
 }
 function generateRecordCheck(doc, ctx, schema, accessor) {
   const def = schema._zod.def;
-  const isPlainObjectConst = addConstant(ctx, isPlainObject);
+  const isPlainObjectConst = addConstant(ctx, isPlainObject2);
   doc.write(`if (!${isPlainObjectConst}(${accessor})) return INVALID;`);
   const outputVar = newVar(ctx);
   const kVar = newVar(ctx);
@@ -62045,7 +64030,7 @@ var ZodType = /* @__PURE__ */ $constructor("ZodType", (inst, def) => {
     return this.check(...chks);
   },
   clone(def, params) {
-    return clone(this, def, params);
+    return clone2(this, def, params);
   },
   brand() {
     return this;
@@ -64061,7 +66046,7 @@ function convertBaseSchema(schema, ctx) {
           const patterns = patternKeys.map((p) => new RegExp(p));
           const basePatternSchema = zodSchema;
           zodSchema = zodSchema.check((payload) => {
-            if (!isPlainObject(payload.value))
+            if (!isPlainObject2(payload.value))
               return;
             const unrecognized = [];
             for (const key of Object.keys(payload.value)) {
@@ -64310,11 +66295,11 @@ function visit(schema, fnOrHandlers) {
           if (newCatchall !== def.catchall)
             changed = true;
         }
-        return changed ? clone(s, { ...def, shape: newShape, catchall: newCatchall }) : s;
+        return changed ? clone2(s, { ...def, shape: newShape, catchall: newCatchall }) : s;
       }
       case "array": {
         const mapped = run(def.element);
-        return mapped === def.element ? s : clone(s, { ...def, element: mapped });
+        return mapped === def.element ? s : clone2(s, { ...def, element: mapped });
       }
       case "tuple": {
         const oldItems = def.items;
@@ -64332,17 +66317,17 @@ function visit(schema, fnOrHandlers) {
           if (newRest !== def.rest)
             changed = true;
         }
-        return changed ? clone(s, { ...def, items: newItems, rest: newRest }) : s;
+        return changed ? clone2(s, { ...def, items: newItems, rest: newRest }) : s;
       }
       case "record":
       case "map": {
         const newKey = run(def.keyType);
         const newVal = run(def.valueType);
-        return newKey === def.keyType && newVal === def.valueType ? s : clone(s, { ...def, keyType: newKey, valueType: newVal });
+        return newKey === def.keyType && newVal === def.valueType ? s : clone2(s, { ...def, keyType: newKey, valueType: newVal });
       }
       case "set": {
         const newVal = run(def.valueType);
-        return newVal === def.valueType ? s : clone(s, { ...def, valueType: newVal });
+        return newVal === def.valueType ? s : clone2(s, { ...def, valueType: newVal });
       }
       case "union": {
         const oldOptions = def.options;
@@ -64354,12 +66339,12 @@ function visit(schema, fnOrHandlers) {
             changed = true;
           newOptions.push(mapped);
         }
-        return changed ? clone(s, { ...def, options: newOptions }) : s;
+        return changed ? clone2(s, { ...def, options: newOptions }) : s;
       }
       case "intersection": {
         const newLeft = run(def.left);
         const newRight = run(def.right);
-        return newLeft === def.left && newRight === def.right ? s : clone(s, { ...def, left: newLeft, right: newRight });
+        return newLeft === def.left && newRight === def.right ? s : clone2(s, { ...def, left: newLeft, right: newRight });
       }
       case "optional":
       case "nullable":
@@ -64371,22 +66356,22 @@ function visit(schema, fnOrHandlers) {
       case "promise":
       case "success": {
         const newInner = run(def.innerType);
-        return newInner === def.innerType ? s : clone(s, { ...def, innerType: newInner });
+        return newInner === def.innerType ? s : clone2(s, { ...def, innerType: newInner });
       }
       case "pipe": {
         const newIn = run(def.in);
         const newOut = run(def.out);
-        return newIn === def.in && newOut === def.out ? s : clone(s, { ...def, in: newIn, out: newOut });
+        return newIn === def.in && newOut === def.out ? s : clone2(s, { ...def, in: newIn, out: newOut });
       }
       case "function": {
         const newInput = run(def.input);
         const newOutput = run(def.output);
-        return newInput === def.input && newOutput === def.output ? s : clone(s, { ...def, input: newInput, output: newOutput });
+        return newInput === def.input && newOutput === def.output ? s : clone2(s, { ...def, input: newInput, output: newOutput });
       }
       case "lazy": {
         const original = def.getter;
         const { _cachedInner, ...rest } = def;
-        return clone(s, { ...rest, getter: () => run(original()) });
+        return clone2(s, { ...rest, getter: () => run(original()) });
       }
       // A leaf by choice: `parts` are regex fragments, not data positions.
       case "template_literal":
@@ -64437,7 +66422,7 @@ function withChecks(side, checks) {
   if (!checks?.length)
     return side;
   const def = side._zod.def;
-  return clone(side, mergeDefs(def, { checks: [...def.checks ?? [], ...checks] }), { parent: true });
+  return clone2(side, mergeDefs(def, { checks: [...def.checks ?? [], ...checks] }), { parent: true });
 }
 function outSide(def) {
   return withChecks(def.out, def.checks);
@@ -67865,7 +69850,7 @@ var AdaptiveTransport = class extends BaseTransport {
       }
       if (frame.type === "signal.ice") {
         const payload = frame.payload;
-        if (payload.connectionId === this.connectionId && isObject2(payload.candidate)) {
+        if (payload.connectionId === this.connectionId && isObject3(payload.candidate)) {
           this.rtc?.handleSignal({ type: "ice", candidate: payload.candidate });
         }
         return;
@@ -68338,7 +70323,7 @@ var CONTROL_RECOVERY_MAX_DELAY_MS = 15e3;
 function recoveryDelayMs(_attempt, _diagnostic) {
   return Math.random() * CONTROL_RECOVERY_MAX_DELAY_MS;
 }
-function isObject2(value) {
+function isObject3(value) {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 function socketState(readyState) {
@@ -84608,237 +86593,12 @@ async function readPrivateJson(path) {
 // packages/plugin/src/config.ts
 import { hostname as hostname3 } from "node:os";
 
-// node_modules/@deepseek-ai/cosmokit/lib/index.js
-function isNullable(value) {
-  return value === null || value === void 0;
-}
-function isPlainObject2(data2) {
-  return data2 && typeof data2 === "object" && !Array.isArray(data2);
-}
-function filterKeys(object6, filter) {
-  return Object.fromEntries(Object.entries(object6).filter(([key, value]) => filter(key, value)));
-}
-function mapValues(object6, transform2) {
-  return Object.fromEntries(Object.entries(object6).map(([key, value]) => [key, transform2(value, key)]));
-}
-function pick2(source, keys, forced) {
-  if (!keys) return { ...source };
-  const result = {};
-  for (const key of keys) if (forced || source[key] !== void 0) result[key] = source[key];
-  return result;
-}
-var write = Symbol.for("cosmokit.volatile.write");
-function snapshot(value, ancestors = /* @__PURE__ */ new Set()) {
-  if (typeof value === "function") throw new TypeError("volatile config cannot contain functions");
-  if (value === null || typeof value !== "object") return value;
-  if (ancestors.has(value)) throw new TypeError("volatile config cannot contain cycles");
-  ancestors.add(value);
-  try {
-    if (Array.isArray(value)) return Object.freeze(value.map((item) => snapshot(item, ancestors)));
-    if (Object.getPrototypeOf(value) !== Object.prototype && Object.getPrototypeOf(value) !== null) throw new TypeError("volatile config objects must be plain objects or arrays");
-    return Object.freeze(Object.fromEntries(Object.entries(value).map(([key, item]) => [key, snapshot(item, ancestors)])));
-  } finally {
-    ancestors.delete(value);
-  }
-}
-function createVolatile(value) {
-  let current = snapshot(value);
-  return Object.freeze({
-    get: () => current,
-    [write]: (value2) => {
-      current = value2;
-    }
-  });
-}
-function isVolatile(value) {
-  return typeof value === "object" && value !== null && write in value;
-}
-function is(type, value) {
-  if (arguments.length === 1) return (value2) => is(type, value2);
-  return type in globalThis && value instanceof globalThis[type] || Object.prototype.toString.call(value).slice(8, -1) === type;
-}
-function isArrayBufferLike(value) {
-  return is("ArrayBuffer", value) || is("SharedArrayBuffer", value);
-}
-function isArrayBufferSource(value) {
-  return isArrayBufferLike(value) || ArrayBuffer.isView(value);
-}
-var Binary;
-(function(Binary2) {
-  Binary2.is = isArrayBufferLike;
-  Binary2.isSource = isArrayBufferSource;
-  function fromSource(source) {
-    if (ArrayBuffer.isView(source)) return source.buffer.slice(source.byteOffset, source.byteOffset + source.byteLength);
-    else return source;
-  }
-  Binary2.fromSource = fromSource;
-  function toBase64(source) {
-    source = fromSource(source);
-    if (typeof Buffer !== "undefined") return Buffer.from(source).toString("base64");
-    let binary = "";
-    const bytes = new Uint8Array(source);
-    for (let i = 0; i < bytes.byteLength; i++) binary += String.fromCharCode(bytes[i]);
-    return btoa(binary);
-  }
-  Binary2.toBase64 = toBase64;
-  function fromBase64(source) {
-    if (typeof Buffer !== "undefined") return fromSource(Buffer.from(source, "base64"));
-    return Uint8Array.from(atob(source), (c) => c.charCodeAt(0));
-  }
-  Binary2.fromBase64 = fromBase64;
-  function toHex(source) {
-    source = fromSource(source);
-    if (typeof Buffer !== "undefined") return Buffer.from(source).toString("hex");
-    return Array.from(new Uint8Array(source), (byte) => byte.toString(16).padStart(2, "0")).join("");
-  }
-  Binary2.toHex = toHex;
-  function fromHex(source) {
-    if (typeof Buffer !== "undefined") return fromSource(Buffer.from(source, "hex"));
-    const hex3 = source.length % 2 === 0 ? source : source.slice(0, source.length - 1);
-    const buffer3 = [];
-    for (let i = 0; i < hex3.length; i += 2) buffer3.push(parseInt(`${hex3[i]}${hex3[i + 1]}`, 16));
-    return Uint8Array.from(buffer3).buffer;
-  }
-  Binary2.fromHex = fromHex;
-})(Binary || (Binary = {}));
-var base64ToArrayBuffer = Binary.fromBase64;
-var arrayBufferToBase64 = Binary.toBase64;
-var hexToArrayBuffer = Binary.fromHex;
-var arrayBufferToHex = Binary.toHex;
-function clone2(source, refs = /* @__PURE__ */ new Map()) {
-  if (!source || typeof source !== "object") return source;
-  if (is("Date", source)) return new Date(source.valueOf());
-  if (is("RegExp", source)) return new RegExp(source.source, source.flags);
-  if (isArrayBufferLike(source)) return source.slice(0);
-  if (ArrayBuffer.isView(source)) return source.buffer.slice(source.byteOffset, source.byteOffset + source.byteLength);
-  const cached2 = refs.get(source);
-  if (cached2) return cached2;
-  if (Array.isArray(source)) {
-    const result2 = [];
-    refs.set(source, result2);
-    source.forEach((value, index) => {
-      result2[index] = Reflect.apply(clone2, null, [value, refs]);
-    });
-    return result2;
-  }
-  const result = Object.create(Object.getPrototypeOf(source));
-  refs.set(source, result);
-  for (const key of Reflect.ownKeys(source)) {
-    const descriptor = { ...Reflect.getOwnPropertyDescriptor(source, key) };
-    if ("value" in descriptor) descriptor.value = Reflect.apply(clone2, null, [descriptor.value, refs]);
-    Reflect.defineProperty(result, key, descriptor);
-  }
-  return result;
-}
-function deepEqual(a, b, strict) {
-  const ancestors = /* @__PURE__ */ new Set();
-  function compare(a2, b2) {
-    if (a2 === b2) return true;
-    if (isVolatile(a2) || isVolatile(b2)) return isVolatile(a2) && isVolatile(b2);
-    if (!strict && isNullable(a2) && isNullable(b2)) return true;
-    if (typeof a2 !== typeof b2 || typeof a2 !== "object" || !a2 || !b2) return false;
-    if (ancestors.has(a2)) return false;
-    function check2(test, then) {
-      return test(a2) ? test(b2) ? then(a2, b2) : false : test(b2) ? false : void 0;
-    }
-    ancestors.add(a2);
-    try {
-      return check2(Array.isArray, (a3, b3) => {
-        if (a3.length !== b3.length) return false;
-        for (let index = 0; index < a3.length; index++) if (!compare(a3[index], b3[index])) return false;
-        return true;
-      }) ?? check2(is("Date"), (a3, b3) => a3.valueOf() === b3.valueOf()) ?? check2(is("URL"), (a3, b3) => a3.href === b3.href) ?? check2(is("RegExp"), (a3, b3) => a3.source === b3.source && a3.flags === b3.flags) ?? check2(isArrayBufferLike, (a3, b3) => {
-        if (a3.byteLength !== b3.byteLength) return false;
-        const viewA = new Uint8Array(a3);
-        const viewB = new Uint8Array(b3);
-        for (let i = 0; i < viewA.length; i++) if (viewA[i] !== viewB[i]) return false;
-        return true;
-      }) ?? ((!strict || [a2, b2].every((value) => Object.getPrototypeOf(value) === Object.prototype || Object.getPrototypeOf(value) === null)) && Object.keys({
-        ...a2,
-        ...b2
-      }).every((key) => compare(a2[key], b2[key])));
-    } finally {
-      ancestors.delete(a2);
-    }
-  }
-  return compare(a, b);
-}
-var Time;
-(function(Time2) {
-  Time2.millisecond = 1;
-  Time2.second = 1e3;
-  Time2.minute = Time2.second * 60;
-  Time2.hour = Time2.minute * 60;
-  Time2.day = Time2.hour * 24;
-  Time2.week = Time2.day * 7;
-  let timezoneOffset = (/* @__PURE__ */ new Date()).getTimezoneOffset();
-  function setTimezoneOffset(offset) {
-    timezoneOffset = offset;
-  }
-  Time2.setTimezoneOffset = setTimezoneOffset;
-  function getTimezoneOffset() {
-    return timezoneOffset;
-  }
-  Time2.getTimezoneOffset = getTimezoneOffset;
-  function getDateNumber(date6 = /* @__PURE__ */ new Date(), offset) {
-    if (typeof date6 === "number") date6 = new Date(date6);
-    if (offset === void 0) offset = timezoneOffset;
-    return Math.floor((date6.valueOf() / Time2.minute - offset) / 1440);
-  }
-  Time2.getDateNumber = getDateNumber;
-  function fromDateNumber(value, offset) {
-    const date6 = new Date(value * Time2.day);
-    if (offset === void 0) offset = timezoneOffset;
-    return new Date(+date6 + offset * Time2.minute);
-  }
-  Time2.fromDateNumber = fromDateNumber;
-  const numeric = /\d+(?:\.\d+)?/.source;
-  const timeRegExp = new RegExp(`^${[
-    "w(?:eek(?:s)?)?",
-    "d(?:ay(?:s)?)?",
-    "h(?:our(?:s)?)?",
-    "m(?:in(?:ute)?(?:s)?)?",
-    "s(?:ec(?:ond)?(?:s)?)?"
-  ].map((unit) => `(${numeric}${unit})?`).join("")}$`);
-  function parseTime(source) {
-    const capture = timeRegExp.exec(source);
-    if (!capture) return 0;
-    return (parseFloat(capture[1]) * Time2.week || 0) + (parseFloat(capture[2]) * Time2.day || 0) + (parseFloat(capture[3]) * Time2.hour || 0) + (parseFloat(capture[4]) * Time2.minute || 0) + (parseFloat(capture[5]) * Time2.second || 0);
-  }
-  Time2.parseTime = parseTime;
-  function parseDate(date6) {
-    const parsed = parseTime(date6);
-    if (parsed) date6 = Date.now() + parsed;
-    else if (/^\d{1,2}(:\d{1,2}){1,2}$/.test(date6)) date6 = `${(/* @__PURE__ */ new Date()).toLocaleDateString()}-${date6}`;
-    else if (/^\d{1,2}-\d{1,2}-\d{1,2}(:\d{1,2}){1,2}$/.test(date6)) date6 = `${(/* @__PURE__ */ new Date()).getFullYear()}-${date6}`;
-    return date6 ? new Date(date6) : /* @__PURE__ */ new Date();
-  }
-  Time2.parseDate = parseDate;
-  function format(ms) {
-    const abs = Math.abs(ms);
-    if (abs >= Time2.day - Time2.hour / 2) return Math.round(ms / Time2.day) + "d";
-    else if (abs >= Time2.hour - Time2.minute / 2) return Math.round(ms / Time2.hour) + "h";
-    else if (abs >= Time2.minute - Time2.second / 2) return Math.round(ms / Time2.minute) + "m";
-    else if (abs >= Time2.second) return Math.round(ms / Time2.second) + "s";
-    return ms + "ms";
-  }
-  Time2.format = format;
-  function toDigits(source, length = 2) {
-    return source.toString().padStart(length, "0");
-  }
-  Time2.toDigits = toDigits;
-  function template(template2, time3 = /* @__PURE__ */ new Date()) {
-    return template2.replace("yyyy", time3.getFullYear().toString()).replace("yy", time3.getFullYear().toString().slice(2)).replace("MM", toDigits(time3.getMonth() + 1)).replace("dd", toDigits(time3.getDate())).replace("hh", toDigits(time3.getHours())).replace("mm", toDigits(time3.getMinutes())).replace("ss", toDigits(time3.getSeconds())).replace("SSS", toDigits(time3.getMilliseconds(), 3));
-  }
-  Time2.template = template;
-})(Time || (Time = {}));
-
 // node_modules/@deepseek-ai/schemastery/lib/index.mjs
 var kSchema = Symbol.for("schemastery");
-var kValidationError = Symbol.for("ValidationError");
+var kValidationError2 = Symbol.for("ValidationError");
 globalThis.__schemastery_index__ ??= 0;
 globalThis.__schemastery_refs__ = void 0;
-var ValidationError = class extends TypeError {
+var ValidationError2 = class extends TypeError {
   options;
   name = "ValidationError";
   constructor(message, options) {
@@ -84851,10 +86611,10 @@ var ValidationError = class extends TypeError {
     this.options = options;
   }
   static is(error62) {
-    return !!error62?.[kValidationError];
+    return !!error62?.[kValidationError2];
   }
 };
-Object.defineProperty(ValidationError.prototype, kValidationError, { value: true });
+Object.defineProperty(ValidationError2.prototype, kValidationError2, { value: true });
 var Schema = function(options) {
   const schema = function(data2, options2 = {}) {
     return Schema.resolve(data2, schema, options2)[0];
@@ -84892,7 +86652,7 @@ Object.defineProperty(Schema.prototype, "~standard", { get() {
       try {
         return { value: Schema.resolve(value, this, {})[0] };
       } catch (error62) {
-        if (ValidationError.is(error62)) return { issues: [{
+        if (ValidationError2.is(error62)) return { issues: [{
           message: error62.message,
           path: error62.options.path
         }] };
@@ -84901,7 +86661,7 @@ Object.defineProperty(Schema.prototype, "~standard", { get() {
     }
   };
 } });
-Schema.ValidationError = ValidationError;
+Schema.ValidationError = ValidationError2;
 Schema.prototype.toJSON = function toJSON() {
   if (globalThis.__schemastery_refs__) {
     globalThis.__schemastery_refs__[this.uid] ??= JSON.parse(JSON.stringify({ ...this }));
@@ -85002,7 +86762,7 @@ Schema.prototype.experimental = function experimental() {
 };
 Schema.prototype.pattern = function pattern(regexp) {
   const schema = Schema(this);
-  const pattern2 = pick2(regexp, ["source", "flags"]);
+  const pattern2 = pick(regexp, ["source", "flags"]);
   schema.meta = {
     ...schema.meta,
     pattern: pattern2
@@ -85079,7 +86839,7 @@ function validateVolatileSchema(schema, path = [], blocked = false, seen = /* @_
   if (states.has(blocked)) return;
   states.add(blocked);
   seen.set(schema, states);
-  if (schema.meta?.volatile && blocked) throw new ValidationError("volatile fields require a fixed object path without an enclosing volatile field", { path });
+  if (schema.meta?.volatile && blocked) throw new ValidationError2("volatile fields require a fixed object path without an enclosing volatile field", { path });
   const nested = blocked || !!schema.meta?.volatile;
   if (schema.dict) for (const [key, child] of Object.entries(schema.dict)) validateVolatileSchema(child, [...path, key], nested, seen);
   if (schema.sKey) validateVolatileSchema(schema.sKey, [...path, "<key>"], true, seen);
@@ -85108,12 +86868,12 @@ Schema.resolve = function resolve2(data2, schema, options = {}, strict = false) 
     try {
       return [createVolatile(value), adapted];
     } catch (error62) {
-      throw new ValidationError(error62 instanceof Error ? error62.message : String(error62), options);
+      throw new ValidationError2(error62 instanceof Error ? error62.message : String(error62), options);
     }
   }
   if (options.ignore?.(data2, schema)) return [data2];
   if (isNullable(data2) && schema.type !== "lazy") {
-    if (schema.meta.required) throw new ValidationError(`missing required value`, options);
+    if (schema.meta.required) throw new ValidationError2(`missing required value`, options);
     let current = schema;
     let fallback = schema.meta.default;
     while (current?.type === "intersect" && isNullable(fallback)) {
@@ -85121,10 +86881,10 @@ Schema.resolve = function resolve2(data2, schema, options = {}, strict = false) 
       fallback = current?.meta.default;
     }
     if (isNullable(fallback)) return [data2];
-    data2 = clone2(fallback);
+    data2 = clone(fallback);
   }
   const callback = resolvers[schema.type];
-  if (!callback) throw new ValidationError(`unsupported type "${schema.type}"`, options);
+  if (!callback) throw new ValidationError2(`unsupported type "${schema.type}"`, options);
   try {
     return callback(data2, schema, options, strict);
   } catch (error62) {
@@ -85181,7 +86941,7 @@ Schema.percent = function percent() {
 Schema.date = function date5() {
   return Schema.union([Schema.is(Date), Schema.transform(Schema.string().role("datetime"), (value, options) => {
     const date6 = new Date(value);
-    if (isNaN(+date6)) throw new ValidationError(`invalid date "${value}"`, options);
+    if (isNaN(+date6)) throw new ValidationError2(`invalid date "${value}"`, options);
     return date6;
   }, true)]);
 };
@@ -85190,7 +86950,7 @@ Schema.regExp = function regExp(flag = "") {
     try {
       return new RegExp(value, flag);
     } catch (e) {
-      throw new ValidationError(e.message, options);
+      throw new ValidationError2(e.message, options);
     }
   }, true)]);
 };
@@ -85200,13 +86960,13 @@ Schema.arrayBuffer = function arrayBuffer(encoding) {
     Schema.is(SharedArrayBuffer),
     Schema.transform(Schema.any(), (value, options) => {
       if (Binary.isSource(value)) return Binary.fromSource(value);
-      throw new ValidationError(`expected ArrayBufferSource but got ${value}`, options);
+      throw new ValidationError2(`expected ArrayBufferSource but got ${value}`, options);
     }, true),
     ...encoding ? [Schema.transform(Schema.string(), (value, options) => {
       try {
         return encoding === "base64" ? Binary.fromBase64(value) : Binary.fromHex(value);
       } catch (e) {
-        throw new ValidationError(e.message, options);
+        throw new ValidationError2(e.message, options);
       }
     }, true)] : []
   ]);
@@ -85226,22 +86986,22 @@ Schema.extend("any", (data2) => {
   return [data2];
 });
 Schema.extend("never", (data2, _, options) => {
-  throw new ValidationError(`expected nullable but got ${data2}`, options);
+  throw new ValidationError2(`expected nullable but got ${data2}`, options);
 });
 Schema.extend("const", (data2, { value }, options) => {
   if (deepEqual(data2, value)) return [value];
-  throw new ValidationError(`expected ${value} but got ${data2}`, options);
+  throw new ValidationError2(`expected ${value} but got ${data2}`, options);
 });
 function checkWithinRange(data2, meta3, description, options, skipMin = false) {
   const { max = Infinity, min = -Infinity } = meta3;
-  if (data2 > max) throw new ValidationError(`expected ${description} <= ${max} but got ${data2}`, options);
-  if (data2 < min && !skipMin) throw new ValidationError(`expected ${description} >= ${min} but got ${data2}`, options);
+  if (data2 > max) throw new ValidationError2(`expected ${description} <= ${max} but got ${data2}`, options);
+  if (data2 < min && !skipMin) throw new ValidationError2(`expected ${description} >= ${min} but got ${data2}`, options);
 }
 Schema.extend("string", (data2, { meta: meta3 }, options) => {
-  if (typeof data2 !== "string") throw new ValidationError(`expected string but got ${data2}`, options);
+  if (typeof data2 !== "string") throw new ValidationError2(`expected string but got ${data2}`, options);
   if (meta3.pattern) {
     const regexp = new RegExp(meta3.pattern.source, meta3.pattern.flags);
-    if (!regexp.test(data2)) throw new ValidationError(`expect string to match regexp ${regexp}`, options);
+    if (!regexp.test(data2)) throw new ValidationError2(`expect string to match regexp ${regexp}`, options);
   }
   checkWithinRange(data2.length, meta3, "string length", options);
   return [data2];
@@ -85264,15 +87024,15 @@ function isMultipleOf(data2, min, step) {
   return Math.abs(decimalShift(data2, digits) - decimalShift(min, digits)) % decimalShift(step, digits) === 0;
 }
 Schema.extend("number", (data2, { meta: meta3 }, options) => {
-  if (typeof data2 !== "number") throw new ValidationError(`expected number but got ${data2}`, options);
+  if (typeof data2 !== "number") throw new ValidationError2(`expected number but got ${data2}`, options);
   checkWithinRange(data2, meta3, "number", options);
   const { step } = meta3;
-  if (step && !isMultipleOf(data2, meta3.min ?? 0, step)) throw new ValidationError(`expected number multiple of ${step} but got ${data2}`, options);
+  if (step && !isMultipleOf(data2, meta3.min ?? 0, step)) throw new ValidationError2(`expected number multiple of ${step} but got ${data2}`, options);
   return [data2];
 });
 Schema.extend("boolean", (data2, _, options) => {
   if (typeof data2 === "boolean") return [data2];
-  throw new ValidationError(`expected boolean but got ${data2}`, options);
+  throw new ValidationError2(`expected boolean but got ${data2}`, options);
 });
 Schema.extend("bitset", (data2, { bits, meta: meta3 }, options) => {
   let value = 0, keys = [];
@@ -85282,29 +87042,29 @@ Schema.extend("bitset", (data2, { bits, meta: meta3 }, options) => {
   } else if (Array.isArray(data2)) {
     keys = data2;
     for (const key of keys) {
-      if (typeof key !== "string") throw new ValidationError(`expected string but got ${key}`, options);
+      if (typeof key !== "string") throw new ValidationError2(`expected string but got ${key}`, options);
       if (key in bits) value |= bits[key];
     }
-  } else throw new ValidationError(`expected number or array but got ${data2}`, options);
+  } else throw new ValidationError2(`expected number or array but got ${data2}`, options);
   if (value === meta3.default) return [value];
   return [value, keys];
 });
 Schema.extend("function", (data2, _, options) => {
   if (typeof data2 === "function") return [data2];
-  throw new ValidationError(`expected function but got ${data2}`, options);
+  throw new ValidationError2(`expected function but got ${data2}`, options);
 });
 Schema.extend("is", (data2, { constructor }, options) => {
   if (typeof constructor === "function") {
     if (data2 instanceof constructor) return [data2];
-    throw new ValidationError(`expected ${constructor.name} but got ${data2}`, options);
+    throw new ValidationError2(`expected ${constructor.name} but got ${data2}`, options);
   } else {
-    if (isNullable(data2)) throw new ValidationError(`expected ${constructor} but got ${data2}`, options);
+    if (isNullable(data2)) throw new ValidationError2(`expected ${constructor} but got ${data2}`, options);
     let prototype = Object.getPrototypeOf(data2);
     while (prototype) {
       if (prototype.constructor?.name === constructor) return [data2];
       prototype = Object.getPrototypeOf(prototype);
     }
-    throw new ValidationError(`expected ${constructor} but got ${data2}`, options);
+    throw new ValidationError2(`expected ${constructor} but got ${data2}`, options);
   }
 });
 function property(data2, key, schema, options) {
@@ -85322,12 +87082,12 @@ function property(data2, key, schema, options) {
   }
 }
 Schema.extend("array", (data2, { inner, meta: meta3 }, options) => {
-  if (!Array.isArray(data2)) throw new ValidationError(`expected array but got ${data2}`, options);
+  if (!Array.isArray(data2)) throw new ValidationError2(`expected array but got ${data2}`, options);
   checkWithinRange(data2.length, meta3, "array length", options, !isNullable(inner.meta.default));
   return [data2.map((_, index) => property(data2, index, inner, options))];
 });
 Schema.extend("dict", (data2, { inner, sKey }, options, strict) => {
-  if (!isPlainObject2(data2)) throw new ValidationError(`expected object but got ${data2}`, options);
+  if (!isPlainObject(data2)) throw new ValidationError2(`expected object but got ${data2}`, options);
   const result = {};
   for (const key in data2) {
     let rKey;
@@ -85344,7 +87104,7 @@ Schema.extend("dict", (data2, { inner, sKey }, options, strict) => {
   return [result];
 });
 Schema.extend("tuple", (data2, { list: list2 }, options, strict) => {
-  if (!Array.isArray(data2)) throw new ValidationError(`expected array but got ${data2}`, options);
+  if (!Array.isArray(data2)) throw new ValidationError2(`expected array but got ${data2}`, options);
   const result = list2.map((inner, index) => property(data2, index, inner, options));
   if (strict) return [result];
   result.push(...data2.slice(list2.length));
@@ -85357,7 +87117,7 @@ function merge2(result, data2) {
   }
 }
 Schema.extend("object", (data2, { dict }, options, strict) => {
-  if (!isPlainObject2(data2)) throw new ValidationError(`expected object but got ${data2}`, options);
+  if (!isPlainObject(data2)) throw new ValidationError2(`expected object but got ${data2}`, options);
   const result = {};
   for (const key in dict) {
     const value = property(data2, key, dict[key], options);
@@ -85373,7 +87133,7 @@ Schema.extend("union", (data2, { list: list2, toString: toString2 }, options, st
   } catch (error62) {
     messages.push(error62);
   }
-  throw new ValidationError(`expected ${toString2()} but got ${JSON.stringify(data2)}`, options);
+  throw new ValidationError2(`expected ${toString2()} but got ${JSON.stringify(data2)}`, options);
 });
 Schema.extend("intersect", (data2, { list: list2, toString: toString2 }, options, strict) => {
   if (!list2.length) return [data2];
@@ -85382,11 +87142,11 @@ Schema.extend("intersect", (data2, { list: list2, toString: toString2 }, options
     const value = Schema.resolve(data2, inner, options, true)[0];
     if (isNullable(value)) continue;
     if (isNullable(result)) result = value;
-    else if (typeof result !== typeof value) throw new ValidationError(`expected ${toString2()} but got ${JSON.stringify(data2)}`, options);
+    else if (typeof result !== typeof value) throw new ValidationError2(`expected ${toString2()} but got ${JSON.stringify(data2)}`, options);
     else if (typeof value === "object") merge2(result ??= {}, value);
-    else if (result !== value) throw new ValidationError(`expected ${toString2()} but got ${JSON.stringify(data2)}`, options);
+    else if (result !== value) throw new ValidationError2(`expected ${toString2()} but got ${JSON.stringify(data2)}`, options);
   }
-  if (!strict && isPlainObject2(data2)) merge2(result, data2);
+  if (!strict && isPlainObject(data2)) merge2(result, data2);
   return [result];
 });
 Schema.extend("transform", (data2, { inner, callback, preserve }, options) => {
@@ -85546,7 +87306,7 @@ var configSchema = external_exports.object({
   }).strict().optional(),
   acp: external_exports.object({ enabled: external_exports.boolean().optional(), backends: external_exports.array(external_exports.object({ id: external_exports.string().trim().regex(/^[a-z0-9][a-z0-9._-]{0,31}$/i), enabled: external_exports.boolean().optional(), command: external_exports.string().trim().min(1).max(4096).optional(), args: external_exports.array(external_exports.string().max(4096)).max(32).optional(), cwd: external_exports.string().max(4096).optional() }).strict()).max(12).optional(), backend: external_exports.string().trim().regex(/^[a-z0-9][a-z0-9._-]{0,31}$/i).optional(), command: external_exports.string().trim().min(1).max(4096).optional(), args: external_exports.array(external_exports.string().max(4096)).max(32).optional(), cwd: external_exports.string().max(4096).optional() }).strict().optional()
 }).strict();
-function resolveConfig(input4 = {}, env = process.env) {
+function resolveConfig2(input4 = {}, env = process.env) {
   const parsed = configSchema.parse(input4);
   const configuredCursorBackend = parsed.acp?.backends?.find((item) => item.id === "cursor");
   const legacyCursorEnabled = parsed.acp?.backend === "cursor" ? parsed.acp.enabled : void 0;
@@ -98321,7 +100081,7 @@ var PluginControlRuntime = class {
         if (typeof value.enabled !== "boolean") throw new ClientModeError("INVALID_MESSAGE", "Host authorization state is required.");
         const status2 = await this.client.setHostAuthorization(value.enabled);
         if (this.settings !== void 0) {
-          const current = resolveConfig(this.settings.get());
+          const current = resolveConfig2(this.settings.get());
           await this.settings.replace(editableConfig({ ...current, hostControl: { enabled: value.enabled } }));
         }
         return ok3(status2);
@@ -98389,9 +100149,9 @@ var PluginControlRuntime = class {
     if (typeof value.serverUrl !== "string") {
       throw new ClientModeError("INVALID_MESSAGE", "Server URL is required.");
     }
-    const current = editableConfig(resolveConfig(this.settings.get()));
+    const current = editableConfig(resolveConfig2(this.settings.get()));
     if (value.role === "client" && this.host?.hostStatus?.()?.pairingHostOnly) throw new ClientModeError("DEVICE_SCOPE_REQUIRED", "This Host only accepts incoming connections.");
-    const next = resolveConfig({ ...current, role: value.role, serverUrl: value.serverUrl });
+    const next = resolveConfig2({ ...current, role: value.role, serverUrl: value.serverUrl });
     if (!this.storageAvailable && this.startupFailure instanceof Error) {
       throw this.startupFailure;
     }
@@ -98413,7 +100173,7 @@ var PluginControlRuntime = class {
         return identity3;
       });
     }
-    if (value.role === "client" && resolveConfig(this.settings.get()).hostControl?.enabled !== false) {
+    if (value.role === "client" && resolveConfig2(this.settings.get()).hostControl?.enabled !== false) {
       await this.client?.authorizeHostByDefault();
     }
     await this.settings.replace(editableConfig(next));
@@ -98474,8 +100234,8 @@ var PluginControlRuntime = class {
     if (typeof value.serverUrl !== "string") {
       throw new ClientModeError("INVALID_MESSAGE", "Server URL is required.");
     }
-    const current = editableConfig(resolveConfig(this.settings.get()));
-    const next = resolveConfig({ ...current, serverUrl: value.serverUrl });
+    const current = editableConfig(resolveConfig2(this.settings.get()));
+    const next = resolveConfig2({ ...current, serverUrl: value.serverUrl });
     await this.settings.replace(editableConfig(next));
     if (this.switchServer !== void 0) {
       if (next.serverUrl !== this.config.serverUrl || this.startupFailure !== void 0) {
@@ -98515,7 +100275,7 @@ var PluginControlRuntime = class {
       throw new ClientModeError("INVALID_MESSAGE", "Role must be host, client, or all.");
     }
     const roles = roleArg === "client" ? ["client"] : roleArg === "host" ? ["host"] : ["host", "client"];
-    const config2 = this.settings === void 0 ? this.config : resolveConfig(this.settings.get());
+    const config2 = this.settings === void 0 ? this.config : resolveConfig2(this.settings.get());
     const nextDirectory = await resetDefaultIdentityRoles(
       roles,
       config2.serverUrl,
@@ -98547,7 +100307,7 @@ var PluginControlRuntime = class {
     if (role2 !== "host" && role2 !== "client") {
       throw new ClientModeError("INVALID_MESSAGE", "Role must be Host or Client.");
     }
-    const current = editableConfig(resolveConfig(this.settings.get()));
+    const current = editableConfig(resolveConfig2(this.settings.get()));
     const currentRole = current.role === "client" ? "client" : "host";
     if (role2 === "client" && this.host?.hostStatus?.()?.pairingHostOnly) throw new ClientModeError("DEVICE_SCOPE_REQUIRED", "This Host only accepts incoming Remote connections.");
     if (role2 !== currentRole && current.serverUrl !== void 0 && await this.association(current.serverUrl, role2) === void 0) {
@@ -98601,8 +100361,8 @@ var PluginControlRuntime = class {
     if (value.terminalEnabled !== void 0 && typeof value.terminalEnabled !== "boolean") throw new ClientModeError("INVALID_MESSAGE", "The terminal switch must be a boolean.");
     if (value.ports !== void 0 && (!Array.isArray(value.ports) || value.ports.some((port) => !Number.isInteger(port)))) throw new ClientModeError("INVALID_MESSAGE", "Loopback ports must be integers.");
     if (value.terminalEnabled === void 0 && value.remoteToolsEnabled === void 0 && value.ports === void 0 && value.debugLogging === void 0) throw new ClientModeError("INVALID_MESSAGE", "A development setting is required.");
-    const current = editableConfig(resolveConfig(this.settings.get()));
-    const next = resolveConfig({
+    const current = editableConfig(resolveConfig2(this.settings.get()));
+    const next = resolveConfig2({
       ...current,
       logLevel: value.debugLogging === void 0 ? current.logLevel : value.debugLogging ? "debug" : "info",
       terminal: { enabled: value.terminalEnabled === void 0 ? current.terminal?.enabled ?? true : value.terminalEnabled },
@@ -98618,8 +100378,8 @@ var PluginControlRuntime = class {
     if (this.settings === void 0) throw new ClientModeError("SETTINGS_UNAVAILABLE", "DSH user settings are unavailable in this profile.");
     const entry = record9(payload).sidebarEntry;
     if (entry !== "standard" && entry !== "compact") throw new ClientModeError("INVALID_MESSAGE", "The sidebar entry style must be Standard or Compact.");
-    const current = editableConfig(resolveConfig(this.settings.get()));
-    await this.settings.replace(editableConfig(resolveConfig({ ...current, sidebar: { entry } })));
+    const current = editableConfig(resolveConfig2(this.settings.get()));
+    await this.settings.replace(editableConfig(resolveConfig2({ ...current, sidebar: { entry } })));
     return this.settingsView();
   }
   async setCodex(payload) {
@@ -98640,8 +100400,8 @@ var PluginControlRuntime = class {
     if (typeof enabled !== "boolean") {
       throw new ClientModeError("INVALID_MESSAGE", "Cursor Remote enabled must be a boolean.");
     }
-    const current = editableConfig(resolveConfig(this.settings.get()));
-    const next = resolveConfig({
+    const current = editableConfig(resolveConfig2(this.settings.get()));
+    const next = resolveConfig2({
       ...current,
       cursor: { ...current.cursor, enabled },
       acp: {
@@ -98650,7 +100410,7 @@ var PluginControlRuntime = class {
       }
     });
     await this.settings.replace(editableConfig(next));
-    await this.host?.setAgentBackends?.(resolveConfig(this.settings.get()));
+    await this.host?.setAgentBackends?.(resolveConfig2(this.settings.get()));
     return { ...await this.settingsView(), applies: "live" };
   }
   async setAcp(payload) {
@@ -98659,7 +100419,7 @@ var PluginControlRuntime = class {
     const backend = value.backend;
     const enabled = value.enabled;
     if (typeof backend !== "string" || typeof enabled !== "boolean") throw new ClientModeError("INVALID_MESSAGE", "ACP backend and enabled are required.");
-    const current = resolveConfig(this.settings.get());
+    const current = resolveConfig2(this.settings.get());
     if (!current.acp?.backends.some((item) => item.id === backend)) throw new ClientModeError("INVALID_MESSAGE", "Unknown ACP backend.");
     const backends = current.acp.backends.map((item) => item.id === backend ? { ...item, enabled } : item);
     await this.settings.replace({
@@ -98668,7 +100428,7 @@ var PluginControlRuntime = class {
       ...backend === "codex" ? { codex: { ...current.codex, enabled } } : {},
       acp: { enabled: enabled || current.acp.enabled, backends }
     });
-    await this.host?.setAgentBackends?.(resolveConfig(this.settings.get()));
+    await this.host?.setAgentBackends?.(resolveConfig2(this.settings.get()));
     return { ...await this.settingsView(), applies: "live" };
   }
   async addAcp(payload) {
@@ -98677,23 +100437,23 @@ var PluginControlRuntime = class {
     if (typeof value.id !== "string" || typeof value.command !== "string" || !Array.isArray(value.args) || !value.args.every((item) => typeof item === "string")) {
       throw new ClientModeError("INVALID_MESSAGE", "ACP name, command, and arguments are required.");
     }
-    const current = resolveConfig(this.settings.get());
+    const current = resolveConfig2(this.settings.get());
     if (value.id === "kimi") throw new ClientModeError("INVALID_MESSAGE", "Kimi is not implemented.");
     if (current.acp?.backends.some((item) => item.id === value.id)) throw new ClientModeError("INVALID_MESSAGE", "ACP backend already exists.");
     const backends = [...current.acp?.backends ?? [], { id: value.id, command: value.command, args: value.args, enabled: false }];
-    const next = resolveConfig({ ...editableConfig(current), acp: { enabled: current.acp?.enabled ?? true, backends } });
+    const next = resolveConfig2({ ...editableConfig(current), acp: { enabled: current.acp?.enabled ?? true, backends } });
     await this.settings.replace(editableConfig(next));
-    await this.host?.setAgentBackends?.(resolveConfig(this.settings.get()));
+    await this.host?.setAgentBackends?.(resolveConfig2(this.settings.get()));
     return { ...await this.settingsView(), applies: "live" };
   }
   async removeAcp(payload) {
     if (this.settings === void 0) throw new ClientModeError("SETTINGS_UNAVAILABLE", "DSH user settings are unavailable in this profile.");
     const id6 = record9(payload).id;
     if (typeof id6 !== "string" || ["codex", "cursor", "antigravity", "pi", "claude", "opencode", "hermes"].includes(id6)) throw new ClientModeError("INVALID_MESSAGE", "Only custom ACP backends can be removed.");
-    const current = resolveConfig(this.settings.get());
+    const current = resolveConfig2(this.settings.get());
     const backends = (current.acp?.backends ?? []).filter((item) => item.id !== id6);
     await this.settings.replace(editableConfig({ ...current, acp: { enabled: current.acp?.enabled ?? true, backends } }));
-    await this.host?.setAgentBackends?.(resolveConfig(this.settings.get()));
+    await this.host?.setAgentBackends?.(resolveConfig2(this.settings.get()));
     return { ...await this.settingsView(), applies: "live" };
   }
   async installOrConfigureAcp(payload) {
@@ -98729,7 +100489,7 @@ var PluginControlRuntime = class {
       claude: []
     };
     const defaultArgs = defaultArgsMap[backend] ?? ["acp"];
-    const current = resolveConfig(this.settings.get());
+    const current = resolveConfig2(this.settings.get());
     const existing = current.acp?.backends.some((item) => item.id === backend);
     const backends = existing ? (current.acp?.backends ?? []).map((item) => item.id === backend ? { ...item, command: detected, enabled: true } : item) : [...current.acp?.backends ?? [], { id: backend, command: detected, enabled: true, args: defaultArgs }];
     await this.settings.replace({
@@ -98738,7 +100498,7 @@ var PluginControlRuntime = class {
       ...backend === "codex" ? { codex: { ...current.codex, binary: detected, enabled: true } } : {},
       acp: { enabled: true, backends }
     });
-    await this.host?.setAgentBackends?.(resolveConfig(this.settings.get()));
+    await this.host?.setAgentBackends?.(resolveConfig2(this.settings.get()));
     const view = await this.settingsView();
     return {
       ...view,
@@ -98754,7 +100514,7 @@ var PluginControlRuntime = class {
     if (!this.storageAvailable && this.startupFailure instanceof Error) {
       throw this.startupFailure;
     }
-    const current = resolveConfig(this.settings?.get() ?? {});
+    const current = resolveConfig2(this.settings?.get() ?? {});
     const sourceDirectory = serverStorageDirectory(this.identityDirectory, serverUrl, sourceRole);
     const sourceIdentity = await new IdentityStore({ directory: sourceDirectory, role: sourceRole }).loadOrCreate(hostname4());
     const sourceStore = new ServerCredentialStore(sourceDirectory);
@@ -98782,7 +100542,7 @@ var PluginControlRuntime = class {
     if (!this.storageAvailable && this.startupFailure instanceof Error) {
       throw this.startupFailure;
     }
-    const config2 = this.settings === void 0 ? this.config : resolveConfig(this.settings.get());
+    const config2 = this.settings === void 0 ? this.config : resolveConfig2(this.settings.get());
     if (config2.serverUrl !== void 0) {
       const runtimes = await Promise.allSettled([
         this.client?.clearClientAuthorization(),
@@ -98798,7 +100558,7 @@ var PluginControlRuntime = class {
     return this.settingsView();
   }
   async settingsView() {
-    const config2 = this.settings === void 0 ? editableConfig(this.config) : editableConfig(resolveConfig(this.settings.get()));
+    const config2 = this.settings === void 0 ? editableConfig(this.config) : editableConfig(resolveConfig2(this.settings.get()));
     const associations = await this.associations(config2);
     const role2 = config2.role === "client" ? "client" : "host";
     const association = associations[role2];
@@ -105523,7 +107283,7 @@ function apply(ctx, entry = void 0) {
       const pendingLogStore = new HostLogStore({ filePath: resolveHostLogPath({ profile: resolveLogProfileName(runtimeContext) }) });
       disposePendingControl = runtimeContext.effect(() => {
         const control = new PluginControlRuntime(
-          resolveConfig(readConfig()),
+          resolveConfig2(readConfig()),
           identityDirectory,
           void 0,
           void 0,
@@ -105571,7 +107331,7 @@ async function activate(ctx, readConfig, entryId, requireRemoteEvents = false) {
   const settingsBinding = await createSettingsBinding(ctx, settings, readConfig, entryId);
   const connection = ctx.get("connection");
   const webServer = ctx.get("webServer");
-  const config2 = resolveConfig(settingsBinding?.get() ?? readConfig());
+  const config2 = resolveConfig2(settingsBinding?.get() ?? readConfig());
   const logStore = new HostLogStore({ filePath: resolveHostLogPath({ profile: resolveLogProfileName(ctx) }) });
   const readSafeLogLevel = () => {
     try {
@@ -105642,7 +107402,8 @@ async function activate(ctx, readConfig, entryId, requireRemoteEvents = false) {
     updateChecker,
     () => readPluginManager(ctx),
     (listener) => {
-      const buses = ctx.events === ctx.root.events ? [ctx.root.events] : [ctx.root.events, ctx.events];
+      const root2 = rootContext(ctx);
+      const buses = root2 === void 0 || ctx.events === root2.events ? [ctx.events] : [root2.events, ctx.events];
       const dispose = buses.map((events) => events.on("plugin-manager/update-state", listener, { global: true }));
       return () => {
         for (const stop of dispose) stop();
@@ -105678,7 +107439,7 @@ async function activate(ctx, readConfig, entryId, requireRemoteEvents = false) {
   };
   if (requireRemoteEvents) await assertRemoteEventSource(localTypertGateway);
   const subprocess = ctx.get("subprocess", false);
-  const schedule = ctx.get("schedule", false) ?? (ctx.root === void 0 ? void 0 : ctx.root.get("schedule", false));
+  const schedule = ctx.get("schedule", false) ?? rootContext(ctx)?.get("schedule", false);
   const createRuntimes = (config3) => {
     const hostIdentities = new IdentityStore({
       directory: config3.serverUrl === void 0 ? defaultIdentityDirectory : serverStorageDirectory(defaultIdentityDirectory, config3.serverUrl, "host"),
@@ -105844,10 +107605,17 @@ async function activate(ctx, readConfig, entryId, requireRemoteEvents = false) {
   }, "ds-harness-remote lifecycle");
   if (config2.remoteTools?.enabled) installRemoteDiscoveryTools(ctx, () => closed || !clientActive ? void 0 : clientRuntime);
 }
+function rootContext(ctx) {
+  const registry2 = symbols;
+  const key = registry2.root;
+  if (key === void 0) return void 0;
+  const root2 = ctx[key];
+  return typeof root2 === "object" && root2 !== null ? root2 : void 0;
+}
 function resolveLogProfileName(ctx) {
   const envProfile = process.env.DSH_PROFILE?.trim();
   if (envProfile) return envProfile;
-  const baseDir = ctx.root?.baseDir;
+  const baseDir = rootContext(ctx)?.baseDir;
   if (typeof baseDir === "string" && baseDir.trim().length > 0) {
     const trimmed = baseDir.trim();
     if (basename9(dirname9(trimmed)) === "profiles") {
@@ -105865,7 +107633,7 @@ function isEntryConfig(value) {
   return typeof value.get === "function";
 }
 function readPluginManager(ctx) {
-  const candidate = ctx.get("pluginManager", false) ?? ctx.root.get("pluginManager", false);
+  const candidate = ctx.get("pluginManager", false) ?? rootContext(ctx)?.get("pluginManager", false);
   if (typeof candidate !== "object" || candidate === null || typeof candidate.listBundles !== "function" || typeof candidate.updateBundle !== "function") return void 0;
   return candidate;
 }
@@ -105897,7 +107665,7 @@ async function createSettingsBinding(ctx, settings, readConfig, entryId) {
     base,
     applies: "restart",
     validate: (value) => {
-      resolveConfig(value);
+      resolveConfig2(value);
     }
   });
   return {
@@ -105976,7 +107744,7 @@ export {
   name,
   prepareDefaultIdentityDirectory,
   resetDefaultIdentityRoles,
-  resolveConfig,
+  resolveConfig2 as resolveConfig,
   runCli,
   serverStorageDirectory
 };
