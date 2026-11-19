@@ -131,7 +131,7 @@ struct Index {
   /** 按下中的服务器行 key，用来做明显的按压反馈。 */
   @State pressedChoiceKey: string = '';
   /** 官方服务器固定地址，切换时直接可选，不用手输。 */
-  private static readonly OFFICIAL_SERVER: string = 'https://dsh.r2049.cn';
+  private static readonly OFFICIAL_SERVER: string = 'https://dsh-remote.crescentia.cn';
   @State textScaleValue: number = 1;
   /** 窗口尺寸（vp），PC 上放大窗口时据此调整布局。 */
   @State windowWidthVp: number = 0;

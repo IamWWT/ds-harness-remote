@@ -12,7 +12,7 @@
       config:
         enabled: true
         role: host
-        serverUrl: https://dsh.r2049.cn
+        serverUrl: https://dsh-remote.crescentia.cn
         codex:
           enabled: true
           binary: codex
