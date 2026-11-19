@@ -2,6 +2,7 @@
 export const localeNamespace = 'ds-harness-remote'
 
 export const en = {
+  panelTitle: 'Remote',
   serverSavedLive: 'Server address saved and applied.',
   saveServerBeforeLogin: 'Save the Server address before continuing sign-in or pairing.',
   pairingLoginTab: 'DSH Go',
@@ -386,6 +387,7 @@ export const en = {
 } as const
 
 export const zh: Record<keyof typeof en, string> = {
+  panelTitle: '远程',
   serverSavedLive: '服务器地址已保存并生效。',
   saveServerBeforeLogin: '请先保存服务器地址，再继续登录或配对。',
   pairingLoginTab: 'DSH Go',
@@ -770,6 +772,7 @@ export const zh: Record<keyof typeof en, string> = {
 }
 
 export const ru: Record<keyof typeof en, string> = {
+  panelTitle: 'Remote',
   serverSavedLive: 'Адрес сервера сохранён и применён.',
   saveServerBeforeLogin: 'Сохраните адрес сервера, прежде чем продолжить вход или сопряжение.',
   pairingLoginTab: 'DSH Go',
@@ -1154,6 +1157,7 @@ export const ru: Record<keyof typeof en, string> = {
 }
 
 export const uk: Record<keyof typeof en, string> = {
+  panelTitle: 'Remote',
   serverSavedLive: 'Адресу сервера збережено й застосовано.',
   saveServerBeforeLogin: 'Збережіть адресу сервера, перш ніж продовжити вхід або спарювання.',
   pairingLoginTab: 'DSH Go',

@@ -1699,6 +1699,7 @@ Minimum version required to store current data is: ` + bestVersion + `.
 
   // packages/plugin/src/client-locale.ts
   var localeNamespace = "ds-harness-remote", en = {
+    panelTitle: "Remote",
     serverSavedLive: "Server address saved and applied.",
     saveServerBeforeLogin: "Save the Server address before continuing sign-in or pairing.",
     pairingLoginTab: "DSH Go",
@@ -2081,6 +2082,7 @@ If a code was sent, recover the original submission without changing it.`,
     hermesVirtualWorkspace: "Hermes virtual workspace",
     codexVirtualSessions: "Sessions"
   }, zh = {
+    panelTitle: "\u8FDC\u7A0B",
     serverSavedLive: "\u670D\u52A1\u5668\u5730\u5740\u5DF2\u4FDD\u5B58\u5E76\u751F\u6548\u3002",
     saveServerBeforeLogin: "\u8BF7\u5148\u4FDD\u5B58\u670D\u52A1\u5668\u5730\u5740\uFF0C\u518D\u7EE7\u7EED\u767B\u5F55\u6216\u914D\u5BF9\u3002",
     pairingLoginTab: "DSH Go",
@@ -2464,6 +2466,7 @@ If a code was sent, recover the original submission without changing it.`,
     hermesVirtualWorkspace: "Hermes \u5DE5\u4F5C\u533A",
     codexVirtualSessions: "Sessions"
   }, ru = {
+    panelTitle: "Remote",
     serverSavedLive: "\u0410\u0434\u0440\u0435\u0441 \u0441\u0435\u0440\u0432\u0435\u0440\u0430 \u0441\u043E\u0445\u0440\u0430\u043D\u0451\u043D \u0438 \u043F\u0440\u0438\u043C\u0435\u043D\u0451\u043D.",
     saveServerBeforeLogin: "\u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u0430\u0434\u0440\u0435\u0441 \u0441\u0435\u0440\u0432\u0435\u0440\u0430, \u043F\u0440\u0435\u0436\u0434\u0435 \u0447\u0435\u043C \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C \u0432\u0445\u043E\u0434 \u0438\u043B\u0438 \u0441\u043E\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u0435.",
     pairingLoginTab: "DSH Go",
@@ -2846,6 +2849,7 @@ If a code was sent, recover the original submission without changing it.`,
     hermesVirtualWorkspace: "\u0412\u0438\u0440\u0442\u0443\u0430\u043B\u044C\u043D\u0430\u044F \u0440\u0430\u0431\u043E\u0447\u0430\u044F \u043E\u0431\u043B\u0430\u0441\u0442\u044C Hermes",
     codexVirtualSessions: "\u0421\u0435\u0441\u0441\u0438\u0438"
   }, uk = {
+    panelTitle: "Remote",
     serverSavedLive: "\u0410\u0434\u0440\u0435\u0441\u0443 \u0441\u0435\u0440\u0432\u0435\u0440\u0430 \u0437\u0431\u0435\u0440\u0435\u0436\u0435\u043D\u043E \u0439 \u0437\u0430\u0441\u0442\u043E\u0441\u043E\u0432\u0430\u043D\u043E.",
     saveServerBeforeLogin: "\u0417\u0431\u0435\u0440\u0435\u0436\u0456\u0442\u044C \u0430\u0434\u0440\u0435\u0441\u0443 \u0441\u0435\u0440\u0432\u0435\u0440\u0430, \u043F\u0435\u0440\u0448 \u043D\u0456\u0436 \u043F\u0440\u043E\u0434\u043E\u0432\u0436\u0438\u0442\u0438 \u0432\u0445\u0456\u0434 \u0430\u0431\u043E \u0441\u043F\u0430\u0440\u044E\u0432\u0430\u043D\u043D\u044F.",
     pairingLoginTab: "DSH Go",
@@ -7417,21 +7421,46 @@ If a code was sent, recover the original submission without changing it.`,
           order: 20,
           locale: localeNamespace,
           inject: () => ({ control, statusFeed, onSignIn: openRemote })
-        }, RemoteSessionHeaderAction)), ctx.slots.inject("sidebar.footer.action", () => ctx.slots.register({
-          name: "sidebar.footer.action",
-          id: "ds-harness-remote-workspace",
-          order: -20,
+        }, RemoteSessionHeaderAction));
+        let REMOTE_PANEL_ID = "ds-harness-remote-panel", RemotePanelMenuRow = (props) => React.createElement(
+          "button",
+          {
+            type: "button",
+            role: "menuitem",
+            className: "dshRemoteMoreMenuRow",
+            onClick: () => {
+              props.onDismiss(), props.openRemote();
+            }
+          },
+          React.createElement(
+            "span",
+            { className: "dshRemoteMoreMenuGlyph", "aria-hidden": !0 },
+            React.createElement(
+              "svg",
+              {
+                width: 16,
+                height: 16,
+                viewBox: "0 0 24 24",
+                fill: "none",
+                stroke: "currentColor",
+                strokeWidth: 1.8,
+                strokeLinecap: "round",
+                strokeLinejoin: "round"
+              },
+              React.createElement("rect", { x: 3, y: 4, width: 18, height: 13, rx: 2 }),
+              React.createElement("path", { d: "M8 21h8M12 17v4" })
+            )
+          ),
+          React.createElement("span", { className: "dshRemoteMoreMenuLabel" }, props.t("panelTitle"))
+        );
+        ctx.slots.inject("sidebar.panellist.actions", () => ctx.slots.register({
+          name: "sidebar.panellist.actions",
+          id: REMOTE_PANEL_ID,
+          order: -100,
           locale: localeNamespace,
-          inject: () => ({
-            control,
-            statusFeed,
-            subscribeOpen,
-            openSettings: void 0,
-            preferredQrProvider: ctx.locale.getLocale().active === "zh" ? "zhihu" : "github",
-            sidebarEntry,
-            portal
-          })
-        }, RemoteWorkspaceAction)), ctx.slots.inject("plugins.row.config", () => ctx.slots.register({
+          label: () => t("panelTitle"),
+          inject: () => ({ openRemote })
+        }, RemotePanelMenuRow)), ctx.slots.inject("plugins.row.config", () => ctx.slots.register({
           name: "plugins.row.config",
           key: "ds-harness-remote#ds-harness-remote",
           locale: localeNamespace,

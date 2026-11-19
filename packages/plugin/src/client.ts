@@ -635,21 +635,51 @@ window.__ModuleLoader__.load({
         locale: localeNamespace,
         inject: () => ({ control, statusFeed, onSignIn: openRemote }),
       }, RemoteSessionHeaderAction))
-      ctx.slots.inject('sidebar.footer.action', () => ctx.slots.register({
-        name: 'sidebar.footer.action',
-        id: 'ds-harness-remote-workspace',
-        order: -20,
+      // The footer seat and the panel-list launcher are both deliberately NOT
+      // registered. Keeping either produced a second, always-visible Remote
+      // entry in the sidebar; `sidebar.panellist.actions` below is the single
+      // entry point, rendered as the first row of the More menu.
+      const REMOTE_PANEL_ID = 'ds-harness-remote-panel'
+      // Rows in `sidebar.panellist.actions` are plain registrant-rendered
+      // content, so this row owns its own markup: one menu row that dismisses
+      // the menu and then raises the Remote surface. The glyph is decorative —
+      // the row's own text is the accessible name.
+      const RemotePanelMenuRow = (props: {
+        t: Translate
+        onDismiss: () => void
+        openRemote: () => void
+      }): unknown => React.createElement('button', {
+        type: 'button',
+        role: 'menuitem',
+        className: 'dshRemoteMoreMenuRow',
+        onClick: () => {
+          props.onDismiss()
+          props.openRemote()
+        },
+      },
+        React.createElement('span', { className: 'dshRemoteMoreMenuGlyph', 'aria-hidden': true },
+          React.createElement('svg', {
+            width: 16, height: 16, viewBox: '0 0 24 24', fill: 'none',
+            stroke: 'currentColor', strokeWidth: 1.8,
+            strokeLinecap: 'round', strokeLinejoin: 'round',
+          },
+            React.createElement('rect', { x: 3, y: 4, width: 18, height: 13, rx: 2 }),
+            React.createElement('path', { d: 'M8 21h8M12 17v4' }))),
+        React.createElement('span', { className: 'dshRemoteMoreMenuLabel' }, props.t('panelTitle')))
+      // The sidebar's More menu is the only Remote entry point. It deliberately
+      // does NOT register on `sidebar.panellist`: that slot pins a launcher into
+      // the always-visible list, which is what put Remote permanently under
+      // "New Session". `sidebar.panellist.actions` renders rows inside the More
+      // menu instead, so the entry stays out of the way until asked for.
+      // Order -100 keeps it first among the rows.
+      ctx.slots.inject('sidebar.panellist.actions', () => ctx.slots.register({
+        name: 'sidebar.panellist.actions',
+        id: REMOTE_PANEL_ID,
+        order: -100,
         locale: localeNamespace,
-        inject: () => ({
-          control,
-          statusFeed,
-          subscribeOpen,
-          openSettings: undefined,
-          preferredQrProvider: ctx.locale.getLocale().active === 'zh' ? 'zhihu' : 'github',
-          sidebarEntry,
-          portal,
-        }),
-      }, RemoteWorkspaceAction))
+        label: () => t('panelTitle'),
+        inject: () => ({ openRemote }),
+      }, RemotePanelMenuRow))
       // rc.1 Plugins-page configuration surfaces. `plugins.item` is reserved
       // for the official settings companion packages (the Plugins page renders
       // its registrants inside the Official group, so a third-party card there
