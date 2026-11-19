@@ -50,7 +50,7 @@ describe('Remote CLI', () => {
       if (url.endsWith('/auth/oauth/providers')) return json({ items: [providerInfo('github')] })
       if (url.endsWith('/auth/oauth/qr/start?provider=github')) return json({
         qrId: 'github-qr-session-1234567890',
-        scanUrl: 'https://dsh.r2049.cn/api/v1/auth/q/github-qr-session-1234567890',
+        scanUrl: 'https://dsh-remote.crescentia.cn/api/v1/auth/q/github-qr-session-1234567890',
         expiresIn: 600,
         provider: 'github',
       })
@@ -72,24 +72,24 @@ describe('Remote CLI', () => {
     })).resolves.toBe(0)
 
     expect(calls.map(call => call.url)).toEqual([
-      'https://dsh.r2049.cn/api/v1/auth/oauth/providers',
-      'https://dsh.r2049.cn/api/v1/auth/oauth/providers',
-      'https://dsh.r2049.cn/api/v1/auth/oauth/qr/start?provider=github',
-      'https://dsh.r2049.cn/api/v1/auth/oauth/qr/github-qr-session-1234567890',
-      'https://dsh.r2049.cn/api/v1/auth/me',
-      'https://dsh.r2049.cn/api/v1/devices/register',
+      'https://dsh-remote.crescentia.cn/api/v1/auth/oauth/providers',
+      'https://dsh-remote.crescentia.cn/api/v1/auth/oauth/providers',
+      'https://dsh-remote.crescentia.cn/api/v1/auth/oauth/qr/start?provider=github',
+      'https://dsh-remote.crescentia.cn/api/v1/auth/oauth/qr/github-qr-session-1234567890',
+      'https://dsh-remote.crescentia.cn/api/v1/auth/me',
+      'https://dsh-remote.crescentia.cn/api/v1/devices/register',
     ])
     expect(output.text).toContain('<terminal-qr>')
-    expect(output.text).toContain(`Authorization URL: \u001B]8;;https://dsh.r2049.cn/api/v1/auth/q/github-qr-session-1234567890\u0007https://dsh.r2049.cn/api/v1/auth/q/github-qr-session-1234567890\u001B]8;;\u0007`)
+    expect(output.text).toContain(`Authorization URL: \u001B]8;;https://dsh-remote.crescentia.cn/api/v1/auth/q/github-qr-session-1234567890\u0007https://dsh-remote.crescentia.cn/api/v1/auth/q/github-qr-session-1234567890\u001B]8;;\u0007`)
     expect(output.text).toContain('Remote Host login complete for host@example.com.')
     expect(output.text).toContain('Restart the Harness instance')
     expect(output.text).not.toContain('web-account-token-value')
     expect(output.text).not.toContain('access-token-value')
     expect(errors.text).toBe('')
 
-    const directory = serverStorageDirectory(join(dshHome, 'ds-harness-remote'), 'https://dsh.r2049.cn', 'host')
+    const directory = serverStorageDirectory(join(dshHome, 'ds-harness-remote'), 'https://dsh-remote.crescentia.cn', 'host')
     const device = JSON.parse(await readFile(join(directory, 'device.json'), 'utf8')) as { deviceId: string }
-    await expect(new ServerCredentialStore(directory).load('https://dsh.r2049.cn', device.deviceId))
+    await expect(new ServerCredentialStore(directory).load('https://dsh-remote.crescentia.cn', device.deviceId))
       .resolves.toMatchObject({ authorizationMethod: 'account', account: 'host@example.com' })
   })
 
@@ -100,7 +100,7 @@ describe('Remote CLI', () => {
     const errors = writer()
     const start = vi.fn(async () => ({
       qrId: 'zhihu-qr-session-1234567890',
-      scanUrl: 'https://dsh.r2049.cn/api/v1/auth/q/zhihu-qr-session-1234567890',
+      scanUrl: 'https://dsh-remote.crescentia.cn/api/v1/auth/q/zhihu-qr-session-1234567890',
       expiresIn: 600,
     }))
     const poll = vi.fn(async () => ({ status: 'expired' as const }))
@@ -131,11 +131,11 @@ describe('Remote CLI', () => {
     directories.push(dshHome)
     const env = { DSH_HOME: dshHome }
     const root = new IdentityStore({ env }).directory
-    const directory = serverStorageDirectory(root, 'https://dsh.r2049.cn', 'host')
+    const directory = serverStorageDirectory(root, 'https://dsh-remote.crescentia.cn', 'host')
     const identities = new IdentityStore({ directory, env })
     const original = await identities.loadOrCreate('CLI test Host')
     await new ServerCredentialStore(directory).save({
-      serverUrl: 'https://dsh.r2049.cn',
+      serverUrl: 'https://dsh-remote.crescentia.cn',
       deviceId: original.deviceId,
       authorizationMethod: 'account',
       account: 'host@example.com',
@@ -161,7 +161,7 @@ describe('Remote CLI', () => {
     expect(revoke).toHaveBeenCalledOnce()
     const rotated = JSON.parse(await readFile(join(directory, 'device.json'), 'utf8')) as { deviceId: string }
     expect(rotated.deviceId).not.toBe(original.deviceId)
-    await expect(new ServerCredentialStore(directory).load('https://dsh.r2049.cn', rotated.deviceId))
+    await expect(new ServerCredentialStore(directory).load('https://dsh-remote.crescentia.cn', rotated.deviceId))
       .resolves.toBeUndefined()
     expect(output.text).toContain('local device identity was rotated')
   })
@@ -171,10 +171,10 @@ describe('Remote CLI', () => {
     directories.push(dshHome)
     const env = { DSH_HOME: dshHome }
     const root = join(dshHome, 'remote')
-    const directory = serverStorageDirectory(root, 'https://dsh.r2049.cn', 'host')
+    const directory = serverStorageDirectory(root, 'https://dsh-remote.crescentia.cn', 'host')
     const identity = await new IdentityStore({ directory, env }).loadOrCreate('CLI status Host')
     await new ServerCredentialStore(directory).save({
-      serverUrl: 'https://dsh.r2049.cn',
+      serverUrl: 'https://dsh-remote.crescentia.cn',
       deviceId: identity.deviceId,
       authorizationMethod: 'account',
       account: 'status@example.com',
@@ -218,13 +218,13 @@ describe('Remote CLI', () => {
     directories.push(dshHome)
     const env = { DSH_HOME: dshHome }
     const legacyRoot = join(dshHome, 'remote')
-    const hostLegacyDir = serverStorageDirectory(legacyRoot, 'https://dsh.r2049.cn', 'host')
-    const clientLegacyDir = serverStorageDirectory(legacyRoot, 'https://dsh.r2049.cn', 'client')
+    const hostLegacyDir = serverStorageDirectory(legacyRoot, 'https://dsh-remote.crescentia.cn', 'host')
+    const clientLegacyDir = serverStorageDirectory(legacyRoot, 'https://dsh-remote.crescentia.cn', 'client')
     const originalHost = await new IdentityStore({ directory: hostLegacyDir, env, role: 'host' }).loadOrCreate('Host')
     const originalClient = await new IdentityStore({ directory: clientLegacyDir, env, role: 'client' }).loadOrCreate('Client')
     await writeFile(join(clientLegacyDir, 'device.key'), 'corrupted-client-key\n')
     await new ServerCredentialStore(clientLegacyDir).save({
-      serverUrl: 'https://dsh.r2049.cn',
+      serverUrl: 'https://dsh-remote.crescentia.cn',
       deviceId: originalClient.deviceId,
       authorizationMethod: 'owned_device',
       ...tokens(),
@@ -237,8 +237,8 @@ describe('Remote CLI', () => {
     expect(output.text).toContain('Remote client identity was reset')
 
     const canonicalRoot = join(dshHome, 'ds-harness-remote')
-    const hostCanonicalDir = serverStorageDirectory(canonicalRoot, 'https://dsh.r2049.cn', 'host')
-    const clientCanonicalDir = serverStorageDirectory(canonicalRoot, 'https://dsh.r2049.cn', 'client')
+    const hostCanonicalDir = serverStorageDirectory(canonicalRoot, 'https://dsh-remote.crescentia.cn', 'host')
+    const clientCanonicalDir = serverStorageDirectory(canonicalRoot, 'https://dsh-remote.crescentia.cn', 'client')
     const preservedHost = JSON.parse(await readFile(join(hostCanonicalDir, 'device.json'), 'utf8')) as { deviceId: string }
     const rotatedClient = JSON.parse(await readFile(join(clientCanonicalDir, 'device.json'), 'utf8')) as { deviceId: string }
     expect(preservedHost.deviceId).toBe(originalHost.deviceId)
@@ -250,13 +250,13 @@ describe('Remote CLI', () => {
     directories.push(dshHome)
     const env = { DSH_HOME: dshHome }
     const root = new IdentityStore({ env }).directory
-    const directory = serverStorageDirectory(root, 'https://dsh.r2049.cn', 'host')
+    const directory = serverStorageDirectory(root, 'https://dsh-remote.crescentia.cn', 'host')
     const identities = new IdentityStore({ directory, env, role: 'host' })
     const original = await identities.loadOrCreate('CLI test Host')
     // Corrupt the key file
     await writeFile(join(directory, 'device.key'), 'corrupted-private-key\n')
     await new ServerCredentialStore(directory).save({
-      serverUrl: 'https://dsh.r2049.cn',
+      serverUrl: 'https://dsh-remote.crescentia.cn',
       deviceId: original.deviceId,
       authorizationMethod: 'account',
       account: 'host@example.com',
