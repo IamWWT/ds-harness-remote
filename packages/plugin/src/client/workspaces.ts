@@ -143,7 +143,7 @@ export function createRemoteWorkspaceAction(React: ClientReact, portal?: PortalR
     const [needsAuthorization, setNeedsAuthorization] = React.useState<boolean | undefined>(undefined)
     const [email, setEmail] = React.useState('')
     const [password, setPassword] = React.useState('')
-    const [loginServerUrl, setLoginServerUrl] = React.useState('https://dsh.r2049.cn')
+    const [loginServerUrl, setLoginServerUrl] = React.useState('https://dsh-remote.crescentia.cn')
     const [editingServer, setEditingServer] = React.useState(false)
     const [savingServer, setSavingServer] = React.useState(false)
     const serverDirty = loginServerUrl.trim() !== (status?.serverUrl ?? '')
@@ -1402,12 +1402,12 @@ export function createRemoteWorkspaceAction(React: ClientReact, portal?: PortalR
                     }, t(savingServer ? 'saving' : 'save')),
                     React.createElement('button', {
                       type: 'button', disabled: busy || savingServer,
-                      onClick: () => { resetLoginFlow(); setLoginServerUrl('https://dsh.r2049.cn'); void saveLoginServer('https://dsh.r2049.cn') },
+                      onClick: () => { resetLoginFlow(); setLoginServerUrl('https://dsh-remote.crescentia.cn'); void saveLoginServer('https://dsh-remote.crescentia.cn') },
                     }, t('restoreDefaultServiceAddress')),
                     React.createElement('button', {
                       type: 'button', disabled: busy || savingServer,
                       onClick: () => {
-                        setLoginServerUrl(status?.serverUrl ?? 'https://dsh.r2049.cn')
+                        setLoginServerUrl(status?.serverUrl ?? 'https://dsh-remote.crescentia.cn')
                         setEditingServer(false)
                       },
                     }, t('cancelServiceAddressEdit')))

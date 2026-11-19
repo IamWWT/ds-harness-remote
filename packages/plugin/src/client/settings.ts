@@ -138,7 +138,7 @@ export function createRemotePluginOptions(React: ClientReact) {
 
     const applyView = (view: PluginSettingsView, updateAssociations = true): void => {
       setSettingsView(view)
-      if (!serverDraftEdited.current) setServerUrl(view.config.serverUrl ?? 'https://dsh.r2049.cn')
+      if (!serverDraftEdited.current) setServerUrl(view.config.serverUrl ?? 'https://dsh-remote.crescentia.cn')
       setTerminalEnabled(view.config.terminal?.enabled ?? true)
       setDebugLogging(view.config.logLevel === 'debug')
       setRemoteToolsEnabled(view.config.remoteTools?.enabled ?? true)
@@ -365,7 +365,7 @@ export function createRemotePluginOptions(React: ClientReact) {
       try {
         const result = await props.control<PluginConfigureResult>('settings.configure', {
           role: 'client',
-          serverUrl: serverUrl.trim() || 'https://dsh.r2049.cn',
+          serverUrl: serverUrl.trim() || 'https://dsh-remote.crescentia.cn',
           email: loginEmail.trim(),
           password: loginPassword,
         })
@@ -1039,13 +1039,13 @@ export function createRemotePluginOptions(React: ClientReact) {
                     }, t(savingServer ? 'saving' : 'save')),
                     React.createElement('button', {
                       type: 'button', disabled: busy || savingServer || !writable,
-                      onClick: () => { serverDraftEdited.current = true; setServerUrl('https://dsh.r2049.cn'); void saveLoginServer('https://dsh.r2049.cn') },
+                      onClick: () => { serverDraftEdited.current = true; setServerUrl('https://dsh-remote.crescentia.cn'); void saveLoginServer('https://dsh-remote.crescentia.cn') },
                     }, t('restoreDefaultServiceAddress')),
                     React.createElement('button', {
                       type: 'button', disabled: busy || savingServer || !writable,
                       onClick: () => {
                         serverDraftEdited.current = false
-                        setServerUrl(savedServerUrl ?? 'https://dsh.r2049.cn')
+                        setServerUrl(savedServerUrl ?? 'https://dsh-remote.crescentia.cn')
                         setEditingServer(false)
                       },
                     }, t('cancelServiceAddressEdit')))
