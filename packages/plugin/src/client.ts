@@ -644,17 +644,28 @@ window.__ModuleLoader__.load({
       // content, so this row owns its own markup: one menu row that dismisses
       // the menu and then raises the Remote surface. The glyph is decorative —
       // the row's own text is the accessible name.
-      const RemotePanelMenuRow = (props: {
-        t: Translate
-        onDismiss: () => void
-        openRemote: () => void
-      }): unknown => React.createElement('button', {
+      const RemotePanelMenuRow = (props: { onDismiss: () => void }): unknown => React.createElement('button', {
         type: 'button',
         role: 'menuitem',
         className: 'dshRemoteMoreMenuRow',
         onClick: () => {
           props.onDismiss()
-          props.openRemote()
+          openRemote()
+        },
+        style: {
+          display: 'flex',
+          alignItems: 'center',
+          gap: 8,
+          width: '100%',
+          minHeight: 44,
+          padding: '8px 12px',
+          border: 0,
+          borderRadius: 6,
+          background: 'transparent',
+          color: 'var(--dsw-alias-label-primary)',
+          font: 'inherit',
+          cursor: 'pointer',
+          textAlign: 'left',
         },
       },
         React.createElement('span', { className: 'dshRemoteMoreMenuGlyph', 'aria-hidden': true },
@@ -665,7 +676,7 @@ window.__ModuleLoader__.load({
           },
             React.createElement('rect', { x: 3, y: 4, width: 18, height: 13, rx: 2 }),
             React.createElement('path', { d: 'M8 21h8M12 17v4' }))),
-        React.createElement('span', { className: 'dshRemoteMoreMenuLabel' }, props.t('panelTitle')))
+        t('panelTitle'))
       // The sidebar's More menu is the only Remote entry point. It deliberately
       // does NOT register on `sidebar.panellist`: that slot pins a launcher into
       // the always-visible list, which is what put Remote permanently under
@@ -677,8 +688,6 @@ window.__ModuleLoader__.load({
         id: REMOTE_PANEL_ID,
         order: -100,
         locale: localeNamespace,
-        label: () => t('panelTitle'),
-        inject: () => ({ openRemote }),
       }, RemotePanelMenuRow))
       // rc.1 Plugins-page configuration surfaces. `plugins.item` is reserved
       // for the official settings companion packages (the Plugins page renders

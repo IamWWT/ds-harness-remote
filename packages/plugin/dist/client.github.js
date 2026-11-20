@@ -7429,7 +7429,22 @@ If a code was sent, recover the original submission without changing it.`,
             role: "menuitem",
             className: "dshRemoteMoreMenuRow",
             onClick: () => {
-              props.onDismiss(), props.openRemote();
+              props.onDismiss(), openRemote();
+            },
+            style: {
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+              width: "100%",
+              minHeight: 44,
+              padding: "8px 12px",
+              border: 0,
+              borderRadius: 6,
+              background: "transparent",
+              color: "var(--dsw-alias-label-primary)",
+              font: "inherit",
+              cursor: "pointer",
+              textAlign: "left"
             }
           },
           React.createElement(
@@ -7451,15 +7466,13 @@ If a code was sent, recover the original submission without changing it.`,
               React.createElement("path", { d: "M8 21h8M12 17v4" })
             )
           ),
-          React.createElement("span", { className: "dshRemoteMoreMenuLabel" }, props.t("panelTitle"))
+          t("panelTitle")
         );
         ctx.slots.inject("sidebar.panellist.actions", () => ctx.slots.register({
           name: "sidebar.panellist.actions",
           id: REMOTE_PANEL_ID,
           order: -100,
-          locale: localeNamespace,
-          label: () => t("panelTitle"),
-          inject: () => ({ openRemote })
+          locale: localeNamespace
         }, RemotePanelMenuRow)), ctx.slots.inject("plugins.row.config", () => ctx.slots.register({
           name: "plugins.row.config",
           key: "ds-harness-remote#ds-harness-remote",
