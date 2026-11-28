@@ -11,6 +11,7 @@ import { AcpSessionTools, HarnessSessionTools, type SessionTools } from './sessi
 import { SecureTransport } from './secure-transport'
 import { nativeRtcFactory } from './native-rtc-binary'
 import { BotRemoteClient } from './bot-catalog'
+import { parseWorkerWorkspaces } from '../lib/worker-workspaces'
 import { compactionStore } from './compaction-store'
 
 export type MuxFrameHandler = (frame: MuxStreamFrame) => void
@@ -39,6 +40,7 @@ export class AndroidRemoteConnection {
   private lanUploads?: LanUploadRoutes
   private sessionEventsSupported = false
   private pluginRouteSupported = false
+  private coreGeneration = 0
   private core?: RemoteClientCore
   private proxy?: RemoteHarnessClient
   private codex?: CodexRemoteClient
@@ -153,6 +155,7 @@ export class AndroidRemoteConnection {
         35_000,
       )
       this.core = core
+      this.coreGeneration += 1
       // A fresh carrier has no health history: a failure counted on the
       // previous connection must not retire this one after a single probe.
       this.healthCheckFailures = 0
@@ -366,6 +369,25 @@ export class AndroidRemoteConnection {
   }
 
   supportsBinaryUpload(): boolean { return this.core !== undefined && this.binaryUploads }
+
+  async listSuperagentWorkerWorkspaceIds(): Promise<{ workspaces: string[]; sessions: string[] }> {
+    const core = this.core
+    const proxy = this.proxy
+    const generation = this.coreGeneration
+    if (core === undefined || proxy === undefined || !this.pluginRouteSupported) return { workspaces: [], sessions: [] }
+    const isCurrent = () => this.core === core && this.proxy === proxy && this.coreGeneration === generation
+    try {
+      const result = await core.rpc<{ status: number; json: unknown }>('plugin.route.call', {
+        route: 'api/superagent/worker-workspaces', body: { endpoint: 'workspace-ids' },
+      }, AbortSignal.timeout(5_000))
+      if (!isCurrent() || result.status < 200 || result.status >= 300) return { workspaces: [], sessions: [] }
+      const visibility = parseWorkerWorkspaces(result.json)
+      if (!isCurrent()) return { workspaces: [], sessions: [] }
+      return { workspaces: [...visibility.workspaces], sessions: [...visibility.sessions] }
+    } catch {
+      return { workspaces: [], sessions: [] }
+    }
+  }
 
   async rpc<T = unknown>(method: string, params: unknown, signal?: AbortSignal): Promise<T> {
     if (this.core === undefined) throw new Error(strings.runtime.connectHostFirst)

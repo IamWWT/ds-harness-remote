@@ -68,6 +68,7 @@ export class AndroidRemoteRuntime {
   }
 
   async refreshBackends(): Promise<void> { await this.client.refreshBackends() }
+  listSuperagentWorkerWorkspaceIds(): Promise<{ workspaces: string[]; sessions: string[] }> { return this.client.listSuperagentWorkerWorkspaceIds() }
   rpc<T = unknown>(method: string, params: unknown, signal?: AbortSignal): Promise<T> {
     return this.client.rpc<T>(method, params, signal)
   }

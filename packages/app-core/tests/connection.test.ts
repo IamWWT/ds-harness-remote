@@ -10,7 +10,7 @@ class FakeCore {
 
   async connect(): Promise<void> { await testState.connectGate?.() }
 
-  async rpc(method: string, params?: unknown): Promise<unknown> {
+  async rpc(method: string, params?: unknown, _signal?: AbortSignal): Promise<unknown> {
     this.rpcCalls.push({ method, params })
     if (method === 'harness.transport.describe') return { capabilities: testState.capabilities,
       ...(testState.workspaceTypes === undefined ? {} : { workspaceTypes: testState.workspaceTypes }) }
@@ -185,6 +185,31 @@ afterEach(async () => {
           .resolves.toEqual(value)
       } finally { await legacyConnection.close() }
     } })))
+  })
+
+  it('reads Superagent worker visibility only through its fixed encrypted route and fails open', async () => {
+    testState.capabilities = ['harness.remote.v1']
+    const connection = new AndroidRemoteConnection()
+    await connection.connect('https://server.example.com', identity, host, 'synthetic', () => undefined)
+    const core = testState.cores[0]!
+    await expect(connection.listSuperagentWorkerWorkspaceIds()).resolves.toEqual({ workspaces: [], sessions: [] })
+    expect(core.rpcCalls.some(call => call.method === 'plugin.route.call')).toBe(false)
+    await connection.close()
+
+    testState.capabilities = ['harness.remote.v1', 'plugin.route.v1']
+    const supported = new AndroidRemoteConnection()
+    await supported.connect('https://server.example.com', identity, host, 'synthetic', () => undefined)
+    const activeCore = testState.cores.at(-1)!
+    const rpc = activeCore.rpc.bind(activeCore)
+    vi.spyOn(activeCore, 'rpc').mockImplementation(async (method, params) => {
+      if (method !== 'plugin.route.call') return rpc(method, params)
+      expect(params).toEqual({ route: 'api/superagent/worker-workspaces', body: { endpoint: 'workspace-ids' } })
+      return { status: 200, json: { workspaces: ['workspace-worker'], sessions: ['worker-ticket'] } }
+    })
+    await expect(supported.listSuperagentWorkerWorkspaceIds()).resolves.toEqual({
+      workspaces: ['workspace-worker'], sessions: ['worker-ticket'],
+    })
+    await supported.close()
   })
 
   it('binds Bot requests to the advertised encrypted Host and rejects retired clients', async () => {

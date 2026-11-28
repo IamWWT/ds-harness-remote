@@ -268,6 +268,7 @@ export function DeviceDetailScreen({ device, onBack, onConnect, onWorkspaces }: 
   const connection = useAppStore(state => state.connection)
   const descriptor = useAppStore(state => state.hostDescriptor)
   const workspaces = useAppStore(state => state.workspaces)
+  const hiddenWorkerWorkspaceIds = useAppStore(state => state.hiddenWorkerWorkspaceIds)
   const trust = useAppStore(state => state.trustDevice)
   const forgetDevice = useAppStore(state => state.forgetDevice)
   const forgetBusy = useAppStore(state => state.busyAction === `forget:${device.deviceId}`)
@@ -335,7 +336,8 @@ export function DeviceDetailScreen({ device, onBack, onConnect, onWorkspaces }: 
                       {descriptor?.provider !== undefined && <KeyValue label={zhCN.devices.provider} value={descriptor.provider} />}
                       {descriptor?.model !== undefined && <KeyValue label={zhCN.devices.model} value={descriptor.model} />}
                       <View style={styles.contentCounts}>
-                        <View style={styles.contentCount}><Text style={styles.contentCountValue}>{workspaces.length}</Text><Text style={styles.contentCountLabel}>{zhCN.devices.workspaces}</Text></View>
+                        <View style={styles.contentCount}><Text style={styles.contentCountValue}>{workspaces.filter(workspace =>
+                          (workspace.backend ?? 'harness') !== 'harness' || !hiddenWorkerWorkspaceIds.includes(workspace.workspaceId)).length}</Text><Text style={styles.contentCountLabel}>{zhCN.devices.workspaces}</Text></View>
                         <View style={styles.contentCountDivider} />
                         <View style={styles.contentCount}><Text style={styles.contentCountValue}>{descriptor?.attachedSessions ?? 0}</Text><Text style={styles.contentCountLabel}>{zhCN.devices.conversations}</Text></View>
                       </View>

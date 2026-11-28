@@ -24,6 +24,7 @@ import { Alert } from '../ui/alert'
 import { shouldConfirmSwipeRightOpen, shouldStartSwipeRightToOpen } from '../lib/gesture-swipe-rules'
 import { isSubagentSession } from '../lib/session-kind'
 import { workspaceStableKey } from '../lib/workspace-key'
+import { filterHiddenWorkerWorkspaces } from '../lib/worker-workspaces'
 import { strings } from '../locales/i18n'
 import { sessionPermissions } from '../services/session-permissions'
 import type { CustomPrompt } from '../services/storage'
@@ -192,6 +193,7 @@ export function ChatScreen({
   const createSession = useAppStore(state => state.createSession)
   const archiveSession = useAppStore(state => state.archiveSession)
   const workspaces = useAppStore(state => state.workspaces)
+  const hiddenWorkerWorkspaceIds = useAppStore(state => state.hiddenWorkerWorkspaceIds)
   const sessions = useAppStore(state => state.sessions)
   const agentPresetOptions = useAppStore(state => state.agentPresetOptions)
   const agentPresetLoading = useAppStore(state => state.agentPresetLoading)
@@ -1488,7 +1490,8 @@ export function ChatScreen({
           else openSessionsDrawer()
         }}
       />
-      <WorkspacePicker visible={workspacePickerOpen} workspaces={workspaces} currentSessionId={session.sessionId} sessionBackend={session.backend} busy={busy} onClose={() => setWorkspacePickerOpen(false)} onPick={pickWorkspace} onManage={() => { setWorkspacePickerOpen(false); openSessionsDrawer() }} />
+      <WorkspacePicker visible={workspacePickerOpen} workspaces={filterHiddenWorkerWorkspaces(workspaces, hiddenWorkerWorkspaceIds)}
+        currentSessionId={session.sessionId} sessionBackend={session.backend} busy={busy} onClose={() => setWorkspacePickerOpen(false)} onPick={pickWorkspace} onManage={() => { setWorkspacePickerOpen(false); openSessionsDrawer() }} />
       <ToolAccessPicker visible={toolPickerOpen} onClose={() => setToolPickerOpen(false)} onPick={pickToolMode} />
       <PromptsPicker
         visible={promptsPickerOpen}

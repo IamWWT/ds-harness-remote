@@ -81432,7 +81432,7 @@ var LoopbackPreview = class {
 };
 
 // packages/plugin/src/plugin-route-bridge.ts
-var PLUGIN_ROUTE_ALLOWLIST = ["api/bot", "api/session/uploadFileBinary"];
+var PLUGIN_ROUTE_ALLOWLIST = ["api/bot", "api/session/uploadFileBinary", "api/superagent/worker-workspaces"];
 var BOT_REMOTE_OPERATIONS = [
   "abandon-work",
   "add-agent",
@@ -81604,11 +81604,15 @@ function isAllowedPluginRoute(route) {
   return PLUGIN_ROUTE_ALLOWLIST.some((allowed) => allowed === route);
 }
 var callSchema = external_exports.object({
-  route: external_exports.enum(PLUGIN_ROUTE_ALLOWLIST),
+  route: external_exports.literal("api/bot"),
   body: external_exports.object({
     endpoint: external_exports.enum(BOT_REMOTE_OPERATIONS),
     payload: external_exports.record(external_exports.string(), external_exports.unknown()).nullable().optional()
   }).strict()
+}).strict();
+var superagentWorkerWorkspacesSchema = external_exports.object({
+  route: external_exports.literal("api/superagent/worker-workspaces"),
+  body: external_exports.object({ endpoint: external_exports.literal("workspace-ids") }).strict()
 }).strict();
 var uploadFields = {
   sessionId: external_exports.string().min(1).max(512),
@@ -81633,8 +81637,14 @@ var PluginRouteBridge = class {
   }
   async call(input4, transferred = false) {
     let params;
+    let superagentRead = false;
     try {
-      params = typeof input4 === "object" && input4 !== null && "route" in input4 && input4.route === "api/session/uploadFileBinary" ? imageUploadCallSchema.parse(input4) : callSchema.parse(input4);
+      if (typeof input4 === "object" && input4 !== null && "route" in input4 && input4.route === "api/superagent/worker-workspaces") {
+        params = superagentWorkerWorkspacesSchema.parse(input4);
+        superagentRead = true;
+      } else {
+        params = typeof input4 === "object" && input4 !== null && "route" in input4 && input4.route === "api/session/uploadFileBinary" ? imageUploadCallSchema.parse(input4) : callSchema.parse(input4);
+      }
     } catch (error62) {
       if (error62 instanceof external_exports.ZodError) {
         throw new RpcError("INVALID_MESSAGE", "The plugin route call is invalid for the remote channel.");
@@ -81654,6 +81664,15 @@ var PluginRouteBridge = class {
         durationMs: Math.round(performance.now() - startedAt)
       });
       throw error62;
+    }
+    if (superagentRead) {
+      const ids = external_exports.object({
+        workspaces: external_exports.array(external_exports.string().min(1).max(512).regex(/^[A-Za-z0-9:_-]+$/)).max(2e3),
+        sessions: external_exports.array(external_exports.string().min(1).max(512).regex(/^[A-Za-z0-9:_-]+$/)).max(2e3)
+      }).strict().safeParse(result.json);
+      if (result.status < 200 || result.status >= 300 || !ids.success || new Set(ids.data.workspaces).size !== ids.data.workspaces.length || new Set(ids.data.sessions).size !== ids.data.sessions.length) {
+        throw new RpcError("INVALID_MESSAGE", "The superagent workspace read response is invalid.");
+      }
     }
     if (serializedBytes(result) > MAX_SECURE_MESSAGE_BYTES) {
       throw new RpcError("RESPONSE_TOO_LARGE", "The plugin route response exceeds the bounded remote limit.");
@@ -87490,7 +87509,7 @@ function parseIpv6(value) {
 }
 
 // packages/plugin/src/version.ts
-var PLUGIN_VERSION = "0.6.5";
+var PLUGIN_VERSION = "0.6.6";
 
 // packages/plugin/src/server-api.ts
 var TERMINAL_CONTROL_CHARACTERS = /[\u0000-\u001f\u007f-\u009f]/u;

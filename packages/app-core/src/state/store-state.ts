@@ -75,6 +75,9 @@ export interface AppState {
   hermesAvailable: boolean
   workspaceCatalog?: { backend: AgentBackend; loading: boolean; error?: string }
   workspaces: WorkspaceView[]
+  /** Workspaces omitted from mobile list presentation only; catalog/session operations retain the full data. */
+  hiddenWorkerWorkspaceIds: string[]
+  hiddenWorkerSessionIds: string[]
   favoriteWorkspaces: WorkspaceShortcut[]
   /** Newest first; the home screen falls back to these when Favorites is empty. */
   recentWorkspaces: WorkspaceShortcut[]
@@ -234,7 +237,7 @@ export const disconnected: ConnectionSnapshot = {
 }
 
 export function initialData(): Pick<AppState,
-  'config' | 'account' | 'devices' | 'selectedDevice' | 'connection' | 'hostDescriptor' | 'hostSessionEvents' | 'codexAvailable' | 'cursorAvailable' | 'antigravityAvailable' | 'piAvailable' | 'opencodeAvailable' | 'claudeAvailable' | 'hermesAvailable' | 'workspaceCatalog' | 'workspaces' |
+  'config' | 'account' | 'devices' | 'selectedDevice' | 'connection' | 'hostDescriptor' | 'hostSessionEvents' | 'codexAvailable' | 'cursorAvailable' | 'antigravityAvailable' | 'piAvailable' | 'opencodeAvailable' | 'claudeAvailable' | 'hermesAvailable' | 'workspaceCatalog' | 'workspaces' | 'hiddenWorkerWorkspaceIds' | 'hiddenWorkerSessionIds' |
   'favoriteWorkspaces' | 'recentWorkspaces' | 'archivedSessionIds' | 'pinnedSessionIds' | 'sessions' | 'selectedSession' | 'codexReadySessionId' | 'currentWorkSessionIds' | 'messages' | 'sessionModels' | 'modelSelecting' | 'permissionSelecting' |
   'historyHasMore' | 'historyLoadingOlder' | 'oldestLoadedSeq' | 'transportPreference' | 'authPhase' | 'refreshing' | 'busyAction' | 'error' |
   'connectionProbeOrder' | 'connectionNetworkDetails' | 'reauthRequired' | 'feedbackBySession' | 'commandResult' | 'sessionLifecycles' | 'sessionProjectionSeqs'> {
@@ -257,6 +260,8 @@ export function initialData(): Pick<AppState,
     hermesAvailable: false,
     workspaceCatalog: undefined,
     workspaces: [],
+    hiddenWorkerWorkspaceIds: [],
+    hiddenWorkerSessionIds: [],
     favoriteWorkspaces: [],
     recentWorkspaces: [],
     archivedSessionIds: [],

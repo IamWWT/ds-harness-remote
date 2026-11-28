@@ -326,6 +326,8 @@ export function createConnectionActions({ get, set, runtime }: SessionAccess): P
         hermesAvailable: false,
         workspaceCatalog: undefined,
         workspaces: [],
+        hiddenWorkerWorkspaceIds: [],
+        hiddenWorkerSessionIds: [],
         archivedSessionIds: [],
         pinnedSessionIds: [],
         sessions: [],

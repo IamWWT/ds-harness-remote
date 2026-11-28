@@ -128,8 +128,11 @@ export function createWorkspaceActions({ set, get, connection, getConnectionGene
         switch (backend) {
           case 'harness': {
             const proxy = scope.bind(() => connection.requireProxy())
-            const [workspaces, sessions] = await Promise.all([proxy.workspaceList(), proxy.sessionList()])
+            const [workspaces, sessions, hiddenWorkerIds] = await Promise.all([
+              proxy.workspaceList(), proxy.sessionList(), connection.listSuperagentWorkerWorkspaceIds(),
+            ])
             catalog = { workspaces: workspaces.items, sessions }
+            set({ hiddenWorkerWorkspaceIds: hiddenWorkerIds.workspaces, hiddenWorkerSessionIds: hiddenWorkerIds.sessions })
             archivedSessionIds = workspaces.archivedSessionIds
             pinnedSessionIds = workspaces.pinnedSessionIds
             break
@@ -202,6 +205,8 @@ export function createWorkspaceActions({ set, get, connection, getConnectionGene
           claudeAvailable: connection.hasClaude(),
           hermesAvailable: connection.hasHermes(),
           workspaces: [...state.workspaces.filter(item => (item.backend ?? 'harness') !== backend), ...catalog.workspaces],
+          ...(backend === 'harness' && state.hiddenWorkerWorkspaceIds.length === 0 && state.hiddenWorkerSessionIds.length === 0
+             ? { hiddenWorkerWorkspaceIds: [], hiddenWorkerSessionIds: [] } : {}),
           sessions: [...state.sessions.filter(item => (item.backend ?? 'harness') !== backend), ...catalog.sessions],
           ...(archivedSessionIds === undefined ? {} : { archivedSessionIds }),
           ...(pinnedSessionIds === undefined ? {} : { pinnedSessionIds }),

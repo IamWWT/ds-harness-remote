@@ -65,6 +65,8 @@ export function createRemoteWorkspaceAction(React: ClientReact, portal?: PortalR
   }
 
   function RemoteWorkspaceAction(props: {
+    /** 是否渲染账号行入口（overlay 挂载时关掉，只保留监听与对话框）。 */
+    renderEntry?: boolean
     wide: boolean
     control: <T>(endpoint: string, payload?: unknown) => Promise<T>
     statusFeed: StatusFeed<RemoteStatus>
@@ -1246,9 +1248,11 @@ export function createRemoteWorkspaceAction(React: ClientReact, portal?: PortalR
     const compact = sidebarEntry === 'compact' && props.wide && props.portal !== undefined
 
     return React.createElement(React.Fragment, null,
-      compact
-        ? React.createElement(RemoteAccountEntry, { portal: props.portal, fallback: entry }, accountEntry)
-        : entry,
+      props.renderEntry === false
+        ? null
+        : compact
+          ? React.createElement(RemoteAccountEntry, { portal: props.portal, fallback: entry }, accountEntry)
+          : entry,
       !open ? null : renderBodyPortal(portal, React.createElement('div', {
         className: 'dshRemoteBackdrop',
         role: 'presentation',

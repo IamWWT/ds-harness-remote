@@ -635,6 +635,25 @@ window.__ModuleLoader__.load({
         locale: localeNamespace,
         inject: () => ({ control, statusFeed, onSignIn: openRemote }),
       }, RemoteSessionHeaderAction))
+      // 「更多 → 远程」的打开通道：RemoteWorkspaceAction 只在挂载时才订阅 openRemote，
+      // 缺了它 openRemote 的监听者集合为空、点击毫无反应（2026-11-26 实测复现）。
+      // 挂到 shell.overlay 只承担监听与对话框；账号行入口由 renderEntry:false 关闭，避免重复入口。
+      ctx.slots.inject('shell.overlay', () => ctx.slots.register({
+        name: 'shell.overlay',
+        id: 'ds-harness-remote-workspace',
+        order: 21,
+        locale: localeNamespace,
+        inject: () => ({
+          renderEntry: false,
+          wide: true,
+          control,
+          statusFeed,
+          subscribeOpen,
+          preferredQrProvider: ctx.locale.getLocale().active === 'zh' ? 'zhihu' : 'github',
+          sidebarEntry,
+          portal,
+        }),
+      }, RemoteWorkspaceAction))
       // The footer seat and the panel-list launcher are both deliberately NOT
       // registered. Keeping either produced a second, always-visible Remote
       // entry in the sidebar; `sidebar.panellist.actions` below is the single

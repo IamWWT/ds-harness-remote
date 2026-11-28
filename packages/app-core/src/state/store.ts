@@ -62,6 +62,8 @@ export const useAppStore = create<AppState>((set, get) => ({
   hermesAvailable: false,
   workspaceCatalog: undefined,
   workspaces: [],
+  hiddenWorkerWorkspaceIds: [],
+  hiddenWorkerSessionIds: [],
   favoriteWorkspaces: [],
   recentWorkspaces: [],
   archivedSessionIds: [],

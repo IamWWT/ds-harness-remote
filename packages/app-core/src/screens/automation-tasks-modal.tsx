@@ -122,6 +122,7 @@ export function AutomationTasksModal({
   const sessions = useAppStore(state => state.sessions)
   const selectedSession = useAppStore(state => state.selectedSession)
   const workspaces = useAppStore(state => state.workspaces)
+  const hiddenWorkerWorkspaceIds = useAppStore(state => state.hiddenWorkerWorkspaceIds)
   const language = useAppStore(state => state.language)
   const sessionModels = useAppStore(state => state.sessionModels)
   const createSession = useAppStore(state => state.createSession)
@@ -348,7 +349,8 @@ export function AutomationTasksModal({
     if (expandedRow === 'project') {
       return {
         title: strings.automation.selectProject,
-        options: workspaces.map(workspace => ({
+        options: workspaces.filter(workspace =>
+          (workspace.backend ?? 'harness') !== 'harness' || !hiddenWorkerWorkspaceIds.includes(workspace.workspaceId)).map(workspace => ({
           key: workspace.workspaceId,
           label: workspace.title,
           active: formWorkspaceId === workspace.workspaceId,

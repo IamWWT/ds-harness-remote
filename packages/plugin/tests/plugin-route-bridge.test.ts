@@ -21,6 +21,50 @@ describe('PluginRouteBridge', () => {
     expect(dispatch).toHaveBeenCalledWith('api/bot', { endpoint: 'state', payload: null }, expect.any(AbortSignal))
   })
 
+  it('admits only the exact superagent worker-workspaces GET-free read (endpoint workspace-ids)', async () => {
+    await runScenarios([
+      { name: 'exact read', body: { endpoint: 'workspace-ids' }, allowed: true, status: 200, result: { workspaces: ['ws-harness-1', 'ws-harness-2'], sessions: ['worker-1'] } },
+      { name: 'reject malformed response', body: { endpoint: 'workspace-ids' }, allowed: false, status: 200, result: { workspaces: ['/secret'], sessions: [] } },
+      { name: 'reject error status', body: { endpoint: 'workspace-ids' }, allowed: false, status: 404, result: { workspaces: [], sessions: [] } },
+      { name: 'other superagent operation', body: { endpoint: 'state' }, allowed: false },
+      { name: 'superagent send operation', body: { endpoint: 'send' }, allowed: false },
+      { name: 'payload on the read', body: { endpoint: 'workspace-ids', payload: { filter: 'x' } }, allowed: false },
+      { name: 'missing endpoint', body: {}, allowed: false },
+      { name: 'extra top-level body fields', body: { endpoint: 'workspace-ids', extra: true }, allowed: false },
+    ].map(row => ({
+      name: row.name,
+      run: async () => {
+        const dispatch = dispatcher({ status: row.status ?? 200, json: row.result ?? { workspaces: ['ws-harness-1'], sessions: ['worker-1'] } })
+        const call = new PluginRouteBridge(dispatch).call({ route: 'api/superagent/worker-workspaces', body: row.body })
+        if (row.allowed) {
+          await expect(call).resolves.toMatchObject({ status: row.status ?? 200, json: row.result ?? { workspaces: ['ws-harness-1'], sessions: ['worker-1'] } })
+          expect(dispatch).toHaveBeenCalledOnce()
+          expect(dispatch).toHaveBeenCalledWith('api/superagent/worker-workspaces', { endpoint: 'workspace-ids' }, expect.any(AbortSignal))
+        } else {
+          await expect(call).rejects.toMatchObject({ code: 'INVALID_MESSAGE' })
+          if (row.result !== undefined) expect(dispatch).toHaveBeenCalledOnce()
+          else expect(dispatch).not.toHaveBeenCalled()
+        }
+      },
+    })))
+  })
+
+  it('keeps the superagent route out of the DS-Bot operation allowlist and vice versa', async () => {
+    const botClean = dispatcher()
+    await expect(new PluginRouteBridge(botClean).call({ route: 'api/bot', body: { endpoint: 'workspace-ids' } }))
+      .rejects.toMatchObject({ code: 'INVALID_MESSAGE' })
+    expect(botClean).not.toHaveBeenCalled()
+    const superagentClean = dispatcher()
+    await expect(new PluginRouteBridge(superagentClean).call({ route: 'api/superagent/worker-workspaces', body: { endpoint: 'state' } }))
+      .rejects.toMatchObject({ code: 'INVALID_MESSAGE' })
+    expect(superagentClean).not.toHaveBeenCalled()
+    const broadPayload = dispatcher()
+    await expect(new PluginRouteBridge(broadPayload).call({ route: 'api/superagent/worker-workspaces', body: {
+      endpoint: 'workspace-ids', payload: { path: '/outside' },
+    } })).rejects.toMatchObject({ code: 'INVALID_MESSAGE' })
+    expect(broadPayload).not.toHaveBeenCalled()
+  })
+
   it('rejects routes outside the exact plugin allowlist before dispatch', async () => {
     await runScenarios([
       'http://evil/api/bot', '../etc/passwd', '', `api/${'x'.repeat(65)}`,

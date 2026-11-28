@@ -5,7 +5,7 @@ import type { SafeLogger } from './logging.js'
 import { RpcError } from './safe-error.js'
 
 /** Local plugin web routes forwardable over the authenticated channel (POST only). */
-export const PLUGIN_ROUTE_ALLOWLIST = ['api/bot', 'api/session/uploadFileBinary'] as const
+export const PLUGIN_ROUTE_ALLOWLIST = ['api/bot', 'api/session/uploadFileBinary', 'api/superagent/worker-workspaces'] as const
 
 /** DS-Bot v0.3.6 channel + computer endpoints; unknown future operations stay local. */
 export const BOT_REMOTE_OPERATIONS = [
@@ -57,11 +57,16 @@ export type PluginRouteDispatcher = (
 ) => Promise<{ status: number; json: unknown }>
 
 const callSchema = z.object({
-  route: z.enum(PLUGIN_ROUTE_ALLOWLIST),
+  route: z.literal('api/bot'),
   body: z.object({
     endpoint: z.enum(BOT_REMOTE_OPERATIONS),
     payload: z.record(z.string(), z.unknown()).nullable().optional(),
   }).strict(),
+}).strict()
+
+const superagentWorkerWorkspacesSchema = z.object({
+  route: z.literal('api/superagent/worker-workspaces'),
+  body: z.object({ endpoint: z.literal('workspace-ids') }).strict(),
 }).strict()
 
 /** Fixed official attachment intake; caller-selected filesystem paths are forbidden. */
@@ -96,10 +101,17 @@ export class PluginRouteBridge {
 
   async call(input: unknown, transferred = false): Promise<PluginRouteCallResult> {
     let params: PluginRouteCallParams
+    let superagentRead = false
     try {
-      params = (typeof input === 'object' && input !== null && 'route' in input
-        && input.route === 'api/session/uploadFileBinary'
-        ? imageUploadCallSchema.parse(input) : callSchema.parse(input)) as PluginRouteCallParams
+      if (typeof input === 'object' && input !== null && 'route' in input
+        && input.route === 'api/superagent/worker-workspaces') {
+        params = superagentWorkerWorkspacesSchema.parse(input) as PluginRouteCallParams
+        superagentRead = true
+      } else {
+        params = (typeof input === 'object' && input !== null && 'route' in input
+          && input.route === 'api/session/uploadFileBinary'
+          ? imageUploadCallSchema.parse(input) : callSchema.parse(input)) as PluginRouteCallParams
+      }
     } catch (error) {
       if (error instanceof z.ZodError) {
         throw new RpcError('INVALID_MESSAGE', 'The plugin route call is invalid for the remote channel.')
@@ -119,6 +131,17 @@ export class PluginRouteBridge {
         durationMs: Math.round(performance.now() - startedAt),
       })
       throw error
+    }
+    if (superagentRead) {
+      const ids = z.object({
+        workspaces: z.array(z.string().min(1).max(512).regex(/^[A-Za-z0-9:_-]+$/)).max(2_000),
+        sessions: z.array(z.string().min(1).max(512).regex(/^[A-Za-z0-9:_-]+$/)).max(2_000),
+      }).strict().safeParse(result.json)
+      if (result.status < 200 || result.status >= 300 || !ids.success
+        || new Set(ids.data.workspaces).size !== ids.data.workspaces.length
+        || new Set(ids.data.sessions).size !== ids.data.sessions.length) {
+        throw new RpcError('INVALID_MESSAGE', 'The superagent workspace read response is invalid.')
+      }
     }
     if (serializedBytes(result) > MAX_SECURE_MESSAGE_BYTES) {
       throw new RpcError('RESPONSE_TOO_LARGE', 'The plugin route response exceeds the bounded remote limit.')

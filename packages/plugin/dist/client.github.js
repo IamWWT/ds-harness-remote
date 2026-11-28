@@ -5701,7 +5701,7 @@ If a code was sent, recover the original submission without changing it.`,
       return React.createElement(
         React.Fragment,
         null,
-        compact ? React.createElement(RemoteAccountEntry, { portal: props.portal, fallback: entry }, accountEntry) : entry,
+        props.renderEntry === !1 ? null : compact ? React.createElement(RemoteAccountEntry, { portal: props.portal, fallback: entry }, accountEntry) : entry,
         open ? renderBodyPortal(portal, React.createElement("div", {
           className: "dshRemoteBackdrop",
           role: "presentation",
@@ -7421,7 +7421,22 @@ If a code was sent, recover the original submission without changing it.`,
           order: 20,
           locale: localeNamespace,
           inject: () => ({ control, statusFeed, onSignIn: openRemote })
-        }, RemoteSessionHeaderAction));
+        }, RemoteSessionHeaderAction)), ctx.slots.inject("shell.overlay", () => ctx.slots.register({
+          name: "shell.overlay",
+          id: "ds-harness-remote-workspace",
+          order: 21,
+          locale: localeNamespace,
+          inject: () => ({
+            renderEntry: !1,
+            wide: !0,
+            control,
+            statusFeed,
+            subscribeOpen,
+            preferredQrProvider: ctx.locale.getLocale().active === "zh" ? "zhihu" : "github",
+            sidebarEntry,
+            portal
+          })
+        }, RemoteWorkspaceAction));
         let REMOTE_PANEL_ID = "ds-harness-remote-panel", RemotePanelMenuRow = (props) => React.createElement(
           "button",
           {
